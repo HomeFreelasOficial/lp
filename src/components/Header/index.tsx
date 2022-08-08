@@ -5,7 +5,7 @@ export function Header(){
     <>
      <header>
       <div className="image">
-        <img src="./src/img/letrassemfundo-2.png" alt="Logo HomeFrellas" />
+        <img src="./src/img/HeaderImages/letrassemfundo-2.png" alt="Logo HomeFrellas" />
       </div>
 
       <div className="menu">
@@ -19,7 +19,7 @@ export function Header(){
       </div>
 
       <div className="buttons">
-        <img src="./src/img/Person-buttons.png" alt="Ícone para Botão de Login" />
+        <img src="./src/img/HeaderImages/Person-buttons.png" alt="Ícone para Botão de Login" />
         <button className="btn-signIn">Fazer Login</button>
         <button className="btn-signUp">Cadastre-se</button>
       </div>
