@@ -15,6 +15,10 @@ export function Home(){
       <button className='btn-signUp'>Quero me Cadastrar</button>
     </div>
 
+    <div className="container-second-description">
+
+    </div>
+
     <footer>
 
     </footer>

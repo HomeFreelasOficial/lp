@@ -1,9 +1,22 @@
+import React, { useState } from 'react';
 import './styles.css'
 
 export function Header(){  
+const [navbar, setNavBar] = useState(false);
+
+const changeBackground = () => {
+  if(window.scrollY >= 80){
+    setNavBar(true);
+  }else{
+    setNavBar(false);
+  }
+}
+
+window.addEventListener("scroll", changeBackground);
+
   return (
     <>
-     <header>
+     <header className='container-fixed'>
       <div className="image">
         <img src="./src/img/HeaderImages/letrassemfundo-2.png" alt="Logo HomeFrellas" />
       </div>
