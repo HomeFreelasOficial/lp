@@ -1,14 +1,12 @@
-import './styles.css'
+import { Header } from '../../components/Header';
 
 export function Home(){
   return(
     <>
-    <header>
-      
-    </header>
+    <Header />
 
     <div className="container-first-description">
-      
+
     </div>
 
     <footer>
