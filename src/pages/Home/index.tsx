@@ -16,7 +16,24 @@ export function Home(){
     </div>
 
     <div className="container-second-description">
+      <div className="container-work-description">
+        <div className="buttons-work">
+          <div className="work-with-us">
+            <img src="./src/img/SecondDescriptionDiv/support-pink.png" alt="Imagem Trabalhe conosco" />
+            <small>Trabalhe conosco</small>
+          </div>
 
+          <div className="request-professionals">
+            <img src="./src/img/SecondDescriptionDiv/zoom-in-black.png" alt="Imagem Solicite Profissional" />
+            <small>Solicite profissionais</small>
+          </div>
+        </div>
+        <div className="work-infos">
+          <h2 id='changeTitle'>Trabalhe de forma informal</h2>
+          <p id='changeTextP'>Ofereça seus serviços na nossa plataforma de forma prática e viável.</p>
+        </div>
+        <small className='work-informally-with-us'>Saiba como trabalhar informalmente conosco</small>
+      </div>
     </div>
 
     <footer>
