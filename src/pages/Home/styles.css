@@ -130,13 +130,13 @@
 }
 
 .work-infos {
-  padding: 5px;
+  padding: 5px 16px;
 }
 
 .work-infos h2{
-  font-size: 13pt;
+  font-size: 12pt;
 }
 
 .work-infos p {
-  font-size: 10pt;
+  font-size: 9pt;
 }

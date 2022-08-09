@@ -1,0 +1,10 @@
+.btn-signUp-dark{
+  width: 120px;
+  height: 45px;
+
+  border: none;
+  border-radius: 5px;
+
+  color: var(--white);
+  background-color: var(--black);
+}

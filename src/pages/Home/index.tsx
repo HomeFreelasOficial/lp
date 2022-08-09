@@ -1,4 +1,5 @@
 import { Header } from '../../components/Header';
+import { ButtonSignUpDark } from '../../components/ButtonSignUpDark';
 import './styles.css'
 
 export function Home(){
@@ -31,6 +32,7 @@ export function Home(){
         <div className="work-infos">
           <h2 id='changeTitle'>Trabalhe de forma informal</h2>
           <p id='changeTextP'>Ofereça seus serviços na nossa plataforma de forma prática e viável.</p>
+          <ButtonSignUpDark />
         </div>
         <small className='work-informally-with-us'>Saiba como trabalhar informalmente conosco</small>
       </div>
