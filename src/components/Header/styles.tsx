@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Colors } from "../../styles/global";
 
@@ -70,11 +71,41 @@ export const ButtonSign = styled.button<ButtonSignProps>`
 
   color: ${props => props.signUp ? Colors.BLACK : Colors.WHITE };
   background-color: ${props => props.signUp ? Colors.WHITE : "transparent"}
-  `;
+`;
 
 export const DivLogoButton = styled.div`
   display: flex;
   align-items: center;
 
   gap: 15px;
+`;
+
+export const DivNavBar = styled.div`
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+
+  width: 100%;
+  height: 50px;
+
+  margin-top: 56px;
+
+  z-index:2;
+
+  background-color: ${Colors.BACKGROUND_PRIMARY};
+  color: ${Colors.WHITE};    
+`;
+
+export const Item = styled.li`
+  list-style-type: none;
+
+  padding: 15px;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  display: inline-flex;
 `;
