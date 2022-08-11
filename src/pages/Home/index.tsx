@@ -1,9 +1,58 @@
 import { Header } from "../../components/Header";
 
+import {
+  FirstDescriptionDiv,
+  TitleFirstDiv,
+  TextFirstDiv,
+  Button,
+  ImageFirstDiv,
+  SecondDescriptionDiv,
+  WorkDescriptionDiv,
+  ButtonsWork,
+  WorkWithUs,
+  RequestProfessionals,
+  UnderLine,
+  WorkInfo,
+  UnderLineWorkInfo,
+  ThridDescriptionDiv,
+} from './styles';
+
+
 export function Home(){
   return(
    <>
     <Header />
+    <FirstDescriptionDiv>
+      <TitleFirstDiv>Proporcionamos resolver seu problema e gerar trabalho para profissionais</TitleFirstDiv>
+      <TextFirstDiv>Viabilizando a conexão entre cliente e profissional visamos solucionar sua necessidade e dar a oportunidade de trabalho para o profissional de forma prática e segura</TextFirstDiv>
+      <Button white >Cadastrar</Button>
+      <ImageFirstDiv src='./src/img/FirstDescriptionDiv/image-first-div.png' alt='Imagem da Primeira Seção' />
+    </FirstDescriptionDiv>
+    <SecondDescriptionDiv>
+      <WorkDescriptionDiv>
+        <ButtonsWork>
+          <WorkWithUs>
+            <img src='./src/img/SecondDescriptionDiv/support-black.png' alt='Imagem do primeiro botão da Segunda Seção' />
+            <small>Trabalhe conosco</small>
+          </WorkWithUs>
+          <RequestProfessionals>
+            <img src="./src/img/SecondDescriptionDiv/zoom-in-black.png" alt="Imagem do segundo botão da Segunda Seção" />
+            <small>Solicite profissionais</small>
+          </RequestProfessionals>
+        </ButtonsWork>
+        <UnderLine />
+        <WorkInfo>
+          <h2>Trabalhe de forma informal</h2>
+          <p>Ofereça seus serviços na nossa plataforma de forma prática e viável</p>
+          <Button white={false}>Cadastrar</Button>
+        </WorkInfo>
+        <small>Saiba mais como trabalhar informalmente conosco.</small>
+        <UnderLineWorkInfo />
+      </WorkDescriptionDiv>
+    </SecondDescriptionDiv>
+    <ThridDescriptionDiv>
+      
+    </ThridDescriptionDiv>
    </>
   );
 }

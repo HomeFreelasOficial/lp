@@ -90,8 +90,6 @@ export const DivNavBar = styled.div`
   width: 100%;
   height: 50px;
 
-  margin-top: 56px;
-
   z-index:2;
 
   background-color: ${Colors.BACKGROUND_PRIMARY};

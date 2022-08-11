@@ -4,7 +4,8 @@ export enum Colors {
   BACKGROUND_PRIMARY = "#222628",
   WHITE = "#FFFFFF",
   BLACK = "#000000",
-  LIGHT_GRAY = "#D3D3D3"
+  LIGHT_GRAY = "#D3D3D3",
+  PINK = "#BC0081",
 }
 
 export const GlobalStyle = createGlobalStyle`
