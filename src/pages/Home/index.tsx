@@ -15,6 +15,13 @@ import {
   WorkInfo,
   UnderLineWorkInfo,
   ThridDescriptionDiv,
+  TitleTextThirdDiv,
+  UnderLineThirdDiv,
+  ContainerThirdDiv,
+  ContainerItemsThirdDiv,
+  ItemsThirdDiv,
+  ArrowThirdDiv,
+  
 } from './styles';
 
 
@@ -51,7 +58,23 @@ export function Home(){
       </WorkDescriptionDiv>
     </SecondDescriptionDiv>
     <ThridDescriptionDiv>
-      
+      <div>
+        <TitleTextThirdDiv>Serviços de qualidade, para todas as suas requisições</TitleTextThirdDiv>
+        <UnderLineThirdDiv />
+      </div>
+    <ContainerThirdDiv>
+        <ArrowThirdDiv src="./src/img/ThirdDescriptionDiv/image-arrow-left.png" alt="Imagem Seta Esquerda"/>
+          <ContainerItemsThirdDiv>
+            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-shield.png" alt="Imagem Item Segurança"/>
+            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-time.png" alt="Imagem Item Tempo"/>
+            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-check.png" alt="Imagem Item Serviço"/>
+          </ContainerItemsThirdDiv>
+        <ArrowThirdDiv src="./src/img/ThirdDescriptionDiv/image-arrow-right.png" alt="Imagem Seta Direita"/>
+    </ContainerThirdDiv>
+      <h2>Serviço</h2>
+      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
+
+      <Button white={false}>Cadastrar</Button>
     </ThridDescriptionDiv>
    </>
   );

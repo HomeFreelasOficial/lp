@@ -166,5 +166,74 @@ export const UnderLineWorkInfo = styled.div`
 `;
 
 export const ThridDescriptionDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;  
+
+  padding: 10px;
+
+  width: 100%;
+  height: 315px;
+
+  background-image: url('./src/img/ThirdDescriptionDiv/image-third-div.png');
+  background-repeat: no-repeat;
+
+  h2 {
+    font-size: 16px;
+    align-self: flex-start;
+  }
+
+  p {
+    font-size: 10px;
+
+    text-align: justify;
+  }
+
+  button {
+    align-self: flex-start;
+  }
+`;
+
+export const TitleTextThirdDiv = styled.p`
+  font-weight: 600;
+  font-size: 10px;
+`;
+
+export const UnderLineThirdDiv = styled.div`
+  width: 275px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background-color: ${Colors.BLACK};
+`;
+
+export const ContainerThirdDiv = styled.div`
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const ContainerItemsThirdDiv = styled.div`
+width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const ItemsThirdDiv = styled.img`
   
+  border: 1px solid ${Colors.BLACK};
+  border-radius: 10px;
+
+  background-color: ${Colors.WHITE};
+`;
+
+export const ArrowThirdDiv = styled.img`
+
 `;
