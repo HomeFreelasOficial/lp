@@ -85,7 +85,9 @@ export const SecondDescriptionDiv = styled.div`
   height: 40vh;
 
   background-image: url('./src/img/SecondDescriptionDiv/image-second-div.png');
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
 
 export const WorkDescriptionDiv = styled.div`
@@ -179,6 +181,8 @@ export const ThridDescriptionDiv = styled.div`
 
   background-image: url('./src/img/ThirdDescriptionDiv/image-third-div.png');
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   h2 {
     font-size: 16px;
