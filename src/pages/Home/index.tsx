@@ -1,4 +1,5 @@
 import { Header } from "../../components/Header";
+import { Footer } from '../../components/Footer';
 
 import {
   FirstDescriptionDiv,
@@ -33,17 +34,17 @@ export function Home(){
       <TitleFirstDiv>Proporcionamos resolver seu problema e gerar trabalho para profissionais</TitleFirstDiv>
       <TextFirstDiv>Viabilizando a conexão entre cliente e profissional visamos solucionar sua necessidade e dar a oportunidade de trabalho para o profissional de forma prática e segura</TextFirstDiv>
       <Button white >Cadastrar</Button>
-      <ImageFirstDiv src='./src/img/FirstDescriptionDiv/image-first-div.png' alt='Imagem da Primeira Seção' />
+      <ImageFirstDiv src='./src/img/FirstDescriptionDiv/image-first-div.svg' alt='Imagem da Primeira Seção' />
     </FirstDescriptionDiv>
     <SecondDescriptionDiv>
       <WorkDescriptionDiv>
         <ButtonsWork>
           <WorkWithUs>
-            <img src='./src/img/SecondDescriptionDiv/support-black.png' alt='Imagem do primeiro botão da Segunda Seção' />
+            <img src='./src/img/SecondDescriptionDiv/support.svg' alt='Imagem do primeiro botão da Segunda Seção' />
             <small>Trabalhe conosco</small>
           </WorkWithUs>
           <RequestProfessionals>
-            <img src="./src/img/SecondDescriptionDiv/zoom-in-black.png" alt="Imagem do segundo botão da Segunda Seção" />
+            <img src="./src/img/SecondDescriptionDiv/zoom-in.svg" alt="Imagem do segundo botão da Segunda Seção" />
             <small>Solicite profissionais</small>
           </RequestProfessionals>
         </ButtonsWork>
@@ -63,19 +64,20 @@ export function Home(){
         <UnderLineThirdDiv />
       </div>
     <ContainerThirdDiv>
-        <ArrowThirdDiv src="./src/img/ThirdDescriptionDiv/image-arrow-left.png" alt="Imagem Seta Esquerda"/>
+        <ArrowThirdDiv src="./src/img/ThirdDescriptionDiv/arrow-left.svg" alt="Imagem Seta Esquerda"/>
           <ContainerItemsThirdDiv>
-            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-shield.png" alt="Imagem Item Segurança"/>
-            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-time.png" alt="Imagem Item Tempo"/>
-            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-check.png" alt="Imagem Item Serviço"/>
+            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-shield.svg" alt="Imagem Item Segurança"/>
+            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-time.svg" alt="Imagem Item Tempo"/>
+            <ItemsThirdDiv src="./src/img/ThirdDescriptionDiv/image-check.svg" alt="Imagem Item Serviço"/>
           </ContainerItemsThirdDiv>
-        <ArrowThirdDiv src="./src/img/ThirdDescriptionDiv/image-arrow-right.png" alt="Imagem Seta Direita"/>
+        <ArrowThirdDiv src="./src/img/ThirdDescriptionDiv/arrow-right.svg" alt="Imagem Seta Direita"/>
     </ContainerThirdDiv>
       <h2>Serviço</h2>
       <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
 
       <Button white={false}>Cadastrar</Button>
     </ThridDescriptionDiv>
+    <Footer />
    </>
   );
 }

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { Colors } from "../../styles/global";
 
@@ -44,8 +43,8 @@ export const ButtonNavBar = styled.img`
 `;
 
 export const ImagePersonSign = styled.img`
-  width: 11px;
-  height: 11px;
+  width: 17px;
+  height: 17px;
   
   margin-bottom: 2px;
 

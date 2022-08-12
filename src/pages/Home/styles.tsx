@@ -84,7 +84,7 @@ export const SecondDescriptionDiv = styled.div`
   width: 100%;
   height: 40vh;
 
-  background-image: url('./src/img/SecondDescriptionDiv/image-second-div.png');
+  background-image: url('./src/img/SecondDescriptionDiv/image-second-div.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -179,7 +179,7 @@ export const ThridDescriptionDiv = styled.div`
   width: 100%;
   height: 315px;
 
-  background-image: url('./src/img/ThirdDescriptionDiv/image-third-div.png');
+  background-image: url('./src/img/ThirdDescriptionDiv/image-third-div.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
