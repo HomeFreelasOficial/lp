@@ -10,6 +10,8 @@ import {
   DivLogoButton,
   DivNavBar,
   Item,
+  NavBar,
+  
 } from "./styles";
 
 export function Header() {
@@ -21,6 +23,13 @@ export function Header() {
       <DivLogoButton>
         <ImageLogo src='./src/img/HeaderImages/letrassemfundo-2.svg' alt='Logo HomeFreelas' />
         <ButtonNavBar src='./src/img/HeaderImages/arrow-down.svg' alt='Botão para barra de navegação' onClick={ () => setActive(!active) } />
+          <NavBar>        
+              <ul>
+                <Item>Empresa</Item>
+                <Item>Sobre nós</Item>
+                <Item>Suporte</Item>
+              </ul>            
+          </NavBar>
       </DivLogoButton>
       <DivButtons>
         <ImagePersonSign src='./src/img/HeaderImages/person.svg' alt='Icone pessoa botões de cadastrar'/>

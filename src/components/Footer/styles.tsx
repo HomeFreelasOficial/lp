@@ -116,7 +116,7 @@ background-color: #222628;
 `;
 
 export const LogoAndroid = styled.img `
-content: url(./src/img/FooterImages/);
+content: url('./src/img/FooterImages/android.svg');
 margin-left: 1px;
 
 @media screen and (min-width: 1024px){

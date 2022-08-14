@@ -13,24 +13,52 @@ export const ImageLogo = styled.img`
   height: 38px;
 
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const ConfigHeader = styled.header`
-  width: 100%;
+    width: 100%;
+    height: 56px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+  
+    position: fixed;  
+    top: 0;
+  
+    z-index: 3;
+  
+    background-color: ${Colors.BACKGROUND_PRIMARY};
+    color: ${Colors.WHITE};
+
+    @media screen and (min-width: 768px) {
+    height: 91px
+  }
+`;
+
+export const NavBar = styled.nav`
+  display: flex;
+
+  width: 50px;
   height: 56px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-around;
+  visibility: hidden;
 
-  position: fixed;  
-  top: 0;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 91px;
+    
+    align-items: center;
+    justify-content: center;
 
-  z-index: 3;
-
-  background-color: ${Colors.BACKGROUND_PRIMARY};
-  color: ${Colors.WHITE};
+    visibility: visible;
+  }
 `;
 
 export const ButtonNavBar = styled.img`
@@ -40,6 +68,10 @@ export const ButtonNavBar = styled.img`
   cursor: pointer;
 
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    visibility: hidden;
+  }
 `;
 
 export const ImagePersonSign = styled.img`
@@ -49,6 +81,11 @@ export const ImagePersonSign = styled.img`
   margin-bottom: 2px;
 
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 export const DivButtons = styled.div`
@@ -58,6 +95,15 @@ export const DivButtons = styled.div`
 
   width: 200px;
   height: 35px;
+
+  @media screen and (min-width: 768px) {
+    width: 350px;
+    justify-content: flex-end;
+
+    & button {
+      font-size: 15px;
+    }
+  }
 `;
 
 export const ButtonSign = styled.button<ButtonSignProps>`
@@ -105,4 +151,8 @@ export const Item = styled.li`
   cursor: pointer;
 
   display: inline-flex;
+
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+  }
 `;
