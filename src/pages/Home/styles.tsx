@@ -112,6 +112,12 @@ export const SecondDescriptionDiv = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (min-width: 768px) {
+    height: 60vh;    
+
+    justify-content: flex-start;
+  }
 `;
 
 export const WorkDescriptionDiv = styled.div`
@@ -134,6 +140,17 @@ export const WorkDescriptionDiv = styled.div`
 
     font-size: 8px;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    height: 310px;
+
+    margin-left: 30px;
+
+    small {
+      font-size: 12px;
+    }
+  }
 `;
 
 export const ButtonsWork = styled.div`
@@ -148,6 +165,17 @@ export const ButtonsWork = styled.div`
 
   small {
     font-size: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    img {
+      width: 45px;
+      height: 45px;
+    }
+
+    small {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -168,9 +196,18 @@ export const UnderLine = styled.div`
   height: 1px;
 
   background-color: ${Colors.BLACK};
+
+  @media screen and (min-width: 768px) {
+    margin-left: 45px;
+  
+    width: 115px;
+  }
 `;
 
 export const WorkInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 5px 16px;
 
   h2 {
@@ -179,6 +216,18 @@ export const WorkInfo = styled.div`
 
   p {
     font-size: 10px
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 10px 16px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
   }
 `;
 
@@ -189,6 +238,12 @@ export const UnderLineWorkInfo = styled.div`
   height: 1px;
 
   background-color: ${Colors.LIGHT_GRAY};
+
+  @media screen and (min-width: 768px) {
+    width: 320px;
+
+    margin-left: 55px;
+  }
 `;
 
 export const ThridDescriptionDiv = styled.div`
