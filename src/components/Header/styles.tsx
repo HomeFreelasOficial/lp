@@ -38,7 +38,7 @@ export const ConfigHeader = styled.header`
     color: ${Colors.WHITE};
 
     @media screen and (min-width: 768px) {
-    height: 91px
+    height: 91px;
   }
 `;
 

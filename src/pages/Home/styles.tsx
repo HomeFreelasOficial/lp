@@ -19,7 +19,11 @@ export const FirstDescriptionDiv = styled.div`
 
   margin-top: 56px;
 
-  background-color: ${Colors.BACKGROUND_PRIMARY}
+  background-color: ${Colors.BACKGROUND_PRIMARY};
+
+  @media screen and (min-width: 768px) {
+    margin-top: 91px;
+  }
 `;
 
 export const TitleFirstDiv = styled.h1`
@@ -28,7 +32,13 @@ export const TitleFirstDiv = styled.h1`
   font-size: 16px;
   text-align: justify;
 
-  color: ${Colors.WHITE}
+  color: ${Colors.WHITE};
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+
+    font-size: 18px;
+  }
 `;
 
 export const TextFirstDiv = styled.p`
@@ -38,7 +48,13 @@ export const TextFirstDiv = styled.p`
   font-size: 13px;
   text-align: justify;
 
-  color: ${Colors.WHITE}
+  color: ${Colors.WHITE};
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+
+    font-size: 15px;
+  }
 `;
 
 export const Button = styled.button<ButtonColors>`
@@ -73,6 +89,14 @@ export const ImageFirstDiv = styled.img`
   position: absolute;
   top: 100px;
   left: 200px;
+
+  @media screen and (min-width: 768px) {
+    width: 350px;
+    height: 250px;
+
+    top: 50px;
+    left: 400px;
+  }
 `;
 
 export const SecondDescriptionDiv = styled.div`
