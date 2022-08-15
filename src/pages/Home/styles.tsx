@@ -256,7 +256,7 @@ export const ThridDescriptionDiv = styled.div`
   padding: 10px;
 
   width: 100%;
-  height: 315px;
+  height: 47vh;
 
   background-image: url('./src/img/ThirdDescriptionDiv/image-third-div.svg');
   background-repeat: no-repeat;
@@ -277,6 +277,18 @@ export const ThridDescriptionDiv = styled.div`
   button {
     align-self: flex-start;
   }
+
+  @media screen and (min-width: 768px) {
+    height: 60vh;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
 `;
 
 export const TitleTextThirdDiv = styled.p`
@@ -291,6 +303,10 @@ export const UnderLineThirdDiv = styled.div`
   border-radius: 10px;
 
   background-color: ${Colors.BLACK};
+
+  @media screen and (min-width: 768px) {
+    width: 412px;
+  }
 `;
 
 export const ContainerThirdDiv = styled.div`
@@ -299,6 +315,13 @@ export const ContainerThirdDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+
+    justify-content: stretch;
+    justify-content: center;
+  }
 `;
 
 export const ContainerItemsThirdDiv = styled.div`
@@ -309,14 +332,11 @@ width: 100%;
   justify-content: space-around;
 `;
 
-export const ItemsThirdDiv = styled.img`
-  
+export const ItemsThirdDiv = styled.img`  
   border: 1px solid ${Colors.BLACK};
   border-radius: 10px;
 
   background-color: ${Colors.WHITE};
 `;
 
-export const ArrowThirdDiv = styled.img`
-
-`;
+export const ArrowThirdDiv = styled.img``;
