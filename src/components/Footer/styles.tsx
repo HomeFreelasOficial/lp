@@ -1,77 +1,61 @@
 import styled from 'styled-components';
 
 export const List = styled.div `
-display: flex;
-flex-direction: column;
-align-items: space-between;
-gap: 10px;
-
-@media screen and (min-width: 1024px){
- gap: 35px;
-}
+  display: flex;
+  align-items: space-between;
+  flex-direction: column;
+  
+  gap: 5px;
+ 
+  @media screen and (min-width: 768px){
+   gap: 25px;
+  };
 `;
 
 export const ItemsList = styled.div `
-display: flex;
-flex-direction: column;
-gap: 1px;
-
-@media screen and (min-width: 1024px){
- gap: 3px;
-}
+  display: flex;
+  flex-direction: column;
+  
+  gap: 0.1em;
+ 
+  @media screen and (min-width: 768px){
+   gap: 0.3em;
+  };
 `;
 
 export const ItemList = styled.a `
-font-size: 10px;
-color: white;
-text-decoration: none;
-
-@media screen and (min-width: 1024px){
- font-size: 25px;
-};
-
-@media screen and (min-height: 800px){
- font-size: 13px;
-};
-
-@media screen and (min-height: 1024px){
- font-size: 20px;
-}
+  display: flex;
+  align-items: center;
+  
+  font-size: 12px;
+  text-decoration: none;
+  
+  color: white;
+ 
+  @media screen and (min-width: 768px){
+   font-size: 12px;
+  };
 `;
 
 export const Title = styled.h3 `
-font-size: 10px;
-font-weight: 700;
-color: white;
-
-@media screen and (min-width: 1024px){
- font-size: 25px;
-};
-
-@media screen and (min-height: 800px){
- font-size: 14px;
-};
-
-@media screen and (min-height: 1024px){
- font-size: 22px;
-};
+  font-size: 0.8em;
+  font-weight: 700;
+  
+  color: white;
+ 
+  @media screen and (min-width: 768px){
+   font-size: 15px;
+  };
 `;
 
 export const Text = styled.p `
-font-size: 10px;
-color: white;
-
-@media screen and (min-width: 1024px){
- font-size: 15px;
-}
-
-@media screen and (min-height: 800px){
- font-size: 13px;
-}
-
-@media screen and (min-height: 1024px){
- font-size: 18px;
-}
+  font-size: 0.7em;
+  
+  color: white;
+ 
+  @media screen and (min-width: 768px){
+   font-size: 14px;
+  };
 `;
 
 export const ListDown = styled.div `
@@ -81,50 +65,49 @@ export const ListDown = styled.div `
 `;
 
 export const ListUp = styled.div `
-display: flex;
-justify-content: space-around;
-margin-right: auto;
-width: 90vw;
-
-@media screen and (min-width: 1024px){
-  gap: 75px;
-}
+  display: flex;
+  justify-content: space-around;
+  
+  margin-right: auto;
+  gap: 32px;
+ 
+  @media screen and (min-width: 768px){
+    gap: 75px;
+  };
 `;
 export const ConfigFooter = styled.footer `
-display: flex;
-align-items: space-around;
-justify-content: space-around;
-flex-direction: column;
-
-width: auto;
-height: 120px;
-padding: 10px;
-
-background-color: #222628;
-
-@media screen and (min-height: 800px){
- height: 300px;
-}
-
-@media screen and (min-height: 1024px){
- height: 550px;
-}
-
-@media screen and (min-width: 1024px){
-  padding: 64px;
-}
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+  
+  height: 20vh;
+  padding: 16px;
+  gap: 15px; /* 1.5em */
+  
+  background-color: #222628;
+ 
+  @media screen and (min-width: 768px){
+    height: 30vh;
+    padding: 2em;
+  }
+ 
+  @media screen and (min-height: 768px){
+   gap: 2.5em;
+  }
+ 
+  @media screen and (min-width: 1366px){
+   padding: 3em;
+  }
 `;
 
 export const LogoAndroid = styled.img `
-content: url('./src/img/FooterImages/android.svg');
-margin-left: 1px;
-
-@media screen and (min-width: 1024px){
- width: 23px;
- margin-left: 8px;
-}
-
-@media screen and (min-height: 1024px){
- width: 26px;
-}
+  content: url('./src/img/FooterImages/android.svg');
+  
+  width: 10px;
+  margin-left: 1px;
+ 
+  @media screen and (min-width: 768px){
+   width: 23px;
+   margin-left: 8px;
+  };
 `;

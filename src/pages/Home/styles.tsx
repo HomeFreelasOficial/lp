@@ -219,7 +219,9 @@ export const WorkInfo = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    padding: 10px 16px;
+    padding-left: 45px;
+
+    gap: 20px;
 
     h2 {
       font-size: 20px;
@@ -321,6 +323,8 @@ export const ContainerThirdDiv = styled.div`
 
     justify-content: stretch;
     justify-content: center;
+
+    gap: 40px;
   }
 `;
 
@@ -330,6 +334,10 @@ width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media screen and (min-width: 768px) {
+    gap: 40px;
+  }
 `;
 
 export const ItemsThirdDiv = styled.img`  
