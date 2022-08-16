@@ -8,25 +8,25 @@ export function HeaderCadastro(){
   const Wrapper = styled.div `
   display: flex;
   align-items: center;
-  gap: 9px;
-  margin-left: 9px;
+  gap: 0.9em;
+  margin-left: 0.9em;
   justify-content: center;
 
   @media screen and (min-width: 1024px) {
-    gap: 20px;
+    gap: 2em;
   }
   `;
 
   const Header = styled.header `
   background-color: ${Colors.HEADER_BLACK};
   display: fixed;
-  height: 56px;
+  height: 5.6em;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   
   @media screen and (min-width: 1024px) {
-    height: 80px;
+    height: 8em;
   }
 
   `
@@ -56,12 +56,12 @@ export function HeaderCadastro(){
   
   `
   
+ 
 
   return (
     <Header>
       <Wrapper>
       <ItemLogo></ItemLogo>  
-     <Item>Empresa</Item>
      <Item>Sobre nós</Item>
      <Item>Suporte</Item>
     </Wrapper>
