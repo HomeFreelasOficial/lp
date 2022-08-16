@@ -24,6 +24,10 @@ export const FirstDescriptionDiv = styled.div`
   @media screen and (min-width: 768px) {
     margin-top: 91px;
   }
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 30px;
+  }
 `;
 
 export const TitleFirstDiv = styled.h1`
@@ -38,6 +42,10 @@ export const TitleFirstDiv = styled.h1`
     width: 50%;
 
     font-size: 18px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 24px;
   }
 `;
 
@@ -54,6 +62,10 @@ export const TextFirstDiv = styled.p`
     width: 50%;
 
     font-size: 15px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 18px;
   }
 `;
 
@@ -79,6 +91,14 @@ export const Button = styled.button<ButtonColors>`
 
   color: ${props => props.white ? Colors.BLACK : Colors.WHITE};
   background-color: ${props => props.white ? Colors.WHITE : Colors.BLACK};
+
+  @media screen and (min-width: 1024px) {
+    width: 130px;
+    height: 50px;
+    padding: 10px;
+
+    font-size: 18px;
+  }
 `;
 
 export const ImageFirstDiv = styled.img`
@@ -96,6 +116,14 @@ export const ImageFirstDiv = styled.img`
 
     top: 50px;
     left: 400px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 472px;
+    height: 295px;
+    
+    top: 30px;
+    left: 750px;
   }
 `;
 
@@ -151,6 +179,11 @@ export const WorkDescriptionDiv = styled.div`
       font-size: 12px;
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    width: 500px;
+    height: 370px;
+  }
 `;
 
 export const ButtonsWork = styled.div`
@@ -202,6 +235,10 @@ export const UnderLine = styled.div`
   
     width: 115px;
   }
+
+  @media screen and (min-width: 1024px) {
+    margin-left: 60px;
+  }
 `;
 
 export const WorkInfo = styled.div`
@@ -231,6 +268,16 @@ export const WorkInfo = styled.div`
       font-size: 15px;
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    h2 {
+      font-size: 23px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
 `;
 
 export const UnderLineWorkInfo = styled.div`
@@ -245,6 +292,10 @@ export const UnderLineWorkInfo = styled.div`
     width: 320px;
 
     margin-left: 55px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-left: 80px;
   }
 `;
 
@@ -291,6 +342,16 @@ export const ThridDescriptionDiv = styled.div`
       font-size: 15px;
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    h2 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+  }
 `;
 
 export const TitleTextThirdDiv = styled.p`
@@ -308,6 +369,10 @@ export const UnderLineThirdDiv = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 412px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 465px;
   }
 `;
 
@@ -329,7 +394,7 @@ export const ContainerThirdDiv = styled.div`
 `;
 
 export const ContainerItemsThirdDiv = styled.div`
-width: 100%;
+  width: 100%;
 
   display: flex;
   align-items: center;
@@ -345,6 +410,10 @@ export const ItemsThirdDiv = styled.img`
   border-radius: 10px;
 
   background-color: ${Colors.WHITE};
+
+  @media screen and (min-width: 1024px) {
+    height: 150px;
+  }
 `;
 
 export const ArrowThirdDiv = styled.img``;
