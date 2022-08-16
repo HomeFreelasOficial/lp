@@ -11,15 +11,18 @@ export function BodyCadastro(){
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-block: 39px;
+  padding-block: 4.5em;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 1024px){
-    padding-block: 100px;
+  @media screen and (min-width: 768px){
+    padding-block: 10em;
   }
 
+  @media screen and (min-height: 768px){
+    padding-block: 10em;
+  }
   `
 
 
