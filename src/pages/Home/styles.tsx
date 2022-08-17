@@ -15,18 +15,21 @@ export const FirstDescriptionDiv = styled.div`
   overflow: hidden;
 
   width: 100%;
-  height: 50vh;
+  height: max-content;
 
   margin-top: 56px;
-
+  padding: 10px;
   background-color: ${Colors.BACKGROUND_PRIMARY};
 
-  @media screen and (min-width: 768px) {
-    margin-top: 91px;
+  @media (min-width: 601px) {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 10px;
+    flex-direction: row;
   }
 
-  @media screen and (min-width: 1024px) {
-    padding-left: 30px;
+  @media (min-width: 768px) {
+    margin-top: 91px;
   }
 `;
 
@@ -39,8 +42,6 @@ export const TitleFirstDiv = styled.h1`
   color: ${Colors.WHITE};
 
   @media screen and (min-width: 768px) {
-    width: 50%;
-
     font-size: 18px;
   }
 
@@ -50,7 +51,6 @@ export const TitleFirstDiv = styled.h1`
 `;
 
 export const TextFirstDiv = styled.p`
-  width: 45%;
   padding: 10px;
 
   font-size: 13px;
@@ -59,15 +59,33 @@ export const TextFirstDiv = styled.p`
   color: ${Colors.WHITE};
 
   @media screen and (min-width: 768px) {
-    width: 50%;
-
     font-size: 15px;
   }
 
   @media screen and (min-width: 1024px) {
     font-size: 18px;
   }
+
+  @media (max-width: 601px) {
+    width: 50%;
+  }
+
+  @media (max-width: 458px) {
+    width: 100%;
+  }
 `;
+
+export const HeroDescription = styled.div`
+  width: 100%;
+
+  @media (min-width: 601px) {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+`
 
 export const Button = styled.button<ButtonColors>`
   display: flex;
@@ -104,26 +122,21 @@ export const Button = styled.button<ButtonColors>`
 export const ImageFirstDiv = styled.img`
   display: block;
   
-  max-width: 100%;
+  width: 214px;
+  height: 134px;
 
   position: absolute;
-  top: 100px;
-  left: 200px;
+  bottom: 34px;
+  right: 14px;
 
-  @media screen and (min-width: 768px) {
-    width: 350px;
-    height: 250px;
-
-    top: 50px;
-    left: 400px;
+  @media (min-width: 601px) {
+    position: static;
+    width: 45%;
+    height: auto;
   }
 
-  @media screen and (min-width: 1024px) {
-    width: 472px;
-    height: 295px;
-    
-    top: 30px;
-    left: 750px;
+  @media (max-width: 458px) {
+    display: none;
   }
 `;
 

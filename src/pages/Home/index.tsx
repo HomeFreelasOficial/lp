@@ -21,8 +21,8 @@ import {
   ContainerThirdDiv,
   ContainerItemsThirdDiv,
   ItemsThirdDiv,
-  ArrowThirdDiv,
-  
+  ArrowThirdDiv,  
+  HeroDescription
 } from './styles';
 
 
@@ -31,9 +31,12 @@ export function Home(){
    <>
     <Header />
     <FirstDescriptionDiv>
+      <HeroDescription>
       <TitleFirstDiv>Proporcionamos resolver seu problema e gerar trabalho para profissionais</TitleFirstDiv>
-      <TextFirstDiv>Viabilizando a conexão entre cliente e profissional visamos solucionar sua necessidade e dar a oportunidade de trabalho para o profissional de forma prática e segura</TextFirstDiv>
-      <Button white >Cadastrar</Button>
+        <TextFirstDiv>Viabilizando a conexão entre cliente e profissional visamos solucionar sua necessidade e dar a oportunidade de trabalho para o profissional de forma prática e segura</TextFirstDiv>
+        <Button white >Cadastrar</Button>
+        </HeroDescription>      
+              
       <ImageFirstDiv src='./src/img/FirstDescriptionDiv/image-first-div.svg' alt='Imagem da Primeira Seção' />
     </FirstDescriptionDiv>
     <SecondDescriptionDiv>
