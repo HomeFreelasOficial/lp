@@ -1,42 +1,55 @@
-import React, { useState } from 'react';
-import './styles.css'
+import { useState } from "react";
 
-export function Header(){  
-const [navbar, setNavBar] = useState(false);
+import { 
+  ImageLogo, 
+  ConfigHeader,
+  ButtonNavBar,
+  ImagePersonSign,
+  DivButtons,
+  ButtonSign,
+  DivLogoButton,
+  DivNavBar,
+  Item,
+  NavBar,
+  
+} from "./styles";
 
-const changeBackground = () => {
-  if(window.scrollY >= 80){
-    setNavBar(true);
-  }else{
-    setNavBar(false);
-  }
-}
+export function Header() {
+  const [active, setActive] = useState<boolean>(false); 
 
-window.addEventListener("scroll", changeBackground);
-
-  return (
+  return(
     <>
-     <header className='container-fixed'>
-      <div className="image">
-        <img src="./src/img/HeaderImages/letrassemfundo-2.png" alt="Logo HomeFrellas" />
-      </div>
-
-      <div className="menu">
-        <nav className="nav-itens">
-          <ul>
-            <li>Empresa</li>
-            <li>Sobre nós</li>
-            <li>Suporte</li>
-          </ul>
-        </nav>
-      </div>
-
-      <div className="buttons">
-        <img src="./src/img/HeaderImages/Person-buttons.png" alt="Ícone para Botão de Login" />
-        <button className="btn-signIn">Fazer Login</button>
-        <button className="btn-signUp">Cadastre-se</button>
-      </div>
-    </header>
+    <ConfigHeader>
+      <DivLogoButton>
+        <ImageLogo src='./src/img/HeaderImages/letrassemfundo-2.svg' alt='Logo HomeFreelas' />
+        <ButtonNavBar src='./src/img/HeaderImages/arrow-down.svg' alt='Botão para barra de navegação' onClick={ () => setActive(!active) } />
+          <NavBar>        
+              <ul>
+                <Item>Empresa</Item>
+                <Item>Sobre nós</Item>
+                <Item>Suporte</Item>
+              </ul>            
+          </NavBar>
+      </DivLogoButton>
+      <DivButtons>
+        <ImagePersonSign src='./src/img/HeaderImages/person.svg' alt='Icone pessoa botões de cadastrar'/>
+        <ButtonSign>Fazer login</ButtonSign>
+        <ButtonSign signUp >Cadastre-se</ButtonSign>
+      </DivButtons>
+    </ConfigHeader>
+      
+      {active ? 
+        <DivNavBar>
+          <nav>
+            <ul>
+              <Item>Empresa</Item>
+              <Item>Sobre nós</Item>
+              <Item>Suporte</Item>
+            </ul>
+          </nav>
+        </DivNavBar>
+      : <></>}
+  
     </>
   );
 }
