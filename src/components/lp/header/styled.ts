@@ -63,7 +63,7 @@ export const Arrow = styled.span<{ active: boolean }>`
     background-size: 80%;
     cursor: pointer;
     background-repeat: no-repeat;
-    transition: transform .3s ease-in-out;
+    transition: transform .1s ease-in-out;
     transform: ${props => props.active ? 'rotate(180deg)' : 'rotate(0)'};
     @media (min-width: 900px) {
         display: none;
@@ -84,7 +84,7 @@ export const ActionButton = styled.button<{ variant: 'primary' | 'secondary' }>`
     line-height: 2.5rem;
     cursor: pointer;
     border-radius: 8px;
-    transition: filter .2s;
+    transition: filter .1s;
     :hover {
         filter: contrast(.85);
     }
@@ -108,7 +108,7 @@ export const Menu = styled(Container)<{ active: boolean }>`
     align-items: center;
     flex-direction: row;
     column-gap: 3.3rem;
-    transition: transform .3s ease-in-out;
+    transition: transform .1s ease-in-out;
     ${props => props.active ? css`
         transform: translateY(95%);
     ` : css`

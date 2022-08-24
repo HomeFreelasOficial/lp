@@ -4,6 +4,7 @@ export const GlobalStyles = createGlobalStyle`
     :root {
         --gray: #222628;
         --font-family: 'Poppins', sans-serif;
+        --pink: #BC0081;
     }
 
     * {
