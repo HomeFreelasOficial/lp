@@ -20,6 +20,21 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 62.5%;
     }
 
+    body {
+        overflow-x: hidden;
+        scroll-behavior: auto;
+
+        ::-webkit-scrollbar {
+            background: var(--gray);
+            width: 1rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 12px;
+            background: var(--pink);
+        }
+    }
+
     @media (max-width: 650px) {
         html {
             font-size: 50%;
