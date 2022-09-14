@@ -9,19 +9,42 @@ export default function Footer() {
                         <S.TitleColumns>
                             HomeFreelas
                         </S.TitleColumns>
-                        
+                        <S.ItemsColumns>
+                            Diferencias
+                        </S.ItemsColumns>
+                        <S.ItemsColumns>
+                            Segurança
+                        </S.ItemsColumns>
+                        <S.ItemsColumns>
+                            Privacidade e termos
+                        </S.ItemsColumns>
                     </S.ItemsFooterDiv>
 
                     <S.ItemsFooterDiv>
                         <S.TitleColumns>
                             Empresa
                         </S.TitleColumns>
+                        <S.ItemsColumns>
+                            Sobre nós
+                        </S.ItemsColumns>
+                        <S.ItemsColumns>
+                            Fale conosco
+                        </S.ItemsColumns>
+                        <S.ItemsColumns>
+                            Acesse o suporte
+                        </S.ItemsColumns>
                     </S.ItemsFooterDiv>
 
                     <S.ItemsFooterDiv>
                         <S.TitleColumns>
                             Download
                         </S.TitleColumns>
+                        <S.ItemsColumns>
+                            Desktop                               
+                        </S.ItemsColumns>
+                        <S.ItemsColumns>
+                            Android              
+                        </S.ItemsColumns>
                     </S.ItemsFooterDiv>
                 </S.ColumnsDiv>
 

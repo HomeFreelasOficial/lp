@@ -12,12 +12,16 @@ export const Container = styled.div`
 
 export const ColumnsDiv = styled.div`
     display: grid;
-    grid-column: 3;
+    grid-row: auto;
+
+    padding-bottom: 8rem; 
 `
 
 export const ItemsFooterDiv = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-row: 1;
+    
+    cursor: pointer;
 `
 
 export const TitleColumns = styled.h2`
@@ -25,10 +29,16 @@ export const TitleColumns = styled.h2`
     font-weight: bold;
     font-size: 2.5rem;
     line-height: 2.5rem;
+
+    padding-bottom: 4.4rem;
 `
 
 export const ItemsColumns = styled.a`
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
 
+    padding: 0.9rem 0;
 `
 
 export const SpanCopyright = styled.div`
