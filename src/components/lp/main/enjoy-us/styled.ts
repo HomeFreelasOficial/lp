@@ -45,7 +45,7 @@ export const Card = styled.div`
     }
 `
 
-export const CardIcon = styled.span<{ icon: string }>`
+export const CardIcon = styled.span<{ icon: string, active: boolean }>`
     display: block;
     mask-image: ${props => `url(${props.icon})`};
     mask-repeat: no-repeat;

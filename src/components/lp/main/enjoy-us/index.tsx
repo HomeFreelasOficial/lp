@@ -30,24 +30,26 @@ export default function EnjoyUs() {
   const secondActiveItem = activeItemIndex === 1;
   const thirdActiveItem = activeItemIndex === 2;
 
+  const activeKey = firstActiveItem ? "security" : secondActiveItem ? "time" : "solve";
+
   return (
     <Section background="url(/assets/enjoy-us-background.svg)">
       <S.Wrapper>
         <S.Title>Serviços de qualidade, para todas as suas requisições</S.Title>
         <S.Cards>
           <S.Card>
-            <S.CardIcon icon="/assets/security-icon.svg" />
+            <S.CardIcon icon="/assets/security-icon.svg" active={firstActiveItem} onClick={() => {setActiveItemIndex(0)}} />
           </S.Card>
           <S.Card>
-            <S.CardIcon icon="/assets/time-icon.svg" />
+            <S.CardIcon icon="/assets/time-icon.svg" active={secondActiveItem} onClick={() => {setActiveItemIndex(1)}} />
           </S.Card>
           <S.Card>
-            <S.CardIcon icon="/assets/solve-icon.svg" />
+            <S.CardIcon icon="/assets/solve-icon.svg" active={thirdActiveItem} onClick={() => {setActiveItemIndex(2)}} />
           </S.Card>
         </S.Cards>
         <S.ServiceDescription>
-          <h1>Título</h1>
-          <p>Descrição</p>
+          <h1>{data[activeKey].title}</h1>
+          <p>{data[activeKey].description}</p>
           <Button label="Cadastrar" variant="secondary" />
         </S.ServiceDescription>
       </S.Wrapper>
