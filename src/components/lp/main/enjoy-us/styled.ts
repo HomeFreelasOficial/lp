@@ -21,6 +21,11 @@ export const Cards = styled.div`
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+
+    
+    @media (max-width: 768px) {
+        gap: 2rem;
+    }
 `
 
 export const Card = styled.div`
@@ -43,18 +48,37 @@ export const Card = styled.div`
             background-color: var(--pink);
         }
     }
+
+    @media (max-width: 1190px) {
+        width: 25rem;
+        height: 22rem;
+    }
+
+    @media (max-width: 936px) {
+        width: 20rem;
+        height: 17rem;
+    }
 `
 
 export const CardIcon = styled.span<{ icon: string, active: boolean }>`
     display: block;
     mask-image: ${props => `url(${props.icon})`};
     mask-repeat: no-repeat;
-    mask-size: auto;
+    /* mask-size: cover; */
     mask-position: center;
     background-color: #000;
     transition: all .3s ease-in-out;
     width: 80%;
     height: 80%;
+
+    @media (max-width: 1190px) {
+        width: 75%;
+        height: 75%;
+    }
+
+    @media (max-width: 936px) {
+        
+    }
 `
 
 export const ServiceDescription = styled.div`
