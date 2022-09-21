@@ -10,7 +10,7 @@ export default function Footer() {
                             HomeFreelas
                         </S.TitleColumns>
                         <S.ItemsColumns>
-                            Diferencias
+                            Diferenciais
                         </S.ItemsColumns>
                         <S.ItemsColumns>
                             Segurança

@@ -8,7 +8,7 @@ export const Container = styled.div<{ background?: string }>`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: local;
 `
 
 Container.defaultProps = {
