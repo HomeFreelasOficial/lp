@@ -38,10 +38,10 @@ export default function EnjoyUs() {
         <S.Title>Serviços de qualidade, para todas as suas requisições</S.Title>
         <S.Cards>
           <S.Card>
-            <S.CardIcon icon="/assets/security-icon.svg" active={firstActiveItem} onClick={() => {setActiveItemIndex(0)}} />
+            <S.CardIcon itsNotASolve icon="/assets/security-icon.svg" active={firstActiveItem} onClick={() => {setActiveItemIndex(0)}} />
           </S.Card>
           <S.Card>
-            <S.CardIcon icon="/assets/time-icon.svg" active={secondActiveItem} onClick={() => {setActiveItemIndex(1)}} />
+            <S.CardIcon itsNotASolve icon="/assets/time-icon.svg" active={secondActiveItem} onClick={() => {setActiveItemIndex(1)}} />
           </S.Card>
           <S.Card>
             <S.CardIcon icon="/assets/solve-icon.svg" active={thirdActiveItem} onClick={() => {setActiveItemIndex(2)}} />

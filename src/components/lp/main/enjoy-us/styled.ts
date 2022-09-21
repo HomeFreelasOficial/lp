@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
     width: 100%;
@@ -60,24 +60,38 @@ export const Card = styled.div`
     }
 `
 
-export const CardIcon = styled.span<{ icon: string, active: boolean }>`
+export const CardIcon = styled.span<{ icon: string, active: boolean, itsNotASolve?: boolean }>`
     display: block;
     mask-image: ${props => `url(${props.icon})`};
     mask-repeat: no-repeat;
-    /* mask-size: cover; */
+    mask-size: cover;
     mask-position: center;
     background-color: #000;
     transition: all .3s ease-in-out;
-    width: 80%;
-    height: 80%;
+    width: 12rem;
+    height: 12rem;
 
-    @media (max-width: 1190px) {
-        width: 75%;
-        height: 75%;
+    ${props => props.itsNotASolve ?
+        css`
+            width: 22rem;
+            height: 22rem;
+        `
+    : 
+        ''
     }
 
     @media (max-width: 936px) {
-        
+    ${props => props.itsNotASolve ?
+        css`
+            width: 17rem;
+            height: 17rem;
+        `
+    : 
+        css`
+            width: 10rem;
+            height: 10rem;
+        `
+    }
     }
 `
 
