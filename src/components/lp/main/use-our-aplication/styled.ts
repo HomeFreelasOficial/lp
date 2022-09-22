@@ -96,5 +96,9 @@ export const Indicator = styled.span<{activeItemIndex: number}>`
     background: #BC0081;
     transition: transform .3s cubic-bezier(.12,.28,.24,.91);
     transform: ${props => `translateX(calc(${(props.activeItemIndex * 100)}% + ${(props.activeItemIndex * 7.2)}rem))`};
+
+    @media (max-width: 768px) {        
+        border-radius: 100%;
+    }
 `
 

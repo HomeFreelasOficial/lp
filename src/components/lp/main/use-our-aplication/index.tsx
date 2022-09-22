@@ -32,8 +32,7 @@ export default function UseOurAplication() {
   return (
     <Section background="url(/assets/use-our-app-background.svg)">
       <S.Box>
-        <div>
-          <S.BoxHeader>
+          <S.BoxHeader> 
             <S.Button
               active={firstActiveItem}
               onClick={() => setActiveItemIndex(0)}
@@ -50,7 +49,6 @@ export default function UseOurAplication() {
             </S.Button>
           </S.BoxHeader>
           <S.Indicator activeItemIndex={activeItemIndex} />
-        </div>
         <S.BoxMain>
           <h1>{data[activeKey].title}</h1>
           <p>{data[activeKey].description}</p>

@@ -11,6 +11,10 @@ export const Content = styled.div`
     row-gap: 4.3rem;
     color: #fff;
     width: 50%;
+
+    @media (max-width: 1022px) {
+        width: 100%;
+    }
 `   
 
 export const Title = styled.h1`
@@ -35,4 +39,8 @@ export const Image = styled.div`
     background-position: center;
     border-radius: 8px;
     background-color: linear-gradient(90deg, rgba(1,0,36,1) 0%, rgba(188,0,129,1) 100%, rgba(0,212,255,1) 100%);
+
+    @media (max-width: 1022px) {
+        display: none;
+    }
 `

@@ -35,9 +35,27 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 768px) {
         html {
             font-size: 50%;
-        }   
+        }
+    }
+
+    @media (max-width: 625px) {
+        html {
+            font-size: 40%;
+        }
+    }
+
+    @media (max-width: 485px) {
+        html {
+            font-size: 35%;
+        }
+    }
+
+    @media (max-width: 425px) {
+        html {
+            font-size: 30%;
+        }
     }
 `

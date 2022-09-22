@@ -47,6 +47,10 @@ export const Card = styled.div`
         span {
             background-color: var(--pink);
         }
+
+        @media (max-width: 425px) {
+            box-shadow: 0px 4px 2px 1px var(--pink);
+        }
     }
 
     @media (max-width: 1190px) {
