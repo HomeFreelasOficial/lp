@@ -3,6 +3,13 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
+    
+    @media (max-width: 426px) {
+        height: 45rem;
+        
+        align-items: center;
+        justify-content: center;
+    }
 `
 
 export const Content = styled.div`
@@ -21,12 +28,22 @@ export const Title = styled.h1`
     font-size: 2.6rem;
     font-weight: 700;
     line-height: 2.5rem;
+
+    @media (max-width: 426px) {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
 `
 
 export const Text = styled.p`
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.5rem;
+
+    @media (max-width: 426px) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
 `
 
 export const Image = styled.div`

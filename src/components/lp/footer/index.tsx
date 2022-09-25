@@ -38,10 +38,7 @@ export default function Footer() {
                     <S.ItemsFooterDiv>
                         <S.TitleColumns>
                             Download
-                        </S.TitleColumns>
-                        <S.ItemsColumns>
-                            Desktop                               
-                        </S.ItemsColumns>
+                        </S.TitleColumns>                        
                         <S.ItemsColumns>
                             Android              
                         </S.ItemsColumns>
