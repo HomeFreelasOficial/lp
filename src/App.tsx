@@ -1,8 +1,12 @@
-import { Home } from '../src/pages/Home';
+import LandingPage from "./components/lp";
+import { GlobalStyles } from "./styles/global";
 
 export function App() {
   return (
-   <Home />
+    <>
+      <GlobalStyles />
+      <LandingPage />
+    </>
   );
 }
 
