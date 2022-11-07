@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Background = styled.div `
-background-image: url(./src/assets/frameloginecadastro.svg);
 width: auto;
 height: auto;
 padding-block: 17.5em;

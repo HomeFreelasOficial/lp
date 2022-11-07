@@ -1,107 +1,29 @@
 import { useState } from "react"
 import styled from "styled-components"
 import { BotaoFormulario } from "./Botao/Botao"
+import {
+  Wrapper,
+  Title,
+  Formulario,
+  Input,
+  Botoes,
+  Texto, 
+  LinkLogin
+} from "./styles"
 
 export function FormularioCadastro(){
 
   const [account, setAccount] = useState(
     {
       nome: "",
-      sobrenome: "",
+      cpf: "",
       email: "",
       confirmaEmail: "",
       senha: "",
       confirmaSenha: ""
     }
   )
-  
-  const Wrapper = styled.div `
-  display:flex;
-  flex-direction: column;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 8px;
-  width: 341px;
-  height: 469px;
-  margin-inline: 44px;
-  align-items: center;
-  text-align: center;
-  box-shadow: 2px 0px rgba(0, 0, 0, 0.5);
-  gap: 20px;
-
-  @media screen and (min-width: 1024px) {
-    width: 413px;
-    height: 483px;
-  }
-
-  `
-  const Title = styled.h2 `
-  margin-top: 23px;
-  font-weight: 700;
-  font-size: 20px;
-
-  @media screen and (min-width: 1024px){
-    font-size: 25px;
-  }
-  `
-
-  const Input = styled.input `
-  border: 1px solid rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  padding-left: 8px;
-  width: 262px;
-  height: 36px;
-
-  ::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 15px;
-    font-family: 'Poppins';
-  }
-  `
-
-  const Formulario = styled.form `
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  margin-inline: 36px;
-
-  @media screen and (min-width: 1024px){
-  margin-inline: 70px;
-  }
-  `
-
-  const Botoes = styled.div `
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-top: 8px;
-  width: 280px;
-
-  @media screen and (min-width: 1024px){
-    gap: 6px;
-  }
-  `
-  const Texto = styled.p `
-  font-size: 10px;
-  margin-top: 4px;
-  font-weight: 500;
-
-  @media screen and (min-width: 1024px){
-    font-size: 15px;
-  }
-  `
-  const LinkLogin = styled.a `
-  font-size: 10px;
-  font-weight: 700;
-  color: black;
-  text-decoration: none;
-
-  @media screen and (min-width: 1024px){
-    font-size: 15px;
-  }
-  `
+ 
 
   return (
   <Wrapper>
@@ -113,14 +35,14 @@ export function FormularioCadastro(){
       name="nome" 
       value={account.nome}   
       id="nome" 
-         placeholder="Insira seu nome"/>
+         placeholder="Insira seu nome completo"/>
       <Input 
       type="text" 
-      onChange={(e) => setAccount({...account, sobrenome: e.target.value})}
-      name="sobrenome" 
-      value={account.sobrenome}   
-      id="sobrenome" 
-         placeholder="Insira seu sobrenome"/>
+      onChange={(e) => setAccount({...account, cpf: e.target.value})}
+      name="cpf" 
+      value={account.cpf}   
+      id="cpf" 
+         placeholder="Insira seu cpf"/>
       <Input 
       type="email" 
       onChange={(e) => setAccount({...account, email: e.target.value})}
@@ -152,7 +74,7 @@ export function FormularioCadastro(){
     <Botoes>
       <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="273px"/>
     </Botoes>
-    <Texto>Já tem conta? Faça <LinkLogin href="#">login</LinkLogin></Texto>
+    <Texto>Já tem conta? Faça <LinkLogin href="signin">login</LinkLogin></Texto>
     </Formulario>
   </Wrapper>
   

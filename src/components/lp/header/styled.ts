@@ -77,11 +77,12 @@ export const Actions = styled.div`
     margin: 0 0 0 auto;
 `
 
-export const ActionButton = styled.button<{ variant: 'primary' | 'secondary' }>`
+export const ActionButton = styled.a<{ variant: 'primary' | 'secondary' }>`
     padding: 1.5rem 1.6rem;
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.5rem;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 8px;
     transition: filter .1s;
