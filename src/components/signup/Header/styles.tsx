@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Colors } from "../../global";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -13,7 +12,7 @@ export const Wrapper = styled.div`
   `;
 
 export const Header = styled.header`
-  background-color: ${Colors.HEADER_BLACK};
+  background-color: #222628;
   display: fixed;
   height: 5.6em;
   width: 100%;

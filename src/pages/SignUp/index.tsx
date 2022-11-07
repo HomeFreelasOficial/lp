@@ -1,8 +1,9 @@
 
 import styled from "styled-components"
-import { BodyCadastro } from "../../components/signup/BodyCadastro/BodyCadastro"
-import { Footer } from "../../components/Footer/Footer"
-import { HeaderCadastro } from "../../components/HeaderCadastro/HeaderCadastro"
+import { BodyCadastro } from "../../components/signup/Body/Body"
+import { Footer } from "../../components/signup/Footer/Footer"
+import { HeaderCadastro } from "../../components/signup/Header/Header"
+
 
 export default function SignUp() {
 

@@ -103,19 +103,6 @@ export function FormularioCadastro(){
   }
   `
 
-  const [clienteClicado, setClienteClicado] = useState(false)
-  const [profissionalClicado, setProfissionalClicado] = useState(false)
-
-  function handleClienteClicado() {
-    setClienteClicado(!clienteClicado)
-    setProfissionalClicado(false)
-  }
-
-  function handleProfissionalClicado() {
-    setProfissionalClicado(!profissionalClicado)
-    setClienteClicado(false)
-  }
-
   return (
   <Wrapper>
    <Title>Cadastre-se</Title>
@@ -163,8 +150,6 @@ export function FormularioCadastro(){
       id="confirmaSenha" 
          placeholder="Confirme sua senha"/>
     <Botoes>
-      <BotaoFormulario onClick={handleClienteClicado} clicado={clienteClicado} text="Cliente" componentColor="#8811D2" componentWidth="134px"/>
-      <BotaoFormulario onClick={handleProfissionalClicado} clicado={profissionalClicado} text="Profissional" componentColor="#FF00C7" componentWidth="134px"/>
       <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="273px"/>
     </Botoes>
     <Texto>Já tem conta? Faça <LinkLogin href="#">login</LinkLogin></Texto>

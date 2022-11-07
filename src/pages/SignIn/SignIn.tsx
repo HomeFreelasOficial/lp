@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Body } from "../../components/Body/Body"
+import { Body } from "../../components/signin/Body/Body"
 import { Footer } from "../../components/Footer/Footer"
 import { HeaderCadastro } from "../../components/Header/Header"
 
