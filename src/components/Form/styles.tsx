@@ -70,6 +70,7 @@ width: 280px;
 `
 export const Texto = styled.p `
 font-size: 14px;
+font-weight: 400;
 margin-top: 4px;
 font-weight: 500;
 
