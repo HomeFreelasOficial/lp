@@ -1,6 +1,6 @@
 
 import styled from "styled-components"
-import { BodyCadastro } from "../../components/BodyCadastro/BodyCadastro"
+import { BodyCadastro } from "../../components/signup/BodyCadastro/BodyCadastro"
 import { Footer } from "../../components/Footer/Footer"
 import { HeaderCadastro } from "../../components/HeaderCadastro/HeaderCadastro"
 
