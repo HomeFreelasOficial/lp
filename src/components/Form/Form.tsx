@@ -20,19 +20,6 @@ export function Formulario(){
     }
   )
   
-  const [clienteClicado, setClienteClicado] = useState(false)
-  const [profissionalClicado, setProfissionalClicado] = useState(false)
-
-  function handleClienteClicado() {
-    setClienteClicado(!clienteClicado)
-    setProfissionalClicado(false)
-  }
-
-  function handleProfissionalClicado() {
-    setProfissionalClicado(!profissionalClicado)
-    setClienteClicado(false)
-  }
-
   return (
   <Wrapper>
    <Title>Login</Title>
@@ -52,8 +39,6 @@ export function Formulario(){
       id="senha" 
          placeholder="Insira seu senha"/>
     <Botoes>
-      <BotaoFormulario onClick={handleClienteClicado} clicado={clienteClicado} text="Cliente" componentColor="#8811D2" componentWidth="134px"/>
-      <BotaoFormulario onClick={handleProfissionalClicado} clicado={profissionalClicado} text="Profissional" componentColor="#FF00C7" componentWidth="134px"/>
       <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="273px"/>
     </Botoes>
     <Texto>Não tem conta? <LinkCadastro href="#">Cadastre-se</LinkCadastro></Texto>

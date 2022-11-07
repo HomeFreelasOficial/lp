@@ -7,8 +7,7 @@ display:flex;
   border: 1px solid black;
   border-radius: 8px;
   width: 341px;
-  height: 200px;
-  margin-inline: 44px;
+  height: 150px;
   align-items: center;
   text-align: center;
   box-shadow: 2px 0px rgba(0, 0, 0, 0.5);
@@ -70,7 +69,7 @@ width: 280px;
 }
 `
 export const Texto = styled.p `
-font-size: 10px;
+font-size: 14px;
 margin-top: 4px;
 font-weight: 500;
 
@@ -79,7 +78,7 @@ font-weight: 500;
 }
 `
 export const LinkCadastro = styled.a `
-font-size: 10px;
+font-size: 14px;
 font-weight: 700;
 color: black;
 text-decoration: none;
