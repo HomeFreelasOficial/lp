@@ -41,7 +41,7 @@ export function Formulario(){
     <Botoes>
       <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="273px"/>
     </Botoes>
-    <Texto>Não tem conta? <LinkCadastro href="#">Cadastre-se</LinkCadastro></Texto>
+    <Texto>Não tem conta? <LinkCadastro href="signup">Cadastre-se</LinkCadastro></Texto>
     </Form>
   </Wrapper>
   

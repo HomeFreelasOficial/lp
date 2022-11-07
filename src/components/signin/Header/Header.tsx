@@ -11,7 +11,7 @@ export function HeaderCadastro(){
   return (
     <Header>
       <Wrapper>
-      <ItemLogo></ItemLogo>  
+      <ItemLogo href="/home"></ItemLogo>  
     </Wrapper>
     </Header>
     

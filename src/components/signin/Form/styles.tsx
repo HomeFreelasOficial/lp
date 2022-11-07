@@ -3,14 +3,13 @@ import styled from "styled-components"
 export const Wrapper = styled.div `
 display:flex;
   flex-direction: column;
-  background-color: white;
-  border: 1px solid black;
   border-radius: 8px;
   width: 341px;
   height: 150px;
   align-items: center;
   text-align: center;
-  box-shadow: 2px 0px rgba(0, 0, 0, 0.5);
+  background: #F4F4F4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   gap: 20px;
   padding-bottom: 150px;
 

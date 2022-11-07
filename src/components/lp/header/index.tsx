@@ -10,12 +10,10 @@ export default function Header() {
                 <S.Navbar>
                     <S.Logo />
                     <S.Arrow active={isActiveMenu} onClick={() => setIsActiveMenu(old => !old)} />
-                    <S.NavItem>Sobre nós</S.NavItem>
-                    <S.NavItem>Suporte</S.NavItem>
                 </S.Navbar>
                 <S.Actions>
-                    <S.ActionButton variant='secondary'>Fazer login</S.ActionButton>
-                    <S.ActionButton variant='primary'>Cadastre-se</S.ActionButton>
+                    <S.ActionButton href='/signin' variant='secondary'>Fazer login</S.ActionButton>
+                    <S.ActionButton href='/signup' variant='primary'>Cadastre-se</S.ActionButton>
                 </S.Actions>
             </S.Container>
             <S.Menu active={isActiveMenu}>
