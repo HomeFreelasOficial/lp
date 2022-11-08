@@ -14,7 +14,7 @@ export function App() {
     <GlobalStyles />
     <Router>
       <Routes>
-        <Route path="/home" element={<LandingPage/>} /> 
+        <Route path="/*" element={<LandingPage/>} /> 
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/select-type" element={<SelectType/>}/>
