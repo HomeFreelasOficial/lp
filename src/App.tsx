@@ -7,6 +7,7 @@ import SelectType from "./pages/SelectType/SelectType";
 import {
   BrowserRouter as Router, Routes, Route
 } from 'react-router-dom'
+import ClientHome from "./components/client-home";
 
 export function App() {
   return (
@@ -17,7 +18,8 @@ export function App() {
         <Route path="/*" element={<LandingPage/>} /> 
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
-        <Route path="/select-type" element={<SelectType/>}/>
+        <Route path="/selecionar" element={<SelectType/>}/>
+        <Route path="/cliente/inicio" element={<ClientHome/>}/>
       </Routes>
       </Router>
       

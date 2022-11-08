@@ -6,6 +6,7 @@ export const FooterComponent = styled.footer`
   width: auto;
   height: 100%;
   display: flex;
+  z-index: 1;
  
   align-items: center;
   justify-content: center;
