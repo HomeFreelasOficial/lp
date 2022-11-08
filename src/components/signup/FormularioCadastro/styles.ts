@@ -43,6 +43,16 @@
     font-family: 'Poppins';
   }
   `
+  export const InputSenha = styled.input `
+  background-color: transparent;
+
+  ::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    font-family: 'Poppins';
+  }
+  `
+  
 
   export const Formulario = styled.form `
   display: flex;
@@ -57,9 +67,22 @@
   }
   `
 
+  export const DivInputSenha = styled.div `
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding-inline: 8px;
+  width: 262px;
+  height: 36px;
+  background-color: white;
+  `
+
   export const Botoes = styled.div `
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 4px;
   margin-top: 8px;
   width: 280px;

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styled from "styled-components"
 import { BotaoFormulario } from "./Botao/Botao"
+import BotaoSenha from "./Botao/BotaoSenha"
 import {
   Wrapper,
   Title,
@@ -8,10 +9,14 @@ import {
   Input,
   Botoes,
   Texto, 
-  LinkLogin
+  LinkLogin,
+  InputSenha,
+  DivInputSenha
 } from "./styles"
 
 export function FormularioCadastro(){
+
+  const [olhoAtivo, setOlhoAtivo] = useState(true)
 
   const [account, setAccount] = useState(
     {
@@ -57,22 +62,29 @@ export function FormularioCadastro(){
       value={account.confirmaEmail}   
       id="emailConfirma" 
          placeholder="Confirme seu e-mail"/>
-      <Input
-      type="password" 
+      <DivInputSenha>
+      <InputSenha
+      type={olhoAtivo === true ? "password" : "text"} 
       onChange={(e) => setAccount({...account, senha: e.target.value})}
       name="senha" 
       value={account.senha}   
       id="senha" 
-         placeholder="Insira seu senha"/>
-      <Input  
-      type="password" 
+      placeholder="Insira seu senha"/>
+      <BotaoSenha ativo={olhoAtivo} funcao={() => {
+        setOlhoAtivo(!olhoAtivo)
+      }}/>
+      </DivInputSenha>
+      <DivInputSenha>
+      <InputSenha  
+      type={olhoAtivo === true ? "password" : "text"} 
       onChange={(e) => setAccount({...account, confirmaSenha: e.target.value})}
       name="confirmaSenha" 
       value={account.confirmaSenha}   
       id="confirmaSenha" 
          placeholder="Confirme sua senha"/>
+      </DivInputSenha>
     <Botoes>
-      <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="273px"/>
+      <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="17.5em"/>
     </Botoes>
     <Texto>Já tem conta? Faça <LinkLogin href="signin">login</LinkLogin></Texto>
     </Formulario>

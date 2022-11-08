@@ -11,8 +11,8 @@ export default function SelectType(props: {
   align-items: center;
   justify-content: center;
   padding-inline: 10em;
-  padding-top: 46em;
-  padding-bottom: 40.3em;
+  padding-top: 10em;
+  padding-bottom: 12em;
   `
 
   const Card = styled.div`
@@ -54,6 +54,7 @@ export default function SelectType(props: {
   font-family: 'Poppins';
   font-weight: 700;
   font-size: 13px;
+  text-decoration: none;
 
   :hover {
     cursor: pointer;
@@ -82,6 +83,7 @@ const BotaoProfissional = styled.a`
   font-family: 'Poppins';
   font-weight: 700;
   font-size: 13px;
+  text-decoration: none;
 
   :hover {
     cursor: pointer;
@@ -105,9 +107,8 @@ const BotaoProfissional = styled.a`
     <Wrapper> 
       <Card>
       <Texto>Deseja se conectar como?</Texto>
-
-      <BotaoCliente>Cliente</BotaoCliente>
-      <BotaoProfissional>Profissional</BotaoProfissional>
+      <BotaoCliente href="/cliente/inicio">Cliente</BotaoCliente>
+      <BotaoProfissional href="/profissional/inicio">Profissional</BotaoProfissional>
       </Card>
     </Wrapper>
     
