@@ -89,6 +89,6 @@ font-size: 13px;
   cursor: pointer;
   color: #8811D2;
   background-color: white;
-  border: #8811D2;
+  border: 2px solid #8811D2;
 }
 `
