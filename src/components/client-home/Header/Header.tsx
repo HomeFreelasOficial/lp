@@ -8,14 +8,14 @@ import {
 } from "./styles"
 
 export function HeaderApp(props: {
-  funcao?: React.MouseEventHandler<HTMLButtonElement>
+  functionSideBar?: React.MouseEventHandler<HTMLButtonElement>
 }){
   return (
     <Header>
       <Wrapper>
-      <ItemLogo href="/cliente/inicio"><Logo/></ItemLogo>  
-      <MenuBurguer onClick={props.funcao}><ImgBurguer/></MenuBurguer>
-    </Wrapper>
+        <ItemLogo href="/cliente/inicio"><Logo/></ItemLogo>  
+        <MenuBurguer onClick={props.functionSideBar}><ImgBurguer/></MenuBurguer>
+      </Wrapper>
     </Header>
     
   )

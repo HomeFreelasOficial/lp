@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 export const Header = styled.header`
   background-color: #222628;
   z-index: 12;
-  display: fixed;
+  position: fixed;
   height: 10em;
   width: 100%;
   align-items: center;

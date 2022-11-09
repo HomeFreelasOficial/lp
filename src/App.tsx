@@ -5,7 +5,9 @@ import { GlobalStyles } from "./styles/global";
 import SelectType from "./pages/SelectType/SelectType";
 
 import {
-  BrowserRouter as Router, Routes, Route
+  BrowserRouter as Router, 
+  Routes, 
+  Route
 } from 'react-router-dom'
 import ClientHome from "./components/client-home";
 
@@ -15,7 +17,7 @@ export function App() {
     <GlobalStyles />
     <Router>
       <Routes>
-        <Route path="/*" element={<LandingPage/>} /> 
+        <Route path="/" element={<LandingPage/>} /> 
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/selecionar" element={<SelectType/>}/>

@@ -1,20 +1,13 @@
-import { ImgBurguer, MenuBurguer } from "../Header/styles";
-import { DivBaixo, DivCima, Navigation, Texto, Wrapper } from "./styles";
+import { DivBaixo, Navigation, Texto, Wrapper } from "./styles";
 
-
-
-export default function SideBar(props: {
-  funcao?: React.MouseEventHandler<HTMLButtonElement>
-}){
+export default function SideBar(props: ({
+  openOrClose: boolean;
+})){
   
-
   return(
     <>
-    <Navigation>
+    <Navigation openOrCloseSide={props.openOrClose}>
       <Wrapper>
-        <DivCima>
-        <MenuBurguer onClick={props.funcao}><ImgBurguer/></MenuBurguer>
-        </DivCima>
         <DivBaixo>
          <Texto href="/perfil">
           Editar Perfil

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Body } from "../../components/signin/Body/Body"
-import { Footer } from "../../components/signin/Footer/Footer"
+import { Footer } from "../../components/Footer"
 import { HeaderCadastro } from "../../components/signin/Header/Header"
 
 export default function SignIn() {

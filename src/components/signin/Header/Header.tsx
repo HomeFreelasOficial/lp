@@ -5,15 +5,11 @@ import {
 } from "./styles"
 
 export function HeaderCadastro(){
-  
- 
-
   return (
     <Header>
       <Wrapper>
-      <ItemLogo href="/home"></ItemLogo>  
-    </Wrapper>
+        <ItemLogo href="/"></ItemLogo>  
+      </Wrapper>
     </Header>
-    
   )
 }

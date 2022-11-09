@@ -1,16 +1,29 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Navigation = styled.div`
+export const Navigation = styled.div<{ openOrCloseSide: boolean }>`
 background-color: #222628;
 margin-left: auto;
 position: fixed;
 right: 0;
 display: block;
-top: 0;
+top: 10rem;
 z-index: 8;
 filter: drop-shadow(-59px 0px 100px rgba(0, 0, 0, 0.25));
 width: 204px;
 height: 100vh;
+opacity: 0.97;
+
+transition: transform .3s ease-in-out;
+
+${props => props.openOrCloseSide === true ? 
+css`
+  transform: translateX(1%);
+` 
+: 
+css`
+  transform: translateX(100%);
+`
+}
 `
 export const Wrapper = styled.div`
 display: flex;
@@ -18,16 +31,13 @@ flex-direction: column;
 padding: 1.5em;
 `
 
-export const DivCima = styled.div`
-display: flex;
-justify-content: end;
-`
 export const DivBaixo = styled.div`
 padding-top: 3em;
 padding-left: 4em;
 display: flex;
 flex-direction: column;
-gap: 1em;
+align-items: center;
+gap: 3em;
 `
 export const Texto = styled.a`
 font-family: 'Poppins';

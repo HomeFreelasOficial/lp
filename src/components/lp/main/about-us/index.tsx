@@ -1,9 +1,13 @@
 import * as S from './styled';
 
+import { useNavigate } from 'react-router-dom';
+
 import Section from '../../section'
 import Button from '../../button';
 
 export default function AboutUs(){
+    const navigate = useNavigate();
+
     return(
         <Section background="url(/assets/about-us.svg)">
             <S.Wrapper>
@@ -14,6 +18,7 @@ export default function AboutUs(){
                 <Button 
                     label="Cadastrar" 
                     variant="primary"
+                    onClick={() => navigate('/signUp')}
                 />
             </S.Wrapper>
         </Section>

@@ -2,14 +2,13 @@ import styled from "styled-components"
 export const FooterComponent = styled.footer`
 
   width: auto;
-  height: 100%;
   display: flex;
- 
   align-items: center;
   justify-content: center;
+
+  gap: 1.7rem;
   background-color: #222628;
-  gap: 1.5em;
-  padding: 0.75em;
+  padding: 2em;
  
   @media screen and (min-width: 768px){
    padding: 1em;
@@ -23,7 +22,7 @@ export const FooterComponent = styled.footer`
    padding: 2em;
   }
 `
-export const Texto = styled.p`
+export const Text = styled.p`
 color: white;
 font-size: 12px;
 `
