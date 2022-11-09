@@ -69,7 +69,7 @@ export default function Mapa() {
             >
               <Marker position={position} options={{
                 label: {
-                  text: "Você está aqui",
+                  text: "Você está aqui!",
                   className: 'map-marker'
                 }
               }}/>
