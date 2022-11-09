@@ -11,7 +11,7 @@ justify-content: center;
 gap: 14em;
 padding-top: 15em;
 padding-bottom: 15em;
-height: 100%;
+height: 100vh;
 `
 
 export const Card = styled.div`

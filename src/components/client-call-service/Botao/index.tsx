@@ -9,7 +9,7 @@ interface IBotao {
 
 const Botao = styled.button<IBotao>`
     background-color: ${props => props.ativo ? "white" : props.cor};
-    border: ${props => props.ativo ? props.cor : "none"};
+    border: ${props => props.ativo ? "1px solid" + props.cor : "none"};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,7 @@ export default function BotaoServicos(props: IBotao){
   
 
   return (
-    <Botao {...props}>
+    <Botao onClick={props.funcao} {...props}>
       {props.texto}
     </Botao>
   )

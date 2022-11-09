@@ -14,10 +14,11 @@ import {
   DivInputSenha
 } from "./styles"
 
+import axios from "axios"
+
 export function FormularioCadastro(){
 
   const [olhoAtivo, setOlhoAtivo] = useState(true)
-
   const [account, setAccount] = useState(
     {
       nome: "",
@@ -28,6 +29,21 @@ export function FormularioCadastro(){
       confirmaSenha: ""
     }
   )
+
+  function sendData(){
+    axios.post('/user', {
+      firstName: 'Santos',
+      lastName: 'Dumont'
+    })
+    .then(function (response) {
+      if (response.status == 200) {
+        prompt("Usuário cadastrado")
+      }
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+  }
  
 
   return (
@@ -84,7 +100,7 @@ export function FormularioCadastro(){
          placeholder="Confirme sua senha"/>
       </DivInputSenha>
     <Botoes>
-      <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="17.5em"/>
+      <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="17.5em" onClick={() => sendData()}/>
     </Botoes>
     <Texto>Já tem conta? Faça <LinkLogin href="signin">login</LinkLogin></Texto>
     </Formulario>
