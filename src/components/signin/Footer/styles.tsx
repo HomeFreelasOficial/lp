@@ -15,7 +15,7 @@ export const FooterComponent = styled.footer`
   padding: 3em;
  
   @media screen and (min-width: 768px){
-   padding: 5em;
+   padding: 3em;
   }
  
   @media screen and (min-height: 768px){
@@ -23,7 +23,7 @@ export const FooterComponent = styled.footer`
   }
  
   @media screen and (min-width: 1366px){
-   padding: 5em;
+   padding: 3em;
   }
 `
 export const Texto = styled.p`

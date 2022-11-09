@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { GlobalStyles } from "../../../styles/global";
 
 export const Wrapper = styled.div`
 z-index: 1;

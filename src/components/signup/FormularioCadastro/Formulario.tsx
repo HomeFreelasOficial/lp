@@ -13,6 +13,7 @@ import {
   InputSenha,
   DivInputSenha
 } from "./styles"
+import { v4 as uuidv4 } from 'uuid';
 
 import axios from "axios"
 
@@ -24,7 +25,7 @@ export function FormularioCadastro(){
       nome: "",
       cpf: "",
       email: "",
-      confirmaEmail: "",
+      age: "",
       senha: "",
       confirmaSenha: ""
     }
@@ -32,8 +33,11 @@ export function FormularioCadastro(){
 
   function sendData(){
     axios.post('/user', {
-      firstName: 'Santos',
-      lastName: 'Dumont'
+      name: account.nome,
+      email: account.email,
+      password: account.senha,
+      age: +account.age,
+      cpf: account.cpf
     })
     .then(function (response) {
       if (response.status == 200) {
@@ -73,11 +77,11 @@ export function FormularioCadastro(){
          placeholder="Insira seu e-mail"/>
       <Input 
       type="email" 
-      onChange={(e) => setAccount({...account, confirmaEmail: e.target.value})}
-      name="emailConfirma" 
-      value={account.confirmaEmail}   
-      id="emailConfirma" 
-         placeholder="Confirme seu e-mail"/>
+      onChange={(e) => setAccount({...account, age: e.target.value})}
+      name="age" 
+      value={account.age}   
+      id="age" 
+         placeholder="Digite sua idade"/>
       <DivInputSenha>
       <InputSenha
       type={olhoAtivo === true ? "password" : "text"} 

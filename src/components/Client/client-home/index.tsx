@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Footer } from "../signin/Footer/Footer";
+import { Footer } from "../../signin/Footer/Footer";
 import BodyApp from "./Body/Body";
 import { HeaderApp } from "./Header/Header";
 import SideBar from "./SideBar/SideBar";
