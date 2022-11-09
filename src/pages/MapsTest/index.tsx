@@ -45,7 +45,7 @@ export default function Mapa() {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyBJ-k9DL9UE8blCP9dsv8v0y3yykuCN55U"
+    googleMapsApiKey: ""
   })
 
  
