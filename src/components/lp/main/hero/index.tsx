@@ -1,5 +1,5 @@
 import Button from "../../button";
-import Section from "../../section";
+import Section from "../../../Section";
 import * as S from "./styled";
 
 import { useNavigate } from "react-router-dom";

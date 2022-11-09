@@ -1,9 +1,8 @@
 import { useState } from "react";
-import styled from "styled-components";
 import { Footer } from "../Footer";
 import BodyApp from "./Body/Body";
-import { HeaderApp } from "./Header/Header";
-import SideBar from "./SideBar/SideBar";
+import { HeaderApp } from "../Header";
+import SideBar from "./SideBar";
 
 export default function ClientHome(){
 

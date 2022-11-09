@@ -2,7 +2,7 @@ import * as S from './styled';
 
 import { useNavigate } from 'react-router-dom';
 
-import Section from '../../section'
+import Section from '../../../Section'
 import Button from '../../button';
 
 export default function AboutUs(){

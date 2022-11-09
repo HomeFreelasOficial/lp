@@ -1,4 +1,4 @@
-import * as S from './styled'
+import * as S from './styled';
 
 interface SectionProps {
     children: any

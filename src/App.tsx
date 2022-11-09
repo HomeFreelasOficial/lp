@@ -10,6 +10,7 @@ import {
   Route
 } from 'react-router-dom'
 import ClientHome from "./components/client-home";
+import SearchClients from "./pages/SearchClients";
 
 export function App() {
   return (
@@ -22,6 +23,7 @@ export function App() {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
+        <Route path="/profissional/procurar" element={<SearchClients/>}/>
       </Routes>
       </Router>
       
