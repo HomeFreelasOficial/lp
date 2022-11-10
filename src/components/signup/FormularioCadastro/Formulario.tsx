@@ -16,6 +16,7 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 
 import axios from "axios"
+import { redirect } from "react-router-dom"
 
 export function FormularioCadastro(){
 
@@ -40,12 +41,14 @@ export function FormularioCadastro(){
       cpf: account.cpf
     })
     .then(function (response) {
-      if (response.status == 200) {
-        prompt("Usuário cadastrado")
+      if (response.status === 200) {
+        console.log('Usuário cadastrado')
       }
     })
-    .catch(function (error) {
-      console.error(error);
+    .catch(function (error: Error) {
+      prompt(error.message)
+
+      return redirect('signup')
     });
   }
  
@@ -89,7 +92,7 @@ export function FormularioCadastro(){
       name="senha" 
       value={account.senha}   
       id="senha" 
-      placeholder="Insira seu senha"/>
+      placeholder="Insira sua senha"/>
       <BotaoSenha ativo={olhoAtivo} funcao={() => {
         setOlhoAtivo(!olhoAtivo)
       }}/>
