@@ -10,6 +10,8 @@ import {
   Route
 } from 'react-router-dom'
 import ProfessionalHome from "./pages/ProfessionalHome";
+import SearchClients from "./pages/SearchClients";
+
 import ClientHome from "./components/Client/client-home";
 import Mapa from "./pages/MapsTest";
 import ClientCallService from "./components/Client/client-call-service";
@@ -31,6 +33,7 @@ export function App() {
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
         <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
+        <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
         <Route path="/maps-teste" element={<Mapa/>}/>
         <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
         <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
