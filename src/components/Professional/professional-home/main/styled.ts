@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 5rem;
   height: 100vh;
   padding-top: 8.8rem;
@@ -27,6 +26,10 @@ export const ContainerCardLocalization = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (min-width: 1366px) {
+  gap: 1.5rem;
+}
 `
 
 export const IconeLocation = styled.img`
@@ -39,20 +42,29 @@ export const TextBold = styled.p`
 font-weight: 700;
 font-size: 13px;
 line-height: 20px;
+
+@media (min-width: 1366px) {
+  font-size: 20px;
+}
 `
 
 export const Text = styled.p`
 font-weight: 400;
 font-size: 11px;
 line-height: 21px;
+
+@media (min-width: 1366px) {
+  line-height: 28px;
+  font-size: 20px;
+}
 `
 
 export const CardButton = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-around;
-padding: 2rem;
+justify-content: center;
+gap: 5rem;
 width: 65rem;
 height: 30rem;
 background-color: #F4F4F4;
@@ -68,6 +80,8 @@ border-radius: 4px;
 color: white;
 font-weight: 700;
 font-size: 13px;
+
+transition: all .4s ease;
 
 :hover{
   cursor: pointer;

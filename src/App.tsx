@@ -30,7 +30,7 @@ export function App() {
         <Route path="/email-verification/:hash" element={<VerifyEmail/>}/>
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
-        <Route path="/profissional/procurar" element={<SearchClients/>}/>
+        <Route path="/profissional/inicio" element={<SearchClients/>}/>
         <Route path="/maps-teste" element={<Mapa/>}/>
         <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
         <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>

@@ -1,8 +1,12 @@
-import Section from '../../Section';
+import Section from '../../../Section';
 
 import * as S from './styled';
 
+import { useNavigate } from 'react-router-dom';
+
 export default function Main() {
+  const navigate = useNavigate();
+
   return(
     <Section>
       <S.Wrapper>
@@ -21,7 +25,7 @@ export default function Main() {
           <S.TextBold>
             Faça Freelas para clientes da sua região!
           </S.TextBold>  
-          <S.ButtonSearch>
+          <S.ButtonSearch onClick={() => navigate('/profissional/procurar')}>
             Procurar clientes próximos
           </S.ButtonSearch>
         </S.CardButton>

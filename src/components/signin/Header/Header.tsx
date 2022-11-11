@@ -9,9 +9,6 @@ interface IHeader {
 }
 
 export function HeaderCadastro(props: IHeader){
-  
- 
-
   return (
     <Header>
       <Wrapper>
