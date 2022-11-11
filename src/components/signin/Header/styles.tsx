@@ -30,11 +30,10 @@ export const Item = styled.a`
 export const ItemLogo = styled.a`
   margin-left: 14px;
   margin-right: 15px;
-  background-image: url(./src/assets/letrassemfundo.svg);
+  background-image: url("../src/assets/letrassemfundo.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   width: 48px;
   height: 48px;
-  
   `

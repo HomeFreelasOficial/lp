@@ -14,7 +14,7 @@ export default function SignUp() {
 
   return (
     <Wrapper>
-      <HeaderCadastro/>
+      <HeaderCadastro path="/"/>
       <BodyCadastro/>
       <Footer/>
     </Wrapper>

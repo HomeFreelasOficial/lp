@@ -13,7 +13,7 @@ export default function BodyApp() {
      </CardLocalizacao>
      <CardBotao>
       <TextoBold>Deu problema?</TextoBold>
-      <BotaoRoxo>Peça um freela aqui!</BotaoRoxo>
+      <BotaoRoxo href="/cliente/pedir-servico">Peça um freela aqui!</BotaoRoxo>
      </CardBotao>
      <Card>
       <TextoBold>Primeira vez aqui?</TextoBold>

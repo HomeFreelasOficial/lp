@@ -104,8 +104,7 @@ const BotaoProfissional = styled.a`
   
   return (
     <>
-    <HeaderCadastro/>
-    
+    <HeaderCadastro path="/"/>
     <Wrapper> 
       <Card>
       <Texto>Deseja se conectar como?</Texto>

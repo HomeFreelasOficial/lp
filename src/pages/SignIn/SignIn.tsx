@@ -12,7 +12,7 @@ export default function SignIn() {
 
   return (
     <Wrapper>
-      <HeaderCadastro/>
+      <HeaderCadastro path="/"/>
       <Body/>
       <Footer/>
     </Wrapper>
