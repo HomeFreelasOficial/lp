@@ -57,6 +57,8 @@ export default function SelectType(props: {
   font-size: 13px;
   text-decoration: none;
 
+  transition: all .4s ease;
+
   :hover {
     cursor: pointer;
 
@@ -85,6 +87,8 @@ const BotaoProfissional = styled.a`
   font-weight: 700;
   font-size: 13px;
   text-decoration: none;
+
+  transition: all .4s ease;
 
   :hover {
     cursor: pointer;

@@ -43,11 +43,15 @@ export const Container = styled.header`
     }
   `
 
-export const Menu = styled.div<{ isOpened: boolean }>`
+export const Menu = styled.div<{ isOpened: boolean, visible: boolean }>`
+${props => props.visible ? 
+css` display: flex; ` 
+: 
+css` display: none;`}
+
 width: 4.4rem;
 height: max-content;
 cursor: pointer;
-display: flex;
 flex-direction: column;
 row-gap: 1rem;
 position: relative;
