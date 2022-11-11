@@ -1,23 +1,16 @@
-import {
-  Header,
-  Wrapper,
-  ItemLogo,
-  MenuBurguer,
-  Logo,
-  ImgBurguer
-} from "./styles"
+import * as S from "./styles"
 
-export function HeaderApp(props: {
+export default function Header(props: {
   functionSideBar?: React.MouseEventHandler<HTMLButtonElement>
-  url: string
+  url?: string
 }){
   return (
-    <Header>
-      <Wrapper>
-        <ItemLogo href={props.url}><Logo/></ItemLogo>  
-        <MenuBurguer onClick={props.functionSideBar}><ImgBurguer/></MenuBurguer>
-      </Wrapper>
-    </Header>
+    <S.Container>
+      <S.Wrapper>
+        <S.ItemLogo href={props.url}><S.Logo/></S.ItemLogo>  
+        <S.MenuBurguer onClick={props.functionSideBar}><S.ImgBurguer/></S.MenuBurguer>
+      </S.Wrapper>
+    </S.Container>
     
   )
 }

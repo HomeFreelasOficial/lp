@@ -1,4 +1,4 @@
-import { DivBaixo, Navigation, Texto, Wrapper } from "./styles";
+import * as S from "./styles";
 
 export default function SideBar(props: ({
   openOrClose: boolean;
@@ -6,18 +6,16 @@ export default function SideBar(props: ({
   
   return(
     <>
-    <Navigation openOrCloseSide={props.openOrClose}>
-      <Wrapper>
-        <DivBaixo>
-         <Texto href="/perfil">
+    <S.Navigation openOrCloseSide={props.openOrClose}>
+      <S.Wrapper>
+         <S.Text href="/perfil">
           Editar Perfil
-         </Texto>
-         <Texto>
+         </S.Text>
+         <S.Text>
           Log out
-         </Texto>
-        </DivBaixo>
-      </Wrapper>
-    </Navigation>
+         </S.Text>
+      </S.Wrapper>
+    </S.Navigation>
     </>
   )
 }

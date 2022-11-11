@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   width: 100%;
   `;
 
-export const Header = styled.header`
+export const Container = styled.header`
   background-color: #222628;
   z-index: 12;
   position: fixed;
