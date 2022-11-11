@@ -7,7 +7,13 @@ import SelectType from "./pages/SelectType/SelectType";
 import {
   BrowserRouter as Router, Routes, Route
 } from 'react-router-dom'
-import ClientHome from "./components/client-home";
+import ClientHome from "./components/Client/client-home";
+import Mapa from "./pages/MapsTest";
+import ClientCallService from "./components/Client/client-call-service";
+import ClientWaitingForFreela from "./components/Client/client-waiting";
+import ClientServiceAccepted from "./components/Client/client-service-accepted";
+import Payment from "./components/Client/client-payment";
+import VerifyEmail from "./components/verifyEmail";
 
 export function App() {
   return (
@@ -15,14 +21,19 @@ export function App() {
     <GlobalStyles />
     <Router>
       <Routes>
-        <Route path="/*" element={<LandingPage/>} /> 
+        <Route path="/" element={<LandingPage/>} /> 
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
+        <Route path="/email-verification/:hash" element={<VerifyEmail/>}/>
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
+        <Route path="/maps-teste" element={<Mapa/>}/>
+        <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
+        <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
+        <Route path="/cliente/servico-aceito" element={<ClientServiceAccepted/>}/>
+        <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>
       </Routes>
       </Router>
-      
     </>
   );
 }

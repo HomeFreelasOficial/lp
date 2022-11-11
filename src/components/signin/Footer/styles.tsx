@@ -10,10 +10,10 @@ export const FooterComponent = styled.footer`
   justify-content: center;
   background-color: #222628;
   gap: 1.5em;
-  padding: 0.75em;
+  padding: 3em;
  
   @media screen and (min-width: 768px){
-   padding: 1em;
+   padding: 3em;
   }
  
   @media screen and (min-height: 768px){
@@ -21,7 +21,7 @@ export const FooterComponent = styled.footer`
   }
  
   @media screen and (min-width: 1366px){
-   padding: 2em;
+   padding: 3em;
   }
 `
 export const Texto = styled.p`

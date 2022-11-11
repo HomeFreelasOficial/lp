@@ -13,21 +13,44 @@ import {
   InputSenha,
   DivInputSenha
 } from "./styles"
+import { v4 as uuidv4 } from 'uuid';
+
+import axios from "axios"
+import { redirect } from "react-router-dom"
 
 export function FormularioCadastro(){
 
   const [olhoAtivo, setOlhoAtivo] = useState(true)
-
   const [account, setAccount] = useState(
     {
       nome: "",
       cpf: "",
       email: "",
-      confirmaEmail: "",
+      age: "",
       senha: "",
       confirmaSenha: ""
     }
   )
+
+  function sendData(){
+    axios.post('/user', {
+      name: account.nome,
+      email: account.email,
+      password: account.senha,
+      age: +account.age,
+      cpf: account.cpf
+    })
+    .then(function (response) {
+      if (response.status === 200) {
+        console.log('Usuário cadastrado')
+      }
+    })
+    .catch(function (error: Error) {
+      prompt(error.message)
+
+      return redirect('signup')
+    });
+  }
  
 
   return (
@@ -47,7 +70,7 @@ export function FormularioCadastro(){
       name="cpf" 
       value={account.cpf}   
       id="cpf" 
-         placeholder="Insira seu cpf"/>
+         placeholder="Insira seu CPF"/>
       <Input 
       type="email" 
       onChange={(e) => setAccount({...account, email: e.target.value})}
@@ -57,11 +80,11 @@ export function FormularioCadastro(){
          placeholder="Insira seu e-mail"/>
       <Input 
       type="email" 
-      onChange={(e) => setAccount({...account, confirmaEmail: e.target.value})}
-      name="emailConfirma" 
-      value={account.confirmaEmail}   
-      id="emailConfirma" 
-         placeholder="Confirme seu e-mail"/>
+      onChange={(e) => setAccount({...account, age: e.target.value})}
+      name="age" 
+      value={account.age}   
+      id="age" 
+         placeholder="Digite sua idade"/>
       <DivInputSenha>
       <InputSenha
       type={olhoAtivo === true ? "password" : "text"} 
@@ -69,7 +92,7 @@ export function FormularioCadastro(){
       name="senha" 
       value={account.senha}   
       id="senha" 
-      placeholder="Insira seu senha"/>
+      placeholder="Insira sua senha"/>
       <BotaoSenha ativo={olhoAtivo} funcao={() => {
         setOlhoAtivo(!olhoAtivo)
       }}/>
@@ -84,7 +107,7 @@ export function FormularioCadastro(){
          placeholder="Confirme sua senha"/>
       </DivInputSenha>
     <Botoes>
-      <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="17.5em"/>
+      <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="17.5em" onClick={() => sendData()}/>
     </Botoes>
     <Texto>Já tem conta? Faça <LinkLogin href="signin">login</LinkLogin></Texto>
     </Formulario>

@@ -10,7 +10,7 @@ export function Footer() {
 
  return (
   <FooterComponent>
-      <Texto>2020 &copy; HomeFreelas</Texto>
+      <Texto>2022 &copy; HomeFreelas</Texto>
   </FooterComponent>
  )
 
