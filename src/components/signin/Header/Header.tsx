@@ -5,7 +5,7 @@ import {
 } from "./styles"
 
 interface IHeader {
-  path: string
+  path?: string
 }
 
 export function HeaderCadastro(props: IHeader){

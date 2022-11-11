@@ -4,7 +4,7 @@ import { redirect, useParams, useSearchParams } from "react-router-dom";
 import { BodyOrganizer, Card, Wrapper } from "../Client/client-call-service/styles";
 import { Texto, TextoBold } from "../Client/client-home/Body/styles";
 import { HeaderCadastro } from "../signin/Header/Header";
-import { Footer } from "../signup/Footer/Footer";
+import { Footer } from "../Footer";
 
 
 
