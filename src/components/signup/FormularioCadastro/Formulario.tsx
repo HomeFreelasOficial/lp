@@ -104,7 +104,7 @@ export function FormularioCadastro(){
       name="confirmaSenha" 
       value={account.confirmaSenha}   
       id="confirmaSenha" 
-         placeholder="Confirme sua senha"/>
+      placeholder="Confirme sua senha"/>
       </DivInputSenha>
     <Botoes>
       <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="17.5em" onClick={() => sendData()}/>

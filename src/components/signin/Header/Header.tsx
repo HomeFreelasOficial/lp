@@ -18,6 +18,5 @@ export function HeaderCadastro(props: IHeader){
       <ItemLogo href={props.path}></ItemLogo>  
     </Wrapper>
     </Header>
-    
   )
 }

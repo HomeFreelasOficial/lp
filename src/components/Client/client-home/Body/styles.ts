@@ -93,7 +93,6 @@ font-weight: 700;
 font-size: 13px;
 
 :hover{
-
   cursor: pointer;
   color: #8811D2;
   background-color: white;

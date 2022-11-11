@@ -21,6 +21,7 @@ export function BotaoFormulario(props: IBotao){
    border: ${props.clicado === true? "2px solid" : "none"};
    border-color: ${props.clicado === true? props.componentColor : "transparent"};
    border-radius: 5px;
+   cursor: pointer;
 
    @media screen and (min-width: 1024px){
     font-size: 15px;

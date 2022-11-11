@@ -1,4 +1,4 @@
-import { Footer } from "../../components/signup/Footer/Footer";
+import { Footer } from "../../components/Footer";
 import { HeaderCadastro } from "../../components/signin/Header/Header";
 import styled from "styled-components";
 
@@ -10,6 +10,7 @@ export default function SelectType(props: {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   padding-inline: 10em;
   padding-top: 10em;
   padding-bottom: 12em;
