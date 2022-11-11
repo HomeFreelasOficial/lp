@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TextoBold } from "../client-home/Body/styles";
 import { HeaderCadastro } from "../../signin/Header/Header";
-import { Footer } from "../../signup/Footer/Footer";
+import { Footer } from "../../Footer";
 import BotaoServicos from "./Botao";
 import { ButtonConfirm } from "./Botao/BotaoConfirma";
 import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, Description } from "./styles";
