@@ -14,7 +14,7 @@ export default function SearchClients() {
 
   return(
     <>
-    <HeaderApp functionSideBar={sideOpenClose}/>
+    <HeaderApp url="profissional/inicio" functionSideBar={sideOpenClose}/>
     {sideBar === true ? 
     <SideBar openOrClose={sideBar}/> 
     : 

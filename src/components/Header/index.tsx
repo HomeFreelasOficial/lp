@@ -9,11 +9,12 @@ import {
 
 export function HeaderApp(props: {
   functionSideBar?: React.MouseEventHandler<HTMLButtonElement>
+  url: string
 }){
   return (
     <Header>
       <Wrapper>
-        <ItemLogo href="/cliente/inicio"><Logo/></ItemLogo>  
+        <ItemLogo href={props.url}><Logo/></ItemLogo>  
         <MenuBurguer onClick={props.functionSideBar}><ImgBurguer/></MenuBurguer>
       </Wrapper>
     </Header>
