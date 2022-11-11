@@ -70,7 +70,7 @@ export function FormularioCadastro(){
       name="cpf" 
       value={account.cpf}   
       id="cpf" 
-         placeholder="Insira seu cpf"/>
+         placeholder="Insira seu CPF"/>
       <Input 
       type="email" 
       onChange={(e) => setAccount({...account, email: e.target.value})}

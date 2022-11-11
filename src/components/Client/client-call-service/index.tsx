@@ -42,7 +42,7 @@ export default function ClientCallService() {
 
   return (
     <Wrapper>
-    <HeaderCadastro/>
+    <HeaderCadastro path='/cliente/inicio'/>
     <BodyOrganizer>
     <CardBotao>
     <TextoBold>Qual é o problema?</TextoBold>

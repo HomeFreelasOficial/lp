@@ -10,7 +10,7 @@ export default function Payment(){
   return(
     <>
     <Wrapper>
-      <HeaderCadastro/>
+      <HeaderCadastro path='/cliente/inicio'/>
       <BodyOrganizer>
         
       </BodyOrganizer>

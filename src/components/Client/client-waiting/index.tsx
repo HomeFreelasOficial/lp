@@ -31,7 +31,7 @@ export default function ClientWaitingForFreela() {
 
   return (
     <Wrapper>
-      <HeaderCadastro />
+      <HeaderCadastro path='/cliente/inicio'/>
       <BodyOrganizer>
         <CardBotao>
           <TextoBold>

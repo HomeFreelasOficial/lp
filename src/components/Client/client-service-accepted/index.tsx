@@ -10,7 +10,7 @@ export default function ClientServiceAccepted(){
 
   return(
     <Wrapper>
-         <HeaderCadastro/>
+         <HeaderCadastro path='/cliente/inicio'/>
          <BodyOrganizer>
            <Card>
             <TextoBold>Pedido aceito!</TextoBold>
