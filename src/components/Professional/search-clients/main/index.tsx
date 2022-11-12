@@ -17,7 +17,7 @@ export default function Main() {
       setTime(t => t - 1);
     }, 1000)
 
-    if(time < 0) navigate('/profissional/inicio', {
+    if(time < 0) navigate('/profissional/clientes-encontrados', {
       replace: true,
     });
 
