@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const RootList = styled(ScrollArea.Root)`
   width: 50rem;
-  height: 74.4rem;
+  height: 95rem;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
@@ -41,6 +41,10 @@ export const ThumbList = styled(ScrollArea.Thumb)`
   position: relative;
 `
 
+export const Corner = styled(ScrollArea.Corner)`
+  background: gray;
+`
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -55,11 +59,35 @@ export const BoxWrapper = styled.div`
   align-items: center;
   width: 75rem;
   gap: 3rem;
-  height: max-content;
+  height: 120rem;
   background-color: #F4F4F4;
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 4rem;
+
+  @media (min-width: 425px) {
+    height: 110rem;
+  }
+  
+  @media (min-width: 485px) {
+    height: 90.5rem;
+  } 
+  
+  @media (min-width: 625px) {
+    height: 80rem;
+  }
+  
+  @media (min-width: 769px) {
+    height: 60.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    height: 75rem;
+  }
+  
+  @media (min-width: 1366px) {
+    height: 75rem;
+  }
 `
 
 export const Title = styled.h1`
@@ -69,4 +97,9 @@ export const Title = styled.h1`
   letter-spacing: .3rem;
   color: black;
   padding: 2.7rem;
+
+  @media (min-width: 769px) {
+    font-size: 2rem;
+    padding: 2rem;
+  }
 `

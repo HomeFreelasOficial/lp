@@ -15,6 +15,11 @@ export default function CardWork() {
         </S.WrapperNameAndProblem>
         <S.Arrow active={active} onClick={() => setActive(old => !old)}/>
       </S.Wrapper>
+        <S.WrapperDescription active={active}>
+          <S.ShortDescription>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui amet veritatis perferendis expedita, asperiore.
+          </S.ShortDescription>
+        </S.WrapperDescription>
       <S.ButtonAccept>
         Confirmar
       </S.ButtonAccept>

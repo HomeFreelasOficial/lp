@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -11,8 +11,27 @@ export const Container = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   padding: 5rem;
-  gap: 2.5rem;
-  margin-bottom: 4rem;
+  gap: 3.5rem;
+  margin-top: 5rem;
+
+  @media (min-width: 769px) {
+    padding: 4rem;
+  }
+`
+
+export const WrapperDescription = styled.div<{ active: boolean }>`
+  display: ${props => props.active ? 'flex' : 'none'};
+  text-align: justify;
+`
+
+export const ShortDescription = styled.p`
+  font-size: 2.5rem;
+  line-height: 2rem;
+  letter-spacing: .3rem;
+
+  @media (min-width: 769px) {
+    font-size: 1.5rem;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -38,11 +57,19 @@ export const Problem = styled.p`
   font-size: 2rem;
   line-height: 2rem;
   letter-spacing: .3rem;
+
+  @media (min-width: 769px) {
+    font-size: 1.3rem;
+  }
 `
 
 export const NameUser = styled(Problem)`
   font-size: 2.5rem;
   font-weight: bold;
+    
+  @media (min-width: 769px) {
+    font-size: 1.7rem;
+  }
 `
 
 export const Arrow = styled.span<{ active: boolean }>`
@@ -64,12 +91,12 @@ export const ButtonAccept = styled.button`
   justify-content: center;
   width: max-content;
   width: 40rem;
-  height: 2.5em;
+  height: 3em;
   background-color: #000000;
   border-radius: 8px;
   color: white;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 2rem;
   text-decoration: none;
 
   transition: all .4s ease;
@@ -80,5 +107,9 @@ export const ButtonAccept = styled.button`
     background-color: white;
     border: 2px solid #000000;
     color: #000000;
+  }
+
+  @media (min-width: 769px) {
+    font-size: 1.7rem;
   }
 `

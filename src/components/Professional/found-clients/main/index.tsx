@@ -20,6 +20,7 @@ export default function Main() {
             <S.ScrollbarList orientation='vertical'>
               <S.ThumbList />
             </S.ScrollbarList>
+            <S.Corner />
           </S.RootList>
         </S.BoxWrapper>
       </S.Container>
