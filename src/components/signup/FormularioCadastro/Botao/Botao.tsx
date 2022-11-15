@@ -5,7 +5,8 @@ interface IBotao {
   componentColor: string,
   text: string,
   clicado?: boolean,
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
+  onClick?: React.MouseEventHandler<HTMLButtonElement>,
+  tipo: "submit" 
 } 
 
 export function BotaoFormulario(props: IBotao){
@@ -30,7 +31,7 @@ export function BotaoFormulario(props: IBotao){
    `
    
    return (
-    <NovoBotao onClick={props.onClick}>{props.text}</NovoBotao>
+    <NovoBotao type={props.tipo} onClick={props.onClick}>{props.text}</NovoBotao>
    )
 }
 

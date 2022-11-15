@@ -21,13 +21,13 @@ export default function BotaoSenha(props: IBotaoSenha){
   const OlhoAberto = styled.img`
   width: 20px;
   height: 20px;
-  content: url('./src/assets/img/eye-crossed.svg');
+  content: url('./src/assets/img/eye-closed.svg');
   `
 
   const OlhoFechado = styled.img`
   width: 20px;
   height: 20px;
-  content: url('./src/assets/img/eye-closed.svg');
+  content: url('./src/assets/img/eye-crossed.svg');
   `
 
 
