@@ -36,13 +36,16 @@ export function Formulario(){
     .then(function (response) {
       console.log(response)
 
-      if(response.status === 200){
+      if(response.data.code == 200){
         return navigate('/selecionar')
+      } else {
+       alert("Email ou senha incorretos")
       }
+
     })
     .catch(function (error: Error) {
       console.log(error)
-      alert('Algo deu errado')
+      alert('email ou senha incorretos')
     });
   }
   

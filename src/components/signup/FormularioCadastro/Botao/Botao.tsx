@@ -26,6 +26,7 @@ export function BotaoFormulario(props: IBotao){
 
    @media screen and (min-width: 1024px){
     font-size: 15px;
+    width: 300px;
   }
 
    `

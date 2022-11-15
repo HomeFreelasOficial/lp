@@ -37,6 +37,8 @@ export function FormularioCadastro(){
 
     e.preventDefault()
 
+    if (account.senha !== account.confirmaSenha) return alert("as senhas não são iguais")
+
     axios.post(apiPath, {
       name: account.nome,
       email: account.email,
@@ -45,15 +47,27 @@ export function FormularioCadastro(){
       cpf: account.cpf
     })
     .then(function (response) {
-      console.log(response)
+      console.log(response.data)
 
       if(response.status === 201){
        alert('Verifique seu email')
       }
     })
-    .catch(function (error: Error) {
-      console.log(error)
-      alert('Algo deu errado')
+    .catch(function (error) {
+      console.log(error.response.data.body.name)
+
+      switch (error.response.data.body.name){
+        case "UserAlreadyExistsError":
+          alert("Usuário já cadastrado!")
+          break;
+        case "UnderageError":
+          alert("Você não pode criar uma conta sendo menor de 18 anos!")
+          break;
+        case "RequiredFieldsError":
+          alert("Insira os dados corretamente!")
+          break;
+      } 
+ 
     });
   }
  
