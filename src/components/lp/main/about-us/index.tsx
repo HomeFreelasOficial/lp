@@ -13,7 +13,8 @@ export default function AboutUs(){
             <S.Wrapper>
                 <S.Title>Quem Somos</S.Title>
                 <S.Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque sit soluta ipsa tempora cum quam sint, ex asperiores hic velit quae dolor obcaecati repudiandae ipsam sapiente, inventore voluptatem suscipit!
+                    Somos uma empresa que promete proporcionar as pessoas, uma melhor experiência e facilidade na hora
+                    de resolver seus problemas domésticos.
                 </S.Text>
                 <Button 
                     label="Cadastrar" 

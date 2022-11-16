@@ -47,13 +47,14 @@ export function FormularioCadastro(){
       cpf: account.cpf
     })
     .then(function (response) {
-      console.log(response.data)
+      console.log(response)
 
       if(response.status === 201){
        alert('Verifique seu email')
       }
     })
     .catch(function (error) {
+      console.log(error)
       console.log(error.response.data.body.name)
 
       switch (error.response.data.body.name){
