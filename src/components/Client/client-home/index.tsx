@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Footer } from "../../Footer";
 import BodyApp from "./Body/Body";
-import { HeaderApp } from "../../Header";
-import SideBar from "./SideBar";
+import Header from "../../Header";
+import SideBar from "../../SideBar";
 
 export default function ClientHome(){
 
@@ -14,7 +14,7 @@ export default function ClientHome(){
   
   return(
     <>
-    <HeaderApp functionSideBar={sideOpenClose}/>
+    <Header url="/cliente/inicio" functionSideBar={sideOpenClose}/>
     {sideBar === true ? 
     <SideBar openOrClose={sideBar}/> 
     : 
