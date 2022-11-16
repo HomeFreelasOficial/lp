@@ -11,7 +11,6 @@ export const Wrapper = styled.div`
 
 export const Header = styled.header`
   background-color: #222628;
-  position: fixed;
   padding: 1rem;
   width: 100%;
   align-items: center;

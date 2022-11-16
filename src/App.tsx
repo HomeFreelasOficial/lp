@@ -21,6 +21,7 @@ import ClientServiceAccepted from "./components/Client/client-service-accepted";
 import Payment from "./components/Client/client-payment";
 import VerifyEmail from "./components/verifyEmail";
 
+
 export function App() {
   return (
     <>
@@ -30,7 +31,7 @@ export function App() {
         <Route path="/" element={<LandingPage/>} /> 
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
-        <Route path="/email-verification/:hash" element={<VerifyEmail/>}/>
+        <Route path="/email-verification" element={<VerifyEmail/>}/>
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
         <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>

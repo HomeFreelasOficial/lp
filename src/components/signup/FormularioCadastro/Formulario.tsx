@@ -13,12 +13,13 @@ import {
   InputSenha,
   DivInputSenha
 } from "./styles"
-import { v4 as uuidv4 } from 'uuid';
 
 import axios from "axios"
 import { redirect } from "react-router-dom"
 
 export function FormularioCadastro(){
+
+  const apiPath = 'https://api.homefreelas.com.br/auth/sign-up'
 
   const [olhoAtivo, setOlhoAtivo] = useState(true)
   const [account, setAccount] = useState(
@@ -32,8 +33,13 @@ export function FormularioCadastro(){
     }
   )
 
-  function sendData(){
-    axios.post('/user', {
+  function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
+
+    e.preventDefault()
+
+    if (account.senha !== account.confirmaSenha) return alert("as senhas não são iguais")
+
+    axios.post(apiPath, {
       name: account.nome,
       email: account.email,
       password: account.senha,
@@ -41,14 +47,27 @@ export function FormularioCadastro(){
       cpf: account.cpf
     })
     .then(function (response) {
-      if (response.status === 200) {
-        console.log('Usuário cadastrado')
+      console.log(response.data)
+
+      if(response.status === 201){
+       alert('Verifique seu email')
       }
     })
-    .catch(function (error: Error) {
-      prompt(error.message)
+    .catch(function (error) {
+      console.log(error.response.data.body.name)
 
-      return redirect('signup')
+      switch (error.response.data.body.name){
+        case "UserAlreadyExistsError":
+          alert("Usuário já cadastrado!")
+          break;
+        case "UnderageError":
+          alert("Você não pode criar uma conta sendo menor de 18 anos!")
+          break;
+        case "RequiredFieldsError":
+          alert("Insira os dados corretamente!")
+          break;
+      } 
+ 
     });
   }
  
@@ -79,7 +98,7 @@ export function FormularioCadastro(){
       id="email"
          placeholder="Insira seu e-mail"/>
       <Input 
-      type="email" 
+      type="text" 
       onChange={(e) => setAccount({...account, age: e.target.value})}
       name="age" 
       value={account.age}   
@@ -107,7 +126,13 @@ export function FormularioCadastro(){
       placeholder="Confirme sua senha"/>
       </DivInputSenha>
     <Botoes>
-      <BotaoFormulario text="Confirmar" clicado={false} componentColor="black" componentWidth="17.5em" onClick={() => sendData()}/>
+      <BotaoFormulario 
+      tipo="submit" 
+      text="Confirmar" 
+      clicado={false} 
+      componentColor="black" 
+      componentWidth="17.5em" 
+      onClick={(e) => sendData(e)}/>
     </Botoes>
     <Texto>Já tem conta? Faça <LinkLogin href="signin">login</LinkLogin></Texto>
     </Formulario>
