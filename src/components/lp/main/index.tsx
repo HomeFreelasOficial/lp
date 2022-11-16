@@ -1,4 +1,4 @@
-import Section from "../section";
+import Section from "../../Section";
 import AboutUs from "./about-us";
 import EnjoyUs from "./enjoy-us";
 import Hero from "./hero";

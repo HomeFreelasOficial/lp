@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../button";
-import Section from "../../section";
+import Section from "../../../Section";
 import * as S from "./styled";
 
   type Content = {
@@ -26,6 +27,8 @@ import * as S from "./styled";
 export default function EnjoyUs() {
   const [activeItemIndex, setActiveItemIndex] = useState<number>(0)
 
+  const navigate = useNavigate();
+
   const firstActiveItem = activeItemIndex === 0;
   const secondActiveItem = activeItemIndex === 1;
   const thirdActiveItem = activeItemIndex === 2;
@@ -50,7 +53,7 @@ export default function EnjoyUs() {
         <S.ServiceDescription>
           <h1>{data[activeKey].title}</h1>
           <p>{data[activeKey].description}</p>
-          <Button label="Cadastrar" variant="secondary" />
+          <Button label="Cadastrar" variant="secondary" onClick={() => navigate('/signUp')} />
         </S.ServiceDescription>
       </S.Wrapper>
     </Section>

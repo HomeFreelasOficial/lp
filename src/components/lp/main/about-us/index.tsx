@@ -1,19 +1,25 @@
 import * as S from './styled';
 
-import Section from '../../section'
+import { useNavigate } from 'react-router-dom';
+
+import Section from '../../../Section'
 import Button from '../../button';
 
 export default function AboutUs(){
+    const navigate = useNavigate();
+
     return(
         <Section background="url(/assets/about-us.svg)">
             <S.Wrapper>
                 <S.Title>Quem Somos</S.Title>
                 <S.Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque sit soluta ipsa tempora cum quam sint, ex asperiores hic velit quae dolor obcaecati repudiandae ipsam sapiente, inventore voluptatem suscipit!
+                    Somos uma empresa que promete proporcionar as pessoas, uma melhor experiência e facilidade na hora
+                    de resolver seus problemas domésticos.
                 </S.Text>
                 <Button 
                     label="Cadastrar" 
                     variant="primary"
+                    onClick={() => navigate('/signUp')}
                 />
             </S.Wrapper>
         </Section>

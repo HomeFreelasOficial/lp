@@ -16,7 +16,7 @@
 
   @media screen and (min-width: 1024px) {
     width: 413px;
-    height: 483px;
+    height: 500px;
   }
 
   `
@@ -42,6 +42,12 @@
     font-size: 15px;
     font-family: 'Poppins';
   }
+
+  @media screen and (min-width: 1024px){
+    width: 300px;
+    height: 45px;
+    font-size: 16px;
+  }
   `
   export const InputSenha = styled.input `
   background-color: transparent;
@@ -50,6 +56,11 @@
     color: rgba(0, 0, 0, 0.4);
     font-size: 15px;
     font-family: 'Poppins';
+  }
+
+  @media screen and (min-width: 1024px){
+    width: 300px;
+    font-size: 16px;
   }
   `
   
@@ -77,6 +88,10 @@
   width: 262px;
   height: 36px;
   background-color: white;
+  @media screen and (min-width: 1024px){
+    width: 300px;
+    height: 45px;
+  }
   `
 
   export const Botoes = styled.div `
@@ -89,6 +104,7 @@
 
   @media screen and (min-width: 1024px){
     gap: 6px;
+    width: 300px;
   }
   `
   export const Texto = styled.p `

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../button";
-import Section from "../../section";
+import Section from "../../../Section";
 import * as S from "./styled";
 
 type Content = {
@@ -23,6 +24,8 @@ const data: { [key: string]: Content } = {
 
 export default function UseOurAplication() {
   const [activeItemIndex, setActiveItemIndex] = useState<number>(0);
+
+  const navigate = useNavigate();
 
   const firstActiveItem = activeItemIndex === 0;
   const secondActiveItem = activeItemIndex === 1;
@@ -52,7 +55,7 @@ export default function UseOurAplication() {
         <S.BoxMain>
           <h1>{data[activeKey].title}</h1>
           <p>{data[activeKey].description}</p>
-          <Button label="Cadastrar" variant="secondary" />
+          <Button label="Cadastrar" variant="secondary" onClick ={() => navigate('/signUp')}/>
         </S.BoxMain>
         <S.BoxFooter>
           <a href="#">Saiba mais como trabalhar informalmente conosco.</a>

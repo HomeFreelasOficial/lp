@@ -1,6 +1,6 @@
 import { TextoBold } from '../client-home/Body/styles'
 import { HeaderCadastro } from '../../signin/Header/Header'
-import { Footer } from '../../signup/Footer/Footer'
+import { Footer } from '../../Footer'
 import { ButtonCancel } from './Botao/ButtonCancel'
 import {
   BodyOrganizer,
@@ -31,7 +31,7 @@ export default function ClientWaitingForFreela() {
 
   return (
     <Wrapper>
-      <HeaderCadastro />
+      <HeaderCadastro path='/cliente/inicio'/>
       <BodyOrganizer>
         <CardBotao>
           <TextoBold>

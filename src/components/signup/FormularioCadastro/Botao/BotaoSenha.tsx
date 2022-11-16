@@ -16,17 +16,18 @@ export default function BotaoSenha(props: IBotaoSenha){
   border-radius: 32px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
   `
   const OlhoAberto = styled.img`
   width: 20px;
   height: 20px;
-  content: url('./src/assets/img/eye-crossed.svg');
+  content: url('./src/assets/img/eye-closed.svg');
   `
 
   const OlhoFechado = styled.img`
   width: 20px;
   height: 20px;
-  content: url('./src/assets/img/eye-closed.svg');
+  content: url('./src/assets/img/eye-crossed.svg');
   `
 
 

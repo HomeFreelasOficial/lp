@@ -1,6 +1,4 @@
 import styled from "styled-components";
-
-
 export const FooterComponent = styled.footer`
 
   width: auto;
@@ -23,7 +21,7 @@ export const FooterComponent = styled.footer`
   }
  
   @media screen and (min-width: 1366px){
-   padding: 3em;
+   padding: 2em;
   }
 `
 export const Texto = styled.p`

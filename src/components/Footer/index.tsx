@@ -1,16 +1,14 @@
 import {
   FooterComponent,
-  Texto
+  Text
 } from "./styles"
 
 
 export function Footer() {
-
-
-
  return (
   <FooterComponent>
-      <Texto>2020 &copy; HomeFreelas</Texto>
+      <Text>2022 &copy;</Text> 
+      <Text>HomeFreelas</Text>
   </FooterComponent>
  )
 

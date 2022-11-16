@@ -1,5 +1,5 @@
 import { HeaderCadastro } from "../../signin/Header/Header";
-import { Footer } from "../../signup/Footer/Footer";
+import { Footer } from "../../Footer";
 import { BodyOrganizer, Wrapper } from "../client-call-service/styles";
 import { TextoBold } from "../client-home/Body/styles";
 import CardFreela from "./CardFreela/CardFreela";
@@ -10,7 +10,7 @@ export default function ClientServiceAccepted(){
 
   return(
     <Wrapper>
-         <HeaderCadastro/>
+         <HeaderCadastro path='/cliente/inicio'/>
          <BodyOrganizer>
            <Card>
             <TextoBold>Pedido aceito!</TextoBold>
