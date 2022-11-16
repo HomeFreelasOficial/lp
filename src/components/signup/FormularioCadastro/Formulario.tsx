@@ -49,7 +49,8 @@ export function FormularioCadastro(){
       prompt(error.message)
 
       return redirect('signup')
-    });
+    })
+
   }
  
 
