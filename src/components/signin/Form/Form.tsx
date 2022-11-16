@@ -16,7 +16,7 @@ export function Formulario(){
 
   const navigate = useNavigate()
 
-  const apiPath = 'https://api.homefreelas.com.br/auth/signin'
+  const apiPath = 'https://api.homefreelas.com.br/auth/sign-in'
 
   const [account, setAccount] = useState(
     {
