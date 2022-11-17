@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import styled from "styled-components"
 import { BotaoFormulario } from "./Botao/Botao"
 import BotaoSenha from "./Botao/BotaoSenha"
@@ -173,7 +173,7 @@ export function FormularioCadastro(){
     </Botoes>
     <Texto>Já tem conta? Faça <LinkLogin href="signin">login</LinkLogin></Texto>
     {errorIsActive? <TextoErro>{errorText}</TextoErro> : <></>}
-    {userWasRegistered? <TextoUserLogado>Verifique o seu email!</TextoUserLogado> : <></>}
+    {userWasRegistered? <TextoUserLogado>Pronto! Agora verifique sua caixa de email</TextoUserLogado> : <></>}
     </Formulario>
   </Wrapper>
   

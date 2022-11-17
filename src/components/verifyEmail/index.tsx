@@ -18,7 +18,12 @@ export default function VerifyEmail(){
             hash: hash
         }).then((res) => {
            console.log(res.status)
-           if(res.status === 200) return navigate('/signin')
+           if(res.status === 200){
+            setTimeout(() => {
+                return navigate('/signin')
+            }, 500)
+            
+           } 
         }).catch((error) => {
             console.log(error)
         })
