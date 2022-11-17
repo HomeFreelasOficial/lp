@@ -8,7 +8,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   width: 341px;
-  height: 469px;
+  height: 500px;
   margin-inline: 44px;
   align-items: center;
   text-align: center;
@@ -16,7 +16,7 @@
 
   @media screen and (min-width: 1024px) {
     width: 413px;
-    height: 500px;
+    height: 529px;
   }
 
   `
@@ -116,6 +116,29 @@
     font-size: 15px;
   }
   `
+
+export const TextoErro = styled.p `
+font-size: 10px;
+margin-top: 4px;
+font-weight: 500;
+color: red;
+
+@media screen and (min-width: 1024px){
+  font-size: 15px;
+}
+`
+
+export const TextoUserLogado = styled.p `
+  font-size: 10px;
+  margin-top: 4px;
+  font-weight: 500;
+  color: green;
+
+  @media screen and (min-width: 1024px){
+    font-size: 15px;
+  }
+  `
+
   export const LinkLogin = styled.a `
   font-size: 10px;
   font-weight: 700;
