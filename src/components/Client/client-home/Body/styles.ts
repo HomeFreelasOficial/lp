@@ -11,18 +11,27 @@ gap: 14em;
 padding-top: 15em;
 padding-bottom: 15em;
 height: 100vh;
+
+@media (min-width: 720px){
+  padding-top: 25em;
+  padding-bottom: 25em;
+}
 `
 
 export const Card = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-padding: 2em;
-width: 65em;
-height: 30em;
+padding: 2rem;
+width: 65rem;
+height: 30rem;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
+
+@media (min-width: 720px){
+  height: 35rem;
+}
 `
 
 export const CardBotao = styled.div`
@@ -36,6 +45,16 @@ height: 30em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
+
+@media (min-width: 720px){
+  height: 35rem;
+  gap: 3em;
+}
+
+@media (min-width: 1024px){
+  height: 45rem;
+  gap: 3em;
+}
 `
 
 export const CardLocalizacao = styled.div`
@@ -50,6 +69,9 @@ height: 30em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
+@media (min-width: 720px){
+  height: 35rem;
+}
 `
 
 export const OrganizadorCardLocalizacao = styled.div`
