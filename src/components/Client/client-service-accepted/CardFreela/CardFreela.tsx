@@ -11,10 +11,25 @@ interface ICardFreela {
 export default function CardFreela(props: ICardFreela){
 
   const FreelaPicture = styled.img`
-    width: 55px;
-    height: 55px;
+    width: 65px;
+    height: 65px;
     border-radius: 32px;
     content: url(${props.imgURL});
+
+    @media (min-width: 720px){
+       width: 85px;
+       height: 85px;
+    }
+
+    @media (min-width: 1024px){
+      width: 105px;
+      height: 105px;
+    }
+
+    @media (min-width: 1366px){
+      width: 125px;
+      height: 125px;
+    }
   `
   return(
     <Card>

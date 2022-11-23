@@ -29,8 +29,18 @@ export function ButtonConfirm(props: IBotao){
     cursor: pointer;
    }
 
-   @media screen and (min-width: 1024px){
-    font-size: 15px;
+    @media (min-width: 720px){
+    font-size: 8px;
+    }
+
+   @media (min-width: 1024px){
+   font-size: 12px;
+   width: 35em;
+  }
+
+  @media (min-width: 1366px){
+  font-size: 14px;
+  width: 38em;
   }
 
    `

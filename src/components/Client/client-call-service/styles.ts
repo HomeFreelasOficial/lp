@@ -27,6 +27,18 @@ height: 35em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
+
+@media (min-width: 720px){
+  font-size: 8px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+}
 `
 export const Card = styled.div`
 display: flex;
@@ -39,6 +51,18 @@ height: 55em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
+
+@media (min-width: 720px){
+  font-size: 8px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+}
 `
 
 export const DescriptionForm = styled.form`
@@ -61,6 +85,20 @@ export const InputTitle = styled.input `
     font-size: 12px;
     font-family: 'Poppins';
   }
+
+  @media (min-width: 720px){
+  font-size: 8px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+  width: 35em;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+  width: 38em;
+}
   `
 
 export const Description = styled.textarea`
@@ -76,4 +114,18 @@ border: 1px solid rgba(0, 0, 0, 0.7);
     font-size: 12px;
     font-family: 'Poppins';
   }
+
+  @media (min-width: 720px){
+  font-size: 8px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+  width: 35em;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+  width: 38em;
+}
 `

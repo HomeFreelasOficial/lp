@@ -17,7 +17,7 @@ export default function ClientServiceAccepted(){
             <CardFreela imgURL="../src/assets/img/AlceuDispor.svg" name="Alceu Dispor" price="50R$ por hora"/>
             <TextoBold>Está a caminho</TextoBold>
            </Card>
-          <ButtonConfirmService href="/cliente/servico-aceito/pagamento">Confirmar conclusão do serviço</ButtonConfirmService>
+          <ButtonConfirmService>Confirmar conclusão do serviço</ButtonConfirmService>
          </BodyOrganizer>
          <Footer/>
     </Wrapper>
