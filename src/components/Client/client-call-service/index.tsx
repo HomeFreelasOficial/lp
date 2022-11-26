@@ -19,16 +19,21 @@ export default function ClientCallService() {
    const [typeOfService, setTypeOfService] = useState("")
 
    const [info, setInfo] = useState({
-     title: "",
-     description: ""
+    title: "",
+    description: ""
    })
 
    function sendData(){
-    axios.post('/user', {
-      firstName: 'Santos',
-      lastName: 'Dumont'
+    axios.post('https://api.homefreelas.com.br/jobs', {
+      title: info.title,
+      description: info.description,
+      clientId: 1,
+      type: typeOfService,
+      
     })
     .then(function (response) {
+      console.log(response)
+      
       if (response.status == 200) {
         return redirect("/cliente/aguardando-freelancer")
       }
@@ -68,7 +73,7 @@ export default function ClientCallService() {
     </CardBotao>
     <Card>
       <DescriptionForm>
-        <InputTitle type="text" placeholder="Descreva o problema brevemente" value={info.title} onChange={(e) => { setInfo({...info, title: e.target.value})  }}/>
+      <InputTitle placeholder="Insira aqui o título do trabalho" value={info.title} onChange={(e) => { setInfo({...info, title: e.target.value})}}/>
       <Description placeholder="Descreva o problema detalhadamente aqui!" value={info.description} onChange={(e) => { setInfo({...info, description: e.target.value})}}>
       </Description>
       <ButtonConfirm text="Chamar Freela" clicado={false} componentColor="black" componentWidth="20em" onClick={() => sendData()}/>
