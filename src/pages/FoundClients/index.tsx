@@ -5,10 +5,14 @@ import { useEffect, useState } from "react";
 import SearchClients from "../../components/Professional/search-clients";
 import axios from "axios";
 
-const promise = new Promise((res, rej) => {
-  setTimeout(() => {
-    rej(new Error('Não deu dessa vez'))
-  }, 3000)
+const promise = new Promise(async (res, rej) => {
+    const clientsFounded = await axios.get('https://api.homefreelas.com.br');
+    const response = await clientsFounded.data;
+    res(response);
+
+    if(clientsFounded.status >= 400) {
+      rej(alert('deu erro'));
+    }
 })
 
 export default function FoundClients() {
@@ -19,9 +23,9 @@ export default function FoundClients() {
     try {
       const res = await promise
       setClients(res as unknown as any)
-    } catch(error: any) {
-      console.error(error)
-      setError(error)
+    } catch(err: any) {
+      console.error(err)
+      setError(err)
     }
   }
 
@@ -33,7 +37,6 @@ export default function FoundClients() {
     <>
       <Header visible={false}/>
       {clients.length ? <FoundedClients /> : <SearchClients />}
-      {error && <span>Deu erro: {error.message}</span>}
       <Footer/>
     </>
   );
