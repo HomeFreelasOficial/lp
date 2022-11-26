@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
+height: 100vh;
 `
 
 export const BodyOrganizer = styled.div`
@@ -12,7 +13,7 @@ flex-direction: column;
 gap: 5em;
 align-items: center;
 justify-content: center;
-padding-block: 44em;
+padding-block: 60em;
 height: 100vh;
 `
 export const CardBotao = styled.div`

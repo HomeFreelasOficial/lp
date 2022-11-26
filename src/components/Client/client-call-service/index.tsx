@@ -20,7 +20,8 @@ export default function ClientCallService() {
 
    const [info, setInfo] = useState({
     title: "",
-    description: ""
+    description: "",
+    adress: ""
    })
 
    function sendData(){
@@ -74,6 +75,7 @@ export default function ClientCallService() {
     <Card>
       <DescriptionForm>
       <InputTitle placeholder="Insira aqui o título do trabalho" value={info.title} onChange={(e) => { setInfo({...info, title: e.target.value})}}/>
+      <InputTitle placeholder="Rua Virgínia Ferni, 578, 08268-020" value={info.title} onChange={(e) => {setInfo({...info, adress: e.target.value})}}/>
       <Description placeholder="Descreva o problema detalhadamente aqui!" value={info.description} onChange={(e) => { setInfo({...info, description: e.target.value})}}>
       </Description>
       <ButtonConfirm text="Chamar Freela" clicado={false} componentColor="black" componentWidth="20em" onClick={() => sendData()}/>
