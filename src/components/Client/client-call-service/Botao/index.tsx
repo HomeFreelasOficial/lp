@@ -19,6 +19,20 @@ const Botao = styled.button<IBotao>`
     height: 34px;
     border-radius: 8px;
 
+
+    @media (min-width: 720px){
+  font-size: 12px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+  width: 35em;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+  width: 38em;
+}
   `
 
 export default function BotaoServicos(props: IBotao){

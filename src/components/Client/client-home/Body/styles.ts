@@ -29,8 +29,8 @@ background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
 
-@media (min-width: 720px){
-  height: 35rem;
+@media screen and (min-width: 720px){
+  font-size: 16px;
 }
 `
 
@@ -91,6 +91,18 @@ font-family: "Poppins";
 font-weight: 700;
 font-size: 13px;
 line-height: 20px;
+
+@media (min-width: 720px){
+  font-size: 16px;
+}
+
+@media (min-width: 1024px){
+  font-size: 18px;
+}
+
+@media (min-width: 1366px){
+  font-size: 20px;
+}
 `
 
 export const Texto = styled.p`
@@ -98,6 +110,18 @@ font-family: 'Poppins';
 font-weight: 400;
 font-size: 11px;
 line-height: 21px;
+
+@media (min-width: 720px){
+  font-size: 14px;
+}
+
+@media (min-width: 1024px){
+  font-size: 16px;
+}
+
+@media (min-width: 1366px){
+  font-size: 18px;
+}
 `
 
 export const BotaoRoxo = styled.a`

@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
+height: 100vh;
 `
 
 export const BodyOrganizer = styled.div`
@@ -12,7 +13,7 @@ flex-direction: column;
 gap: 5em;
 align-items: center;
 justify-content: center;
-padding-block: 44em;
+padding-block: 80em;
 height: 100vh;
 `
 export const CardBotao = styled.div`
@@ -27,18 +28,41 @@ height: 35em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
+
+@media (min-width: 720px){
+  font-size: 8px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+}
 `
 export const Card = styled.div`
 display: flex;
-flex-grow: 3;
 flex-direction: column;
 justify-content: space-around;
-padding: 6em;
+padding: 10em;
 width: 65em;
-height: 55em;
+height: 105em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
+
+@media (min-width: 720px){
+  font-size: 8px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+}
 `
 
 export const DescriptionForm = styled.form`
@@ -61,6 +85,20 @@ export const InputTitle = styled.input `
     font-size: 12px;
     font-family: 'Poppins';
   }
+
+  @media (min-width: 720px){
+  font-size: 8px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+  width: 35em;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+  width: 38em;
+}
   `
 
 export const Description = styled.textarea`
@@ -76,4 +114,18 @@ border: 1px solid rgba(0, 0, 0, 0.7);
     font-size: 12px;
     font-family: 'Poppins';
   }
+
+  @media (min-width: 720px){
+  font-size: 8px;
+}
+
+@media (min-width: 1024px){
+  font-size: 12px;
+  width: 35em;
+}
+
+@media (min-width: 1366px){
+  font-size: 14px;
+  width: 38em;
+}
 `

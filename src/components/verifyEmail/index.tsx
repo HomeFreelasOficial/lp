@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import { redirect, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { BodyOrganizer, Card, Wrapper } from "../Client/client-call-service/styles";
 import { Texto, TextoBold } from "../Client/client-home/Body/styles";
@@ -11,19 +11,22 @@ import { Footer } from "../Footer";
 export default function VerifyEmail(){
     const [ searchParams ] = useSearchParams()
     const hash = searchParams.get('hash')
-    let navigate = useNavigate()
+    const [time, setTime] = useState<number>(5);
+    const timeout = useRef(0);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
+
+       
+
         axios.post('https://api.homefreelas.com.br/auth/verificate' , {
             hash: hash
         }).then((res) => {
            console.log(res.status)
-           if(res.status === 200){
-            setTimeout(() => {
-                return navigate('/signin')
-            }, 500)
-            
-           } 
+           if(res.status === 200){ 
+
+            return setTimeout(() => navigate('/signin'), 1000*5)}
         }).catch((error) => {
             console.log(error)
         })
