@@ -19,6 +19,7 @@ import ClientWaitingForFreela from "./components/Client/client-waiting";
 import ClientServiceAccepted from "./components/Client/client-service-accepted";
 import Payment from "./components/Client/client-payment";
 import VerifyEmail from "./components/verifyEmail";
+import Work from "./pages/Work";
 
 export function App() {
   return (
@@ -33,7 +34,9 @@ export function App() {
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
         <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
-        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>}/>
+        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>}>
+          <Route path="/:id" element={<Work/>} />
+        </Route>
         <Route path="/maps-teste" element={<Mapa/>}/>
         <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
         <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
