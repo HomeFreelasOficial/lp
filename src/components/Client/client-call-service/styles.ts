@@ -13,7 +13,7 @@ flex-direction: column;
 gap: 5em;
 align-items: center;
 justify-content: center;
-padding-block: 60em;
+padding-block: 80em;
 height: 100vh;
 `
 export const CardBotao = styled.div`
@@ -43,12 +43,11 @@ border-radius: 8px;
 `
 export const Card = styled.div`
 display: flex;
-flex-grow: 3;
 flex-direction: column;
 justify-content: space-around;
-padding: 6em;
+padding: 10em;
 width: 65em;
-height: 55em;
+height: 105em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;

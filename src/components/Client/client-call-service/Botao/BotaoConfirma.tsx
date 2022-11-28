@@ -6,6 +6,7 @@ interface IBotao {
   text: string,
   clicado?: boolean,
   onClick?: React.MouseEventHandler<HTMLButtonElement>
+  type: 'submit'
 } 
 
 export function ButtonConfirm(props: IBotao){
@@ -46,7 +47,7 @@ export function ButtonConfirm(props: IBotao){
    `
    
    return (
-    <NovoBotao onClick={props.onClick}>{props.text}</NovoBotao>
+    <NovoBotao type={props.type} onClick={props.onClick}>{props.text}</NovoBotao>
    )
 }
 
