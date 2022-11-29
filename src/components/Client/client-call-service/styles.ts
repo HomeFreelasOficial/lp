@@ -47,7 +47,7 @@ flex-direction: column;
 justify-content: space-around;
 padding: 10em;
 width: 65em;
-height: 105em;
+height: 115em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;

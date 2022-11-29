@@ -11,7 +11,7 @@ export default function SideBar(props: ({
          <S.Text href="/perfil">
           Editar Perfil
          </S.Text>
-         <S.Text>
+         <S.Text href="/">
           Log out
          </S.Text>
       </S.Wrapper>

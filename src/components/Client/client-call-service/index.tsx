@@ -39,7 +39,6 @@ export default function ClientCallService() {
       description: info.description,
       clientId: 1,
       type: typeOfService,
-      geolocation: geolocation
     })
     .then(function (response) {
       console.log(response)

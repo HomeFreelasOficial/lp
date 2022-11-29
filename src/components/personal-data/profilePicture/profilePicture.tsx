@@ -2,10 +2,14 @@ import React from 'react'
 
 import { Picture } from './styles'
 
-export default function ProfilePicture(){
+interface IProfilePicture {
+    thumb: string
+}
+
+export default function ProfilePicture(props: IProfilePicture){
     return (
         <>
-        <Picture></Picture>
+        <Picture src={props.thumb}/>
         </>
     )
 }

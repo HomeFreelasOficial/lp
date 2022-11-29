@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
-export const Picture = styled.div`
-    border-radius: 100%;
-    overflow: hidden;
+export const Picture = styled.img`
     height: 136px;
     width: 136px;
-    background-color: black;
-    background-image: url('./src/assets/letrassemfundo.svg');
-    background-repeat: no-repeat;
 `
