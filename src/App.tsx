@@ -8,6 +8,7 @@ import {
   BrowserRouter as Router, Routes, Route
 } from 'react-router-dom'
 import ClientHome from "./components/client-home";
+import PersonalData from "./components/personal-data/Index";
 
 export function App() {
   return (
@@ -20,6 +21,7 @@ export function App() {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
+        <Route path="/perfil" element={<PersonalData/>}/>
       </Routes>
       </Router>
       
