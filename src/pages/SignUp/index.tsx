@@ -2,7 +2,7 @@
 import styled from "styled-components"
 import { HeaderCadastro } from "../../components/signin/Header/Header"
 import { BodyCadastro } from "../../components/signup/Body/Body"
-import { Footer } from "../../components/signup/Footer/Footer"
+import { Footer } from "../../components/Footer"
 
 
 export default function SignUp() {
@@ -14,7 +14,7 @@ export default function SignUp() {
 
   return (
     <Wrapper>
-      <HeaderCadastro/>
+      <HeaderCadastro path="/"/>
       <BodyCadastro/>
       <Footer/>
     </Wrapper>

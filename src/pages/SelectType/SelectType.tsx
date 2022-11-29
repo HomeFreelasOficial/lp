@@ -1,4 +1,4 @@
-import { Footer } from "../../components/signup/Footer/Footer";
+import { Footer } from "../../components/Footer";
 import { HeaderCadastro } from "../../components/signin/Header/Header";
 import styled from "styled-components";
 
@@ -10,6 +10,7 @@ export default function SelectType(props: {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   padding-inline: 10em;
   padding-top: 10em;
   padding-bottom: 12em;
@@ -56,6 +57,8 @@ export default function SelectType(props: {
   font-size: 13px;
   text-decoration: none;
 
+  transition: all .4s ease;
+
   :hover {
     cursor: pointer;
 
@@ -85,6 +88,8 @@ const BotaoProfissional = styled.a`
   font-size: 13px;
   text-decoration: none;
 
+  transition: all .4s ease;
+
   :hover {
     cursor: pointer;
 
@@ -103,7 +108,7 @@ const BotaoProfissional = styled.a`
   
   return (
     <>
-    <HeaderCadastro/>
+    <HeaderCadastro path="/"/>
     <Wrapper> 
       <Card>
       <Texto>Deseja se conectar como?</Texto>

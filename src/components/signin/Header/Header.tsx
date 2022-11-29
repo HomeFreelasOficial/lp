@@ -4,16 +4,16 @@ import {
   ItemLogo,
 } from "./styles"
 
-export function HeaderCadastro(){
-  
- 
+interface IHeader {
+  path?: string
+}
 
+export function HeaderCadastro(props: IHeader){
   return (
     <Header>
       <Wrapper>
-      <ItemLogo href="/home"></ItemLogo>  
+      <ItemLogo href={props.path}></ItemLogo>  
     </Wrapper>
     </Header>
-    
   )
 }

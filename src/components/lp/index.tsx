@@ -1,6 +1,6 @@
 import Header from "./header";
 import Main from "./main";
-import Footer from './footer'
+import { Footer } from '../Footer'
 
 export default function LandingPage() {
     return (
