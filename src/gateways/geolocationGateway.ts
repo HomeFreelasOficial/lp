@@ -10,8 +10,8 @@ export default async function getGeolocationByAddress(streetName: string, addres
     .then((res) => {
 
         const geolocation =  {
-         lat : res.data[1].lat,
-         lon : res.data[1].lon
+         lat : +res.data[1].lat,
+         lon : +res.data[1].lon
         }
 
          console.log(res, number, street, geolocation)
