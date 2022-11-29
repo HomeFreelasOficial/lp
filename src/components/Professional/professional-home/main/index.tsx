@@ -25,7 +25,7 @@ export default function Main() {
           <S.TextBold>
             Faça Freelas para clientes da sua região!
           </S.TextBold>  
-          <S.ButtonSearch onClick={() => navigate('/profissional/procurar-cliente')}>
+          <S.ButtonSearch onClick={() => navigate('/profissional/clientes-encontrados')}>
             Procurar clientes próximos
           </S.ButtonSearch>
         </S.CardButton>

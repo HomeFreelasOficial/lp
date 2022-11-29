@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   display: flex;
@@ -85,7 +86,7 @@ export const Arrow = styled.span<{ active: boolean }>`
   transform: ${props => props.active ? 'rotate(180deg)' : 'rotate(0)'};
 `
 
-export const ButtonAccept = styled.button`
+export const ButtonAccept = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;

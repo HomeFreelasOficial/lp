@@ -1,7 +1,7 @@
 import * as S from './styled';
 
-import Section from '../../../Section';
-import CardWork from '../../../CardWork';
+import Section from '../../Section';
+import CardWork from '../../CardWork';
 
 export default function Main() {
   return(
