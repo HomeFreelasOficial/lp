@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Texto, TextoBold } from "../client-home/Body/styles";
 import { HeaderCadastro } from "../../signin/Header/Header";
 import { Footer } from "../../Footer";
@@ -8,8 +8,7 @@ import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, D
 import axios from "axios";
 import { redirect } from "react-router-dom";
 import getGeolocationByAddress from "../../../gateways/geolocationGateway";
-import jwt_decode from 'jwt-decode'
-import { IUser } from "../../../types/User";
+import { User, UserContext } from "../../../context/user";
 
 
 export default function ClientCallService() {
@@ -27,9 +26,9 @@ export default function ClientCallService() {
     number: ""
    })
 
-   const token = document.cookie.replace('token=', '')
-   
-   var user = jwt_decode<IUser>(token)
+   const { user } = useContext(UserContext)
+
+   console.log(user)
 
    function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
 
