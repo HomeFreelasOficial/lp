@@ -8,7 +8,8 @@ import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, D
 import axios from "axios";
 import { redirect } from "react-router-dom";
 import getGeolocationByAddress from "../../../gateways/geolocationGateway";
-
+import jwt_decode from 'jwt-decode'
+import { IUser } from "../../../types/User";
 
 
 export default function ClientCallService() {
@@ -26,18 +27,20 @@ export default function ClientCallService() {
     number: ""
    })
 
+   const token = document.cookie.replace('token=', '')
+   
+   var user = jwt_decode<IUser>(token)
+
    function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
 
     e.preventDefault()
     
     let geolocation = getGeolocationByAddress(info.address, +info.number)
 
-    console.log(geolocation)
-
     axios.post('https://api.homefreelas.com.br/jobs', {
       title: info.title,
       description: info.description,
-      clientId: 1,
+      clientId: user.id,
       type: typeOfService,
       geolocation: geolocation
     })

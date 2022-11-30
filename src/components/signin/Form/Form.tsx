@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {
   Wrapper, 
   Title,
@@ -10,9 +10,13 @@ import {
 } from "./styles"
 import { BotaoFormulario } from "./Button/Button"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { redirect, useNavigate } from "react-router-dom"
+import { useCookies } from 'react-cookie'
+import jwt from 'jsonwebtoken'
 
 export function Formulario(){
+
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
   const navigate = useNavigate()
 
@@ -35,12 +39,11 @@ export function Formulario(){
     })
     .then(function (response) {
       console.log(response)
-
       if(response.data.code == 200){
+        setCookie("token", response.data.body.jwt, { path: '/'})
+
         return navigate('/selecionar')
-      } else {
-       alert("Email ou senha incorretos")
-      }
+      } 
 
     })
     .catch(function (error: Error) {
