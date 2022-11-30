@@ -1,5 +1,6 @@
 import * as S from "./styles";
 
+
 export default function SideBar(props: ({
   openOrClose: boolean;
 })){
@@ -8,10 +9,10 @@ export default function SideBar(props: ({
     <>
     <S.Navigation openOrCloseSide={props.openOrClose}>
       <S.Wrapper>
-         <S.Text href="/perfil">
+         <S.Text to="/perfil">
           Editar Perfil
          </S.Text>
-         <S.Text>
+         <S.Text to="/">
           Log out
          </S.Text>
       </S.Wrapper>
