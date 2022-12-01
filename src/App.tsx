@@ -34,8 +34,8 @@ export function App() {
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
         <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
-        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>}/>
-        <Route path="/:id" element={<Work/>} />
+        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>} />
+        <Route path="/maps-teste" element={<Mapa/>}/>
         <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
         <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
         <Route path="/cliente/servico-aceito" element={<ClientServiceAccepted/>}/>
