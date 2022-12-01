@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import {
   Wrapper, 
   Title,
@@ -12,7 +12,7 @@ import { BotaoFormulario } from "./Button/Button"
 import axios from "axios"
 import { redirect, useNavigate } from "react-router-dom"
 import { useCookies } from 'react-cookie'
-import jwt from 'jsonwebtoken'
+import { UserContext } from "../../../context/user"
 
 export function Formulario(){
 
@@ -22,12 +22,30 @@ export function Formulario(){
 
   const apiPath = 'https://api.homefreelas.com.br/auth/sign-in'
 
+  const {user} = useContext(UserContext)
+
+  if (user.verified){
+
+    const token = document.cookie.replace('token=', '')
+
+    axios.post(apiPath, {}, {headers: {
+      Authorization: token
+    }})
+    .then(res => {
+      if(res.status == 200){
+        return navigate("/selecionar")
+      }
+    })
+  }
+  
+
   const [account, setAccount] = useState(
     {
       email: "",
       senha: "",
     }
   )
+
 
   function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
 
