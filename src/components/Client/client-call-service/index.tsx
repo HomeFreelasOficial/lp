@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { TextoBold } from "../client-home/Body/styles";
+import { useState, useContext } from "react";
+import { Texto, TextoBold } from "../client-home/Body/styles";
 import { HeaderCadastro } from "../../signin/Header/Header";
 import { Footer } from "../../Footer";
 import BotaoServicos from "./Botao";
@@ -7,7 +7,8 @@ import { ButtonConfirm } from "./Botao/BotaoConfirma";
 import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, Description } from "./styles";
 import axios from "axios";
 import { redirect } from "react-router-dom";
-
+import getGeolocationByAddress from "../../../gateways/geolocationGateway";
+import { User, UserContext } from "../../../context/user";
 
 
 export default function ClientCallService() {
@@ -19,16 +20,32 @@ export default function ClientCallService() {
    const [typeOfService, setTypeOfService] = useState("")
 
    const [info, setInfo] = useState({
-     title: "",
-     description: ""
+    title: "",
+    description: "",
+    address: "",
+    number: ""
    })
 
-   function sendData(){
-    axios.post('/user', {
-      firstName: 'Santos',
-      lastName: 'Dumont'
+   const { user } = useContext(UserContext)
+
+   console.log(user)
+
+   function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
+
+    e.preventDefault()
+    
+    let geolocation = getGeolocationByAddress(info.address, +info.number)
+
+    axios.post('https://api.homefreelas.com.br/jobs', {
+      title: info.title,
+      description: info.description,
+      clientId: user.id,
+      type: typeOfService,
+      geolocation: geolocation
     })
     .then(function (response) {
+      console.log(response)
+      
       if (response.status == 200) {
         return redirect("/cliente/aguardando-freelancer")
       }
@@ -68,10 +85,21 @@ export default function ClientCallService() {
     </CardBotao>
     <Card>
       <DescriptionForm>
-        <InputTitle type="text" placeholder="Descreva o problema brevemente" value={info.title} onChange={(e) => { setInfo({...info, title: e.target.value})  }}/>
-      <Description placeholder="Descreva o problema detalhadamente aqui!" value={info.description} onChange={(e) => { setInfo({...info, description: e.target.value})}}>
+         <TextoBold>Informações adicionais:</TextoBold>
+      
+      <Texto>Título do trabalho</Texto>
+      <InputTitle placeholder="Ex. Minha torneira quebrou!" value={info.title} onChange={(e) => { setInfo({...info, title: e.target.value})}}/>
+      <Texto>Dê uma descrição mais detalhada do problema</Texto>
+      <Description placeholder="Ex. Estava lavando a louça quando a torneira parou de funcionar..." value={info.description} onChange={(e) => { setInfo({...info, description: e.target.value})}}>
       </Description>
-      <ButtonConfirm text="Chamar Freela" clicado={false} componentColor="black" componentWidth="20em" onClick={() => sendData()}/>
+      <TextoBold>Endereço:</TextoBold>
+      <Texto>Nome da rua</Texto>
+      <InputTitle placeholder="Ex. Rua Virgínia Ferni" value={info.address} onChange={(e) => {setInfo({...info, address: e.target.value})}}/>
+
+      <Texto>Número</Texto>
+      <InputTitle placeholder="Ex. 256" value={info.number} onChange={(e) => {setInfo({...info, number: e.target.value})}}/>
+
+      <ButtonConfirm type='submit' text="Chamar Freela" clicado={false} componentColor="black" componentWidth="20em" onClick={(e) => sendData(e)}/>
       </DescriptionForm>
     </Card>
     </BodyOrganizer>

@@ -7,9 +7,8 @@ export const Wrapper = styled.div `
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   width: 341px;
-  height: 469px;
+  height: 310px;
   margin-inline: 44px;
-  margin-bottom: 150px;
   align-items: center;
   text-align: center;
   gap: 20px;
