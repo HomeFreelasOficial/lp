@@ -11,7 +11,7 @@ export const Card = styled.div`
     border-radius: 8px;
 
     @media (min-width: 375px){
-        width: 4
+        width: 4    0rem;
     }
 `
 export const TextBold = styled.p`
@@ -53,17 +53,21 @@ export const Input = styled.input`
 export const SaveButton = styled.button`
     border-radius: 8px;
     align-items: center;
-    width: 11rem;
-    height: 5rem;
+    justify-content: center;
+    display: flex;
+    width: 13rem;
+    height: 8rem;
     font-size: 10px;
     cursor: pointer;
     background-color: #039487;
     color: white;
     font-size: 17px;
+    padding: 10px;
 
     @media (min-width: 375px) { 
         width: 13rem;
-        height: 5rem;
+        height: 6rem;
+        padding: 5px;
     }
 `
 export const JobButton = styled.button<{ isClicked: boolean, color: string }>`
