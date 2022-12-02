@@ -34,6 +34,7 @@ export const Styles = {
     background-size: cover;
     border-radius: 10px;
     background-image: ${props => props.isClicked ? 'url(./src/assets/img/component-2.png)' : 'url(./src/assets/img/component-3.png)'};
+    cursor: pointer
     `,
 
     TextBold : styled.p`

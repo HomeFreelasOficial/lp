@@ -11,16 +11,17 @@ export const Card = styled.div`
     border-radius: 8px;
 
     @media (min-width: 375px){
-        width: 40em
+        width: 4
     }
 `
 export const TextBold = styled.p`
     font-weight: 700;
-    font-size: 12px;
+    font-size:17px;
+
 `
 
 export const Text = styled.p`
-    font-size:12px;
+    font-size:17px;
 `
 
 export const Label = styled(Text)`
@@ -58,6 +59,12 @@ export const SaveButton = styled.button`
     cursor: pointer;
     background-color: #039487;
     color: white;
+    font-size: 17px;
+
+    @media (min-width: 375px) { 
+        width: 13rem;
+        height: 5rem;
+    }
 `
 export const JobButton = styled.button<{ isClicked: boolean, color: string }>`
     color: ${props => props.isClicked ? props.color : 'white'};
@@ -67,6 +74,11 @@ export const JobButton = styled.button<{ isClicked: boolean, color: string }>`
     align-items: center;
     width: 11rem;
     height: 3rem;
-    font-size: 10px;
+    font-size: 17px;
     cursor: pointer;
+
+    @media (min-width: 375px) { 
+        width: 13rem;
+        height: 5rem;
+    }
 `
