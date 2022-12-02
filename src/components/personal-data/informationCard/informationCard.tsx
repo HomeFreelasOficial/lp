@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Styles as S } from "./styles"
+import  * as S from "./styles"
 
 interface IInformationCard {
     isEditable: boolean
@@ -39,24 +39,31 @@ export default function Informations(props: IInformationCard) {
           onClick={() => changeJobSettings(technicalRepairs, setTechnicalRepairs)}
           >{technicalRepairs ? 'Ativo' : 'Ativar'}</S.JobButton>
           </>  :  <>
+
           <S.Text>Encanamento</S.Text>
           <S.JobButton 
           isClicked={plumbing} 
           color='#116AD2'
-          >{plumbing ? 'Ativo' : 'Ativar'}</S.JobButton>
+          >{plumbing ? 'Ativo' : 'Ativar'}
+          </S.JobButton>
+
           <S.Text>Elétrica</S.Text>
           <S.JobButton 
           isClicked={electric} 
           color='#F8B137'
-          >{electric ? 'Ativo' : 'Ativar'}</S.JobButton>
+          >{electric ? 'Ativo' : 'Ativar'}
+          </S.JobButton>
+          
           <S.Text>Reparos Técnicos</S.Text>
           <S.JobButton 
           isClicked={technicalRepairs} 
           color='#FF3A5E'
           >{technicalRepairs ? 'Ativo' : 'Ativar'}</S.JobButton>
           </>}
-         
+         <S.Label>Preço cobrado por hora trabalhada</S.Label>
+         <S.Input placeholder="Ex: R$:50,00"/>
        </S.Card>
+       <S.SaveButton>Salvar</S.SaveButton>
     </>
     )
 }
