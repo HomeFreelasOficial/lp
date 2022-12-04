@@ -20,6 +20,8 @@ import ClientServiceAccepted from "./components/Client/client-service-accepted";
 import Payment from "./components/Client/client-payment";
 import VerifyEmail from "./components/verifyEmail";
 import Work from "./pages/Work";
+import SearchClients from "./components/Professional/search-clients";
+
 
 
 export function App() {
@@ -37,7 +39,7 @@ export function App() {
         <Route path="/perfil" element={<PersonalData/>}/>
         <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
         <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
-        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>}/>
+        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>} />
         <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
         <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
         <Route path="/cliente/servico-aceito" element={<ClientServiceAccepted/>}/>

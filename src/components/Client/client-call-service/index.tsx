@@ -37,10 +37,11 @@ export default function ClientCallService() {
     let geolocation = getGeolocationByAddress(info.address, +info.number)
 
     axios.post('https://api.homefreelas.com.br/jobs', {
-      title: info.title,
       description: info.description,
       clientId: user.id,
       type: typeOfService,
+      title: info.title,
+      address: geolocation
     })
     .then(function (response) {
       console.log(response)

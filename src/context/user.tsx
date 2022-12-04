@@ -3,7 +3,8 @@ import{ IUser} from '../types/User'
 import jwt_decode from 'jwt-decode'
 
 interface UserContract {
-  user: IUser
+  user: IUser,
+  token: string
 }
 
 var user =
@@ -19,10 +20,10 @@ var user =
   }
 
 
-
+  var token = ''
 
   if (document.cookie.length > 0){
-    const token = document.cookie.replace('token=', '')
+    token = document.cookie.replace('token=', '')
      
     user = jwt_decode<IUser>(token)
   }
@@ -30,11 +31,11 @@ var user =
  
 
 
-export const UserContext = createContext({user} as UserContract);
+export const UserContext = createContext({user, token} as UserContract);
 
 
 export const User = ({children} : any) => {
   return(
-    <UserContext.Provider value={{ user }}>{children}</UserContext.Provider>
+    <UserContext.Provider value={{ user, token }}>{children}</UserContext.Provider>
   );
 }
