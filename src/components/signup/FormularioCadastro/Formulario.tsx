@@ -2,19 +2,7 @@ import { useRef, useState } from "react"
 import styled from "styled-components"
 import { BotaoFormulario } from "./Botao/Botao"
 import BotaoSenha from "./Botao/BotaoSenha"
-import {
-  Wrapper,
-  Title,
-  Formulario,
-  TextoErro,
-  TextoUserLogado,
-  Input,
-  Botoes,
-  Texto, 
-  LinkLogin,
-  InputSenha,
-  DivInputSenha
-} from "./styles"
+import * as S from "./styles"
 import { cpf } from "cpf-cnpj-validator"
 
 import axios from "axios"
@@ -107,10 +95,10 @@ export function FormularioCadastro(){
  
 
   return (
-  <Wrapper>
-   <Title>Cadastre-se</Title>
-    <Formulario>
-      <Input 
+  <S.Wrapper>
+   <S.Title>Cadastre-se</S.Title>
+    <S.Formulario>
+      <S.Input 
       autoFocus
       type="text" 
       onChange={(e) => setAccount({...account, nome: e.target.value})}
@@ -118,7 +106,7 @@ export function FormularioCadastro(){
       value={account.nome}   
       id="nome" 
          placeholder="Insira seu nome completo"/>
-      <Input 
+      <S.Input 
       type="text" 
       onChange={(e) => setAccount({...account, cpf: e.target.value})}
       name="cpf" 
@@ -127,22 +115,22 @@ export function FormularioCadastro(){
       maxLength={11}
 
       placeholder="Insira seu CPF"/>
-      <Input 
+      <S.Input 
       type="email" 
       onChange={(e) => setAccount({...account, email: e.target.value})}
       name="email" 
       value={account.email}   
       id="email"
          placeholder="Insira seu e-mail"/>
-      <Input 
+      <S.Input 
       type="text" 
       onChange={(e) => setAccount({...account, age: e.target.value})}
       name="age" 
       value={account.age}   
       id="age" 
          placeholder="Digite sua idade"/>
-      <DivInputSenha>
-      <InputSenha
+      <S.DivInputSenha>
+      <S.InputSenha
       type={olhoAtivo === true ? "password" : "text"} 
       onChange={(e) => setAccount({...account, senha: e.target.value})}
       name="senha" 
@@ -152,17 +140,17 @@ export function FormularioCadastro(){
       <BotaoSenha ativo={olhoAtivo} funcao={() => {
         setOlhoAtivo(!olhoAtivo)
       }}/>
-      </DivInputSenha>
-      <DivInputSenha>
-      <InputSenha  
+      </S.DivInputSenha>
+      <S.DivInputSenha>
+      <S.InputSenha  
       type={olhoAtivo === true ? "password" : "text"} 
       onChange={(e) => setAccount({...account, confirmaSenha: e.target.value})}
       name="confirmaSenha" 
       value={account.confirmaSenha}   
       id="confirmaSenha" 
       placeholder="Confirme sua senha"/>
-      </DivInputSenha>
-    <Botoes>
+      </S.DivInputSenha>
+    <S.Botoes>
       <BotaoFormulario 
       tipo="submit" 
       text="Confirmar" 
@@ -170,12 +158,12 @@ export function FormularioCadastro(){
       componentColor="black" 
       componentWidth="17.5em" 
       onClick={(e) => sendData(e)}/>
-    </Botoes>
-    <Texto>Já tem conta? Faça <LinkLogin href="signin">login</LinkLogin></Texto>
-    {errorIsActive? <TextoErro>{errorText}</TextoErro> : <></>}
-    {userWasRegistered? <TextoUserLogado>Pronto! Agora verifique sua caixa de email</TextoUserLogado> : <></>}
-    </Formulario>
-  </Wrapper>
+    </S.Botoes>
+    <S.Texto>Já tem conta? Faça <S.LinkLogin href="signin">login</S.LinkLogin></S.Texto>
+    {errorIsActive? <S.TextoErro>{errorText}</S.TextoErro> : <></>}
+    {userWasRegistered? <S.TextoUserLogado>Pronto! Agora verifique sua caixa de email</S.TextoUserLogado> : <></>}
+    </S.Formulario>
+  </S.Wrapper>
   
   )
 } 
