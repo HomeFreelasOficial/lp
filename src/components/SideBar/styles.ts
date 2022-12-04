@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Navigation = styled.div<{ openOrCloseSide: boolean }>`
 background-color: #222628;
@@ -38,7 +39,7 @@ padding-left: 3rem;
 gap: 5em;
 `
 
-export const Text = styled.a`
+export const Text = styled(Link)`
 text-decoration: none;
 font-weight: 400;
 font-size: 2rem;

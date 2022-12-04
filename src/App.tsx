@@ -11,16 +11,15 @@ import {
 } from 'react-router-dom'
 import PersonalData from "./components/personal-data/Index";
 import ProfessionalHome from "./pages/ProfessionalHome";
-import SearchClients from "./pages/SearchClients";
 import FoundClients from "./pages/FoundClients";
 
 import ClientHome from "./components/Client/client-home";
-import Mapa from "./pages/MapsTest";
 import ClientCallService from "./components/Client/client-call-service";
 import ClientWaitingForFreela from "./components/Client/client-waiting";
 import ClientServiceAccepted from "./components/Client/client-service-accepted";
 import Payment from "./components/Client/client-payment";
 import VerifyEmail from "./components/verifyEmail";
+import Work from "./pages/Work";
 
 
 export function App() {

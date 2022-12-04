@@ -13,8 +13,8 @@ padding-bottom: 15em;
 height: 100vh;
 
 @media (min-width: 720px){
-  padding-top: 25em;
-  padding-bottom: 25em;
+  padding-top: 35em;
+  padding-bottom: 35em;
 }
 `
 

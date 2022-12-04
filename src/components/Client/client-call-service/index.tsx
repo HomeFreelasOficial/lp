@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Texto, TextoBold } from "../client-home/Body/styles";
 import { HeaderCadastro } from "../../signin/Header/Header";
 import { Footer } from "../../Footer";
@@ -8,7 +8,7 @@ import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, D
 import axios from "axios";
 import { redirect } from "react-router-dom";
 import getGeolocationByAddress from "../../../gateways/geolocationGateway";
-
+import { User, UserContext } from "../../../context/user";
 
 
 export default function ClientCallService() {
@@ -26,18 +26,20 @@ export default function ClientCallService() {
     number: ""
    })
 
+   const { user } = useContext(UserContext)
+
+   console.log(user)
+
    function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
 
     e.preventDefault()
     
     let geolocation = getGeolocationByAddress(info.address, +info.number)
 
-    console.log(geolocation)
-
     axios.post('https://api.homefreelas.com.br/jobs', {
       title: info.title,
       description: info.description,
-      clientId: 1,
+      clientId: user.id,
       type: typeOfService,
     })
     .then(function (response) {

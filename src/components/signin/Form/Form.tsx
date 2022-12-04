@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import {
   Wrapper, 
   Title,
@@ -10,13 +10,34 @@ import {
 } from "./styles"
 import { BotaoFormulario } from "./Button/Button"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { redirect, useNavigate } from "react-router-dom"
+import { useCookies } from 'react-cookie'
+import { UserContext } from "../../../context/user"
 
 export function Formulario(){
+
+  const [cookies, setCookie, removeCookie] = useCookies(['token']);
 
   const navigate = useNavigate()
 
   const apiPath = 'https://api.homefreelas.com.br/auth/sign-in'
+
+  const {user} = useContext(UserContext)
+
+  if (user.verified){
+
+    const token = document.cookie.replace('token=', '')
+
+    axios.post(apiPath, {}, {headers: {
+      Authorization: token
+    }})
+    .then(res => {
+      if(res.status == 200){
+        return navigate("/selecionar")
+      }
+    })
+  }
+  
 
   const [account, setAccount] = useState(
     {
@@ -24,6 +45,7 @@ export function Formulario(){
       senha: "",
     }
   )
+
 
   function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
 
@@ -35,12 +57,11 @@ export function Formulario(){
     })
     .then(function (response) {
       console.log(response)
-
       if(response.data.code == 200){
+        setCookie("token", response.data.body.jwt, { path: '/'})
+
         return navigate('/selecionar')
-      } else {
-       alert("Email ou senha incorretos")
-      }
+      } 
 
     })
     .catch(function (error: Error) {
