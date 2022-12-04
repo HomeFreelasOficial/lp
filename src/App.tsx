@@ -9,6 +9,7 @@ import {
   Routes, 
   Route
 } from 'react-router-dom'
+import PersonalData from "./components/personal-data/Index";
 import ProfessionalHome from "./pages/ProfessionalHome";
 import FoundClients from "./pages/FoundClients";
 
@@ -33,9 +34,10 @@ export function App() {
         <Route path="/email-verification" element={<VerifyEmail/>}/>
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
+        <Route path="/perfil" element={<PersonalData/>}/>
         <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
-        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>} />
-        <Route path="/maps-teste" element={<Mapa/>}/>
+        <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
+        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>}/>
         <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
         <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
         <Route path="/cliente/servico-aceito" element={<ClientServiceAccepted/>}/>

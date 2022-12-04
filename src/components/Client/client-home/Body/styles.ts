@@ -48,12 +48,12 @@ border-radius: 8px;
 
 @media (min-width: 720px){
   height: 35rem;
-  gap: 3em;
+  gap: 4em;
 }
 
 @media (min-width: 1024px){
   height: 45rem;
-  gap: 3em;
+  gap: 5em;
 }
 `
 
