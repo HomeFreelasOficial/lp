@@ -18,8 +18,10 @@ import ClientCallService from "./components/Client/client-call-service";
 import ClientWaitingForFreela from "./components/Client/client-waiting";
 import ClientServiceAccepted from "./components/Client/client-service-accepted";
 import Payment from "./components/Client/client-payment";
+
 import VerifyEmail from "./components/verifyEmail";
 import Work from "./pages/Work";
+
 import SearchClients from "./components/Professional/search-clients";
 
 

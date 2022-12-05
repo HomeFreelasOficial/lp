@@ -15,8 +15,8 @@ border-radius: 8px;
 `
 
 export const ButtonConfirmService = styled.button`
-width: 26em;
-height: 6em;
+width: 26rem;
+height: 6rem;
 border-radius: 8px;
 font-size: 10px;
 background-color: #227133;
@@ -42,5 +42,21 @@ padding-block: 1em;
   width: 32em;
   height: 10em;
   font-size: 14px;
+}
+`
+
+export const BodyOrganizer = styled.div`
+display: flex;
+flex-direction: column;
+gap: 5em;
+align-items: center;
+justify-content: center;
+padding-block: 105em;
+height: 100vh;
+
+@media (min-width: 720px){
+  padding-block: 75em;
+
+  font-size: 10px ;
 }
 `

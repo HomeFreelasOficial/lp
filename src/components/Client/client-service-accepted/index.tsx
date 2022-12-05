@@ -1,13 +1,12 @@
 import { HeaderCadastro } from "../../signin/Header/Header";
 import { Footer } from "../../Footer";
-import { BodyOrganizer, Wrapper } from "../client-call-service/styles";
+import { Wrapper } from "../client-call-service/styles";
 import { TextoBold } from "../client-home/Body/styles";
 import CardFreela from "./CardFreela/CardFreela";
-import { ButtonConfirmService, Card } from "./styles";
+import { ButtonConfirmService, Card, BodyOrganizer } from "./styles";
 
 export default function ClientServiceAccepted(){
-
-
+   
   return(
     <Wrapper>
          <HeaderCadastro path='/cliente/inicio'/>
