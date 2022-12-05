@@ -20,7 +20,7 @@ export function Formulario(){
 
   const navigate = useNavigate()
 
-  const apiPath = 'https://api.homefreelas.com.br/auth/sign-in'
+  const apiPath = 'https://localhost:1234/auth/sign-in'
 
   const {user} = useContext(UserContext)
 
@@ -32,6 +32,8 @@ export function Formulario(){
       Authorization: token
     }})
     .then(res => {
+
+      console.log(res)
       if(res.status == 200){
         return navigate("/selecionar")
       }

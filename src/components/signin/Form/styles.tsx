@@ -18,6 +18,11 @@ export const Wrapper = styled.div `
     height: 310px;
   }
 
+  @media screen and (min-width: 1366px) {
+    width: 50rem;
+    height: 35rem
+  }
+
 `
 export const Title = styled.h2 `
   margin-top: 23px;
@@ -25,6 +30,10 @@ export const Title = styled.h2 `
   font-size: 20px;
   @media screen and (min-width: 1024px){
     font-size: 25px;
+  }
+
+  @media screen and (min-width: 1366px){
+    font-size: 28px;
   }
 `
 
@@ -41,6 +50,17 @@ height: 36px;
   font-family: 'Poppins';
 
 }
+
+@media screen and (min-width: 1024px){
+  font-size: 16px;
+     width: 30rem;
+  }
+
+  @media screen and (min-width: 1366px){
+  font-size: 20px;
+     width: 30rem;
+     height: 5rem;
+  }
 `
 
 export const Form = styled.form `
@@ -62,10 +82,15 @@ flex-wrap: wrap;
 gap: 4px;
 margin-top: 8px;
 width: 280px;
-
+justify-content: center;
 @media screen and (min-width: 1024px){
   gap: 6px;
 }
+
+@media screen and (min-width: 1024px){
+    width: 35rem;
+  }
+
 `
 export const Texto = styled.p `
 font-size: 14px;

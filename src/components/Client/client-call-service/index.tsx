@@ -26,6 +26,8 @@ export default function ClientCallService() {
     number: ""
    })
 
+   const apiPath = 'https://localhost:1234/jobs'
+
    const { user } = useContext(UserContext)
 
    console.log(user)
@@ -36,7 +38,7 @@ export default function ClientCallService() {
     
     let geolocation = getGeolocationByAddress(info.address, +info.number)
 
-    axios.post('https://api.homefreelas.com.br/jobs', {
+    axios.post(apiPath, {
       description: info.description,
       clientId: user.id,
       type: typeOfService,
