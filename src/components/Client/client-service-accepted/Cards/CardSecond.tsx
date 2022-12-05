@@ -1,9 +1,7 @@
-import { Card } from './styles';
-import {BodyOrganizer} from "./styles";
 import { TextoBold } from "../../client-home/Body/styles";
 import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
-
+import * as S from './styles';
 
 
 export default function CardSecond(){
@@ -28,14 +26,14 @@ export default function CardSecond(){
 
     return(
         <>
-        <BodyOrganizer>
-            <Card>
+        <S.BodyOrganizer>
+            <S.Card>
             <TextoBold>
             Confirme a finalização do serviço.
             </TextoBold>
             <ButtonPay onClick={()=>{ navegate('/cliente/servico-aceito/pagamento')} } >Ir para o pagamento</ButtonPay>
-            </Card>
-        </BodyOrganizer>
+            </S.Card>
+        </S.BodyOrganizer>
         </>
     )
 }

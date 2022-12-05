@@ -2,7 +2,7 @@
 import { TextoBold } from "../../client-home/Body/styles";
 import CardFreela from "../CardFreela/CardFreela";
 import { useNavigate } from "react-router-dom";
-import * as S from '../styles';
+import * as S from './styles';
 
 export default function CardFirst(){
     return(

@@ -4,24 +4,23 @@ import { Wrapper } from "../client-call-service/styles";
 import CardFirst from "./Cards/CardFirst";
 
 
-import { useNavigate } from "react-router-dom";
-import * as S from './Cards/styles';
-import { useState } from "react";
-import CardSecond from "./Cards/cardSecond";
+import { BodyOrganizer } from "./Cards/styles";
+import CardSecond from "./Cards/CardSecond";
 
 export default function ClientServiceAccepted(){
 
-  const [Card, setCard] = useState(false);
+
+
 
   return(
     <Wrapper>
          <HeaderCadastro path='/cliente/inicio'/>
-         <S.BodyOrganizer>
+         <BodyOrganizer>
            { false ?
            <CardFirst/>:
            <CardSecond/>
           }
-         </S.BodyOrganizer>
+         </BodyOrganizer>
          <Footer/>
     </Wrapper>
    
