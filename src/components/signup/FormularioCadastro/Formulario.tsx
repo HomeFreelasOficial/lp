@@ -10,7 +10,7 @@ import { redirect } from "react-router-dom"
 
 export function FormularioCadastro(){
 
-  const apiPath = 'https://localhost:1234/auth/sign-up'
+  const apiPath = 'http://localhost:1234/auth/sign-up'
 
   const [olhoAtivo, setOlhoAtivo] = useState(true)
   const [errorIsActive, setErrorIsActive] = useState<boolean>(false)

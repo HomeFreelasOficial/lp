@@ -112,3 +112,14 @@ text-decoration: none;
   font-size: 15px;
 }
 `
+
+export const ErrorMessage = styled.p `
+font-size: 10px;
+margin-top: 4px;
+font-weight: 500;
+color: red;
+
+@media screen and (min-width: 1024px){
+  font-size: 15px;
+}
+`
