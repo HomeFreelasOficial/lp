@@ -12,15 +12,15 @@ import * as S from "./styled";
   const data: { [key: string]: Content } = {
     security: {
       title: "Segurança",
-      description: "Descrição Segurança",
+      description: "Todos os nossos profissionais são verificados, não se preocupe!",
     },
     time: {
       title: "Agilidade",
-      description: "Descrição Agilidade",
+      description: "Prometemos solucionar seu problema com maior velocidade o possível, rastreando o profissional mais próximo de você.",
     },
     solve: {
       title: "Confiabilidade",
-      description: "Descrição Confiabilidade",
+      description: "",
     },
   }
 
