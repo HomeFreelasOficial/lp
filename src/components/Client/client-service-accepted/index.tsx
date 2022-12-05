@@ -1,27 +1,26 @@
 import { HeaderCadastro } from "../../signin/Header/Header";
 import { Footer } from "../../Footer";
 import { Wrapper } from "../client-call-service/styles";
-import { TextoBold } from "../client-home/Body/styles";
-import CardFreela from "./CardFreela/CardFreela";
+import CardFirst from "./Cards/CardFirst";
+
+
 import { useNavigate } from "react-router-dom";
-import * as S from './styles';
+import * as S from './Cards/styles';
+import { useState } from "react";
+import CardSecond from "./Cards/cardSecond";
 
 export default function ClientServiceAccepted(){
 
-  function Erase(){
-    let Confirm = document.getElementsByClassName('Confirm');
-  }
+  const [Card, setCard] = useState(false);
 
   return(
     <Wrapper>
          <HeaderCadastro path='/cliente/inicio'/>
          <S.BodyOrganizer>
-           <S.Card className="Confirm">
-            <TextoBold >Pedido aceito!</TextoBold>
-            <CardFreela imgURL="../src/assets/img/AlceuDispor.svg" name="Alceu Dispor" price="50R$ por hora"/>
-            <TextoBold >Está a caminho</TextoBold>
-           </S.Card>
-          <S.ButtonConfirmService onClick={() => Erase()} className="Confirm"> Confirmar conclusão do serviço</S.ButtonConfirmService>
+           { false ?
+           <CardFirst/>:
+           <CardSecond/>
+          }
          </S.BodyOrganizer>
          <Footer/>
     </Wrapper>
