@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Card = styled.div`
     display: flex;
-    padding: 1.5rem;
-    width: 374px;
-    height: 190px;
+    padding: 2rem 2.5rem;
+    width: max-content;
+    height: max-content;
     background-color: #F4F4F4;
     flex-direction: column;
     gap: 0.5rem;
@@ -26,11 +26,13 @@ export const Label = styled.p`
 `
 
 export const Input = styled.input`
+
     border: 1px solid rgba(0, 0, 0, 0.7);
     border-radius: 8px;
     padding-left: 8px;
-    width: 200px;
+    width: 35rem;
     height: 25px;
+    margin-top: 1rem;
 
     ::placeholder {
     color: rgba(0, 0, 0, 0.4);
@@ -39,6 +41,11 @@ export const Input = styled.input`
     }
 
     @media (min-width: 375px) {
-        width: 30rem;
+        width: 45rem;
+        
+    }
+
+    @media screen {
+        
     }
 `

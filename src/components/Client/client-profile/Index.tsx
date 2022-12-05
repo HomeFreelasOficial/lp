@@ -26,7 +26,7 @@ export default function ClientData() {
             }
             <S.Body>
                 <S.ProfileDiv>
-                 <ProfilePicture thumb="./src/assets/img/AlceuDispor.svg"/>
+                 <ProfilePicture thumb="../../../src/assets/img/AlceuDispor.svg"/>
                  <S.EditButton isClicked={isEditable} onClick={() => setIsEditable(!isEditable)}/>
                 </S.ProfileDiv>
             
