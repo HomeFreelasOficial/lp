@@ -5,20 +5,28 @@ import { useEffect, useContext } from "react";
 import { JobContext, JobContextWrapper } from "../../context/jobs";
 import SearchClients from "../../components/Professional/search-clients";
 
-export default function FoundClients() {
+export function FoundClients() {
   const { searchClients, jobs } = useContext(JobContext);
 
   console.log(jobs);
 
   useEffect(() =>  {
-    searchClients
+    searchClients()
   }, [])
 
   return(
-    <JobContextWrapper>
+    <>
       <Header visible={false}/>
         {jobs.length ? <FoundedClients /> : <SearchClients />}
       <Footer/>
+    </>
+  );
+}
+
+export default () => {
+  return(
+    <JobContextWrapper>
+      <FoundClients/>
     </JobContextWrapper>
   );
 }

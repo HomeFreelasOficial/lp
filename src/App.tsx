@@ -21,6 +21,7 @@ import Payment from "./components/Client/client-payment";
 import VerifyEmail from "./components/verifyEmail";
 import Work from "./pages/Work";
 import SearchClients from "./components/Professional/search-clients";
+import NotFound from "./pages/NotFound";
 
 
 
@@ -44,6 +45,7 @@ export function App() {
         <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
         <Route path="/cliente/servico-aceito" element={<ClientServiceAccepted/>}/>
         <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
       </Router>
     </>
