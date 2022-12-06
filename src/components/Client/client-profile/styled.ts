@@ -33,13 +33,13 @@ export const Styles = {
     background-position: center;
     background-size: cover;
     border-radius: 10px;
-    background-image: ${props => props.isClicked ? 'url(./src/assets/img/component-2.png)' : 'url(./src/assets/img/component-3.png)'};
+    background-image: ${props => props.isClicked ? 'url(../../../src/assets/img/component-2.png)' : 'url(../../../src/assets/img/component-3.png)'};
     cursor: pointer
     `,
 
     TextBold : styled.p`
     font-weight: 700;
-    font-size: 17px;
+    font-size: 12px;
     `,
 
     Text : styled.p`
