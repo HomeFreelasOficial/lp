@@ -9,6 +9,8 @@ import { JobsContext } from '../../../context/jobs';
 export default function Main() {
   const { jobs } = useContext(JobsContext);
 
+  console.log(jobs)
+
   return(
     <Section>
       <S.Container>
