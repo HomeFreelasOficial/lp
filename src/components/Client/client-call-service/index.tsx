@@ -22,22 +22,27 @@ export default function ClientCallService() {
     number: ""
    })
    const apiPath = 'http://localhost:1234/jobs'
-   const { data } = useContext(UserContext)
+   const { dataUser } = useContext(UserContext)
 
    function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
     e.preventDefault()
+    console.log(dataUser);
     let geolocation = getGeolocationByAddress(info.address, +info.number)
-    const clientId = data.accounts.find(account => account.type === 'client')!.id
+    const clientId = dataUser.accounts.find(account => account.type === 'client')!.id
     axios.post(apiPath, {
       description: info.description,
       clientId,
       type: typeOfService,
       title: info.title,
       address: geolocation
+    }, {
+      headers: { 
+        Authorization: dataUser.token
+      }
     })
     .then(function (response) {
       console.log(response)
-      if (response.status == 200) {
+      if (response.status == 201) {
         return redirect("/cliente/aguardando-freelancer")
       }
     })

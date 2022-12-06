@@ -17,7 +17,7 @@ export const JobContextWrapper = ({ children }: any) => {
   
   const searchClients = async () => {
     try {
-      const res = await axios.get('https://localhost:1234/jobs')
+      const res = await axios.get('http://localhost:1234/jobs')
       setClients(res as unknown as any)
     } catch(err: any) {
       setError(err)
@@ -27,7 +27,7 @@ export const JobContextWrapper = ({ children }: any) => {
   
   clients.map((el) => {
     jobs.push(
-      new Job(el.jobId, el.clientId, el.professionalId, el.description, el.title, el.typeId, el.price)
+      new Job(el.id, el.clientId, el.professionalId, el.description, el.title, el.type, el.price, el.address)
     )
   });
 

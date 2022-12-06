@@ -1,6 +1,7 @@
 import { Footer } from "../../components/Footer";
 import { HeaderCadastro } from "../../components/signin/Header/Header";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function SelectType(props: {
   componentColor?: string
@@ -112,11 +113,14 @@ const BotaoProfissional = styled.a`
     <Wrapper> 
       <Card>
       <Texto>Deseja se conectar como?</Texto>
-      <BotaoCliente href="/cliente/inicio">Cliente</BotaoCliente>
-      <BotaoProfissional href="/profissional/inicio">Profissional</BotaoProfissional>
+      <Link to="/cliente/inicio">
+        <BotaoCliente>Cliente</BotaoCliente>
+      </Link>
+      <Link to="/profissional/inicio">
+        <BotaoProfissional href="/profissional/inicio">Profissional</BotaoProfissional>
+      </Link>
       </Card>
     </Wrapper>
-    
     <Footer/>
     </>
   )

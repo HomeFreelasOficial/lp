@@ -5,7 +5,7 @@ import { useEffect, useContext } from "react";
 import { JobContext, JobContextWrapper } from "../../context/jobs";
 import SearchClients from "../../components/Professional/search-clients";
 
-function FoundClients() {
+export function FoundClients() {
   const { searchClients, jobs } = useContext(JobContext);
 
   useEffect(() =>  {
@@ -22,9 +22,9 @@ function FoundClients() {
 }
 
 export default () => {
-  return (
+  return(
     <JobContextWrapper>
-      <FoundClients />
+      <FoundClients/>
     </JobContextWrapper>
-  )
+  );
 }

@@ -6,7 +6,6 @@ import CardWork from '../../CardWork';
 import { useContext } from 'react';
 import { JobContext } from '../../../context/jobs';
 
-
 export default function Main() {
   const { jobs } = useContext(JobContext);
 
