@@ -30,7 +30,7 @@ export function Formulario(){
     <S.Background>
       <S.Wrapper>
         <S.Title>Login</S.Title>
-        <S.Form method="POST">
+        <S.Form>
           <S.Input 
             type="email" 
             name="nome" 

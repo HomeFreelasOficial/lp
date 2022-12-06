@@ -32,15 +32,5 @@ padding-block: 1em;
   cursor: pointer;
 }
 
-@media (min-width: 720px){
-  width: 32em;
-  height: 10em;
-  font-size: 14px;
-}
 
-@media (min-width: 1024px){
-  width: 32em;
-  height: 10em;
-  font-size: 14px;
-}
 `

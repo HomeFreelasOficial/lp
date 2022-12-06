@@ -6,11 +6,21 @@ import BotaoServicos from "./Botao";
 import { ButtonConfirm } from "./Botao/BotaoConfirma";
 import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, Description } from "./styles";
 import axios from "axios";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import getGeolocationByAddress from "../../../gateways/geolocationGateway";
 import { UserContext } from "../../../context/user";
+import { JobContext, JobContextWrapper } from "../../../context/job";
+import Header from "../../Header";
+import SideBar from "../../SideBar";
 
 export default function ClientCallService() {
+
+  const [sideBar, setSideBar] = useState(false)
+
+  function sideOpenClose() {
+    setSideBar(old => !old)
+  } 
+
    const [isActiveEncanamento, setIsActiveEncanamento] = useState(false)
    const [isActiveEletrica, setIsActiveEletrica] = useState(false)
    const [isActiveReparos, setIsActiveReparos] = useState(false)
@@ -23,6 +33,8 @@ export default function ClientCallService() {
    })
    const apiPath = 'http://localhost:1234/jobs'
    const { dataUser } = useContext(UserContext)
+   const { job, newJob } = useContext(JobContext)
+   const navigate = useNavigate()
 
    function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
     e.preventDefault()
@@ -34,16 +46,19 @@ export default function ClientCallService() {
       clientId,
       type: typeOfService,
       title: info.title,
-      address: geolocation
+      address: `${info.address}, ${info.number}`
     }, {
       headers: { 
         Authorization: dataUser.token
       }
     })
-    .then(function (response) {
+    .then((response) => {
       console.log(response)
       if (response.status == 201) {
-        return redirect("/cliente/aguardando-freelancer")
+        const job = {...response.data.body}
+
+        newJob(job)
+        return navigate("/cliente/aguardando-freelancer")
       }
     })
     .catch(function (error) {
@@ -52,8 +67,14 @@ export default function ClientCallService() {
   }
 
   return (
+    <JobContextWrapper>
     <Wrapper>
-    <HeaderCadastro path='/cliente/inicio'/>
+    <Header visible={true} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
+    {sideBar === true ? 
+    <SideBar openOrClose={sideBar}/> 
+    : 
+    <SideBar openOrClose={sideBar}/>
+    }
     <BodyOrganizer>
     <CardBotao>
     <TextoBold>Qual é o problema?</TextoBold>
@@ -96,5 +117,6 @@ export default function ClientCallService() {
     </BodyOrganizer>
     <Footer/>
     </Wrapper>
+    </JobContextWrapper>
   )
 }

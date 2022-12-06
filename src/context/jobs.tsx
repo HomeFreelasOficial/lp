@@ -11,7 +11,7 @@ const jobs: Job[] = [];
 
 export const JobContext = createContext({jobs} as JobContract);
 
-export const JobContextWrapper = ({ children }: any) => {
+export const JobsContextWrapper = ({ children }: any) => {
   const [clients, setClients] = useState<Job[]>([])
   const [error, setError] = useState<Error | null>(null)
   

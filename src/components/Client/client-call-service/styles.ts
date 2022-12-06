@@ -13,14 +13,10 @@ flex-direction: column;
 gap: 5em;
 align-items: center;
 justify-content: center;
-padding-block: 105em;
-height: 100vh;
+padding-top: 40rem;
+padding-bottom: 40rem;
+;
 
-@media (min-width: 720px){
-  padding-block: 75em;
-
-  font-size: 10px ;
-}
 `
 export const CardBotao = styled.div`
 display: flex;

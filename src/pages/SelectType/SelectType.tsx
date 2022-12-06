@@ -48,6 +48,7 @@ export default function SelectType(props: {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   width: 12em;
   height: 2.5em;
   background-color: #8811D2;
@@ -76,6 +77,7 @@ export default function SelectType(props: {
   `
 
 const BotaoProfissional = styled.a`
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
