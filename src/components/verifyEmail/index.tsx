@@ -16,10 +16,7 @@ export default function VerifyEmail(){
 
 
     useEffect(() => {
-
-       
-
-        axios.post('https://api.homefreelas.com.br/auth/verificate' , {
+        axios.post('http://localhost:1234/auth/verificate' , {
             hash: hash
         }).then((res) => {
            console.log(res.status)
@@ -29,7 +26,7 @@ export default function VerifyEmail(){
         }).catch((error) => {
             console.log(error)
         })
-    })
+    },[])
     
     return(
         <>

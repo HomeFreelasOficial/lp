@@ -8,44 +8,35 @@ import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, D
 import axios from "axios";
 import { redirect } from "react-router-dom";
 import getGeolocationByAddress from "../../../gateways/geolocationGateway";
-import { User, UserContext } from "../../../context/user";
-
+import { UserContext } from "../../../context/user";
 
 export default function ClientCallService() {
-
    const [isActiveEncanamento, setIsActiveEncanamento] = useState(false)
    const [isActiveEletrica, setIsActiveEletrica] = useState(false)
    const [isActiveReparos, setIsActiveReparos] = useState(false)
-
    const [typeOfService, setTypeOfService] = useState("")
-
    const [info, setInfo] = useState({
     title: "",
     description: "",
     address: "",
     number: ""
    })
-
-   const { user } = useContext(UserContext)
-
-   console.log(user)
+   const apiPath = 'http://localhost:1234/jobs'
+   const { data } = useContext(UserContext)
 
    function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
-
     e.preventDefault()
-    
     let geolocation = getGeolocationByAddress(info.address, +info.number)
-
-    axios.post('https://api.homefreelas.com.br/jobs', {
+    const clientId = data.accounts.find(account => account.type === 'client')!.id
+    axios.post(apiPath, {
       description: info.description,
-      clientId: user.id,
+      clientId,
       type: typeOfService,
       title: info.title,
       address: geolocation
     })
     .then(function (response) {
       console.log(response)
-      
       if (response.status == 200) {
         return redirect("/cliente/aguardando-freelancer")
       }
@@ -54,8 +45,6 @@ export default function ClientCallService() {
       console.error(error);
     });
   }
-
-  
 
   return (
     <Wrapper>
@@ -85,21 +74,18 @@ export default function ClientCallService() {
     </CardBotao>
     <Card>
       <DescriptionForm>
-         <TextoBold>Informações adicionais:</TextoBold>
-      
-      <Texto>Título do trabalho</Texto>
-      <InputTitle placeholder="Ex. Minha torneira quebrou!" value={info.title} onChange={(e) => { setInfo({...info, title: e.target.value})}}/>
-      <Texto>Dê uma descrição mais detalhada do problema</Texto>
-      <Description placeholder="Ex. Estava lavando a louça quando a torneira parou de funcionar..." value={info.description} onChange={(e) => { setInfo({...info, description: e.target.value})}}>
-      </Description>
-      <TextoBold>Endereço:</TextoBold>
-      <Texto>Nome da rua</Texto>
-      <InputTitle placeholder="Ex. Rua Virgínia Ferni" value={info.address} onChange={(e) => {setInfo({...info, address: e.target.value})}}/>
-
-      <Texto>Número</Texto>
-      <InputTitle placeholder="Ex. 256" value={info.number} onChange={(e) => {setInfo({...info, number: e.target.value})}}/>
-
-      <ButtonConfirm type='submit' text="Chamar Freela" clicado={false} componentColor="black" componentWidth="20em" onClick={(e) => sendData(e)}/>
+        <TextoBold>Informações adicionais:</TextoBold>
+        <Texto>Título do trabalho</Texto>
+        <InputTitle placeholder="Ex. Minha torneira quebrou!" value={info.title} onChange={(e) => { setInfo({...info, title: e.target.value})}}/>
+        <Texto>Dê uma descrição mais detalhada do problema</Texto>
+        <Description placeholder="Ex. Estava lavando a louça quando a torneira parou de funcionar..." value={info.description} onChange={(e) => { setInfo({...info, description: e.target.value})}}>
+        </Description>
+        <TextoBold>Endereço:</TextoBold>
+        <Texto>Nome da rua</Texto>
+        <InputTitle placeholder="Ex. Rua Virgínia Ferni" value={info.address} onChange={(e) => {setInfo({...info, address: e.target.value})}}/>
+        <Texto>Número</Texto>
+        <InputTitle placeholder="Ex. 256" value={info.number} onChange={(e) => {setInfo({...info, number: e.target.value})}}/>
+        <ButtonConfirm type='submit' text="Chamar Freela" clicado={false} componentColor="black" componentWidth="20em" onClick={(e) => sendData(e)}/>
       </DescriptionForm>
     </Card>
     </BodyOrganizer>
