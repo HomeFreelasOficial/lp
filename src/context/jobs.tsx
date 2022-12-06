@@ -27,7 +27,7 @@ export const JobContextWrapper = ({ children }: any) => {
   
   clients.map((el) => {
     jobs.push(
-      new Job(el.jobId, el.clientId, el.professionalId, el.description, el.title, el.typeId, el.price)
+      new Job(el.id, el.clientId, el.professionalId, el.description, el.title, el.type, el.price, el.address)
     )
   });
 

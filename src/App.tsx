@@ -3,6 +3,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn/SignIn";
 import { GlobalStyles } from "./styles/global";
 import SelectType from "./pages/SelectType/SelectType";
+import { UserContextWrapper } from "./context/user";
 
 import {
   BrowserRouter as Router, 
@@ -27,7 +28,7 @@ import NotFound from "./pages/NotFound";
 
 export function App() {
   return (
-    <>
+    <UserContextWrapper>
     <GlobalStyles />
     <Router>
       <Routes>
@@ -48,7 +49,7 @@ export function App() {
         <Route path="*" element={<NotFound/>}/>
       </Routes>
       </Router>
-    </>
+    </UserContextWrapper>
   );
 }
 

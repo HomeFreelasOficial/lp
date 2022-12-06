@@ -1,5 +1,5 @@
 import { Card, CardBotao, CardLocalizacao, IconeLocal, Texto, TextoBold, Wrapper, OrganizadorCardLocalizacao, BotaoRoxo } from "./styles";
-
+import { Link } from "react-router-dom";
 
 export default function BodyApp() {
   return(
@@ -13,7 +13,9 @@ export default function BodyApp() {
      </CardLocalizacao>
      <CardBotao>
       <TextoBold>Deu problema?</TextoBold>
-      <BotaoRoxo href="/cliente/pedir-servico">Peça um freela aqui!</BotaoRoxo>
+      <Link to="/cliente/pedir-servico">
+        <BotaoRoxo>Peça um freela aqui!</BotaoRoxo>
+      </Link>
      </CardBotao>
      <Card>
       <TextoBold>Primeira vez aqui?</TextoBold>

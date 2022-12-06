@@ -1,41 +1,50 @@
-import { createContext, useEffect, useState } from 'react';
-import{ IUser} from '../types/User'
-import jwt_decode from 'jwt-decode'
+import { createContext, useEffect, useState } from 'react'
+import axios from 'axios'
+import { User } from '../entities/user'
+import { Account } from '../entities/account'
+import { useCookies } from 'react-cookie'
 
-interface UserContract {
-  user: IUser,
+interface UserContextData {
   token: string
+  user: User | null
+  accounts: Account[]
 }
 
-var user =
-  {
-    age: 0,
-    cpf: '',
-    email : 'string',
-    exp : 0,
-    iat : 0,
-    id : 'string',
-    name : 'string',
-    verified : false
+interface UserContextContract {
+  dataUser: UserContextData
+  login: Function
+}
+
+export const UserContext = createContext({} as UserContextContract)
+
+const BASE_URL = 'http://localhost:1234'
+
+export const UserContextWrapper = ({ children }: any) => {
+  // const [cookies, setCookie, removeCookie] = useCookies(['token']);
+  const [dataUser, setDataUser] = useState<UserContextData>({ user: null, token: '', accounts: [] })
+
+  const login = async (email: string, password: string) => {
+    try {
+      const { data } = await axios.request({
+        url: `${BASE_URL}/auth/sign-in`,
+        method: 'post',
+        data: { email, password }
+      })
+      setDataUser({ user: data.body.user, token: data.body.jwt, accounts: data.body.accounts })
+      // setCookie('token', data.jwt)
+    } catch(error: any) {
+      console.error(error)
+      throw error.response.data
+    }
   }
 
+  useEffect(() => {
+    console.log(dataUser)
+  }, [dataUser])
 
-  var token = ''
-
-  if (document.cookie.length > 0){
-    token = document.cookie.replace('token=', '')
-     
-    user = jwt_decode<IUser>(token)
-  }
-
- 
-
-
-export const UserContext = createContext({user, token} as UserContract);
-
-
-export const User = ({children} : any) => {
-  return(
-    <UserContext.Provider value={{ user, token }}>{children}</UserContext.Provider>
-  );
+  return (
+    <UserContext.Provider value={{ dataUser, login }}>
+      {children}
+    </UserContext.Provider>
+  )
 }

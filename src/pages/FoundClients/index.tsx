@@ -8,8 +8,6 @@ import SearchClients from "../../components/Professional/search-clients";
 export function FoundClients() {
   const { searchClients, jobs } = useContext(JobContext);
 
-  console.log(jobs);
-
   useEffect(() =>  {
     searchClients()
   }, [])
@@ -17,7 +15,7 @@ export function FoundClients() {
   return(
     <>
       <Header visible={false}/>
-        {jobs.length ? <FoundedClients /> : <SearchClients />}
+      {jobs.length ? <FoundedClients /> : <SearchClients />}
       <Footer/>
     </>
   );

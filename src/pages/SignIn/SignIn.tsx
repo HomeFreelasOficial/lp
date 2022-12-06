@@ -1,21 +1,17 @@
-import styled from "styled-components"
-import { Body } from "../../components/signin/Body/Body"
+import * as S from './styled'
+import { Formulario } from "../../components/signin/Form/Form"
 import { Footer } from "../../components/Footer"
 import { HeaderCadastro } from "../../components/signin/Header/Header"
 
 export default function SignIn() {
-
-  const Wrapper = styled.div `
-  display: flex;
-  flex-direction: column;
-  `
-
   return (
-    <Wrapper>
-      <HeaderCadastro path="/"/>
-      <Body/>
-      <Footer/>
-    </Wrapper>
+    <>
+      <S.Wrapper>
+        <HeaderCadastro path="/"/>
+        <Formulario />
+        <Footer/>
+      </S.Wrapper>
+    </>
   )
 }
 
