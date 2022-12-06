@@ -12,7 +12,7 @@ import {
 import PersonalData from "./components/personal-data/Index";
 import ProfessionalHome from "./pages/ProfessionalHome";
 import FoundClients from "./pages/FoundClients";
-
+import ClientData from "./components/Client/client-profile/Index";
 import ClientHome from "./components/Client/client-home";
 import ClientCallService from "./components/Client/client-call-service";
 import ClientWaitingForFreela from "./components/Client/client-waiting";
@@ -21,7 +21,6 @@ import Payment from "./components/Client/client-payment";
 import VerifyEmail from "./components/verifyEmail";
 import Work from "./pages/Work";
 import SearchClients from "./components/Professional/search-clients";
-
 
 
 export function App() {
@@ -36,6 +35,7 @@ export function App() {
         <Route path="/email-verification" element={<VerifyEmail/>}/>
         <Route path="/selecionar" element={<SelectType/>}/>
         <Route path="/cliente/inicio" element={<ClientHome/>}/>
+        <Route path="/cliente/perfil" element={<ClientData/>}/>
         <Route path="/perfil" element={<PersonalData/>}/>
         <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
         <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
