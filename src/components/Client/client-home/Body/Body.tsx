@@ -1,5 +1,4 @@
 import { Card, CardBotao, CardLocalizacao, IconeLocal, Texto, TextoBold, Wrapper, OrganizadorCardLocalizacao, BotaoRoxo } from "./styles";
-import { Link } from "react-router-dom";
 
 export default function BodyApp() {
   return(
@@ -11,12 +10,10 @@ export default function BodyApp() {
         </OrganizadorCardLocalizacao>
         <IconeLocal/>
      </CardLocalizacao>
-     <CardBotao>
+    <CardBotao>
       <TextoBold>Deu problema?</TextoBold>
-      <Link to="/cliente/pedir-servico">
-        <BotaoRoxo>Peça um freela aqui!</BotaoRoxo>
-      </Link>
-     </CardBotao>
+      <BotaoRoxo to="/cliente/pedir-servico">Peça um freela aqui!</BotaoRoxo>
+    </CardBotao>
      <Card>
       <TextoBold>Primeira vez aqui?</TextoBold>
       <Texto>Só clicar no botão roxo no card de cima, depois disso você vai poder específicar qual é o tipo de problema

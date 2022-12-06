@@ -7,33 +7,33 @@ interface JobContract {
   searchClients: Function
 }
 
-const jobs: Job[] = [];
+export const JobsContext = createContext({} as JobContract);
 
-export const JobContext = createContext({jobs} as JobContract);
-
-export const JobContextWrapper = ({ children }: any) => {
-  const [clients, setClients] = useState<Job[]>([])
+export const JobsContextWrapper = ({ children }: any) => {
+  const [jobs, setJobs] = useState<Job[]>([])
   const [error, setError] = useState<Error | null>(null)
   
   const searchClients = async () => {
     try {
-      const res = await axios.get('http://localhost:1234/jobs')
-      setClients(res as unknown as any)
+      const res = await axios.request({
+        url: 'http://localhost:1234/jobs',
+        method: 'GET',
+        data: {
+          types: []
+        } 
+      })
+      setJobs(res.data.body.map((el: any) => {
+        return new Job(el.job.id, el.job.clientId, el.job.professionalId, el.job.description, el.job.title, el.job.type, el.job.price, el.job.address, el.client.name, el.client.picture)
+      }))
     } catch(err: any) {
       setError(err)
       console.error(error)
     }
   }
-  
-  clients.map((el) => {
-    jobs.push(
-      new Job(el.id, el.clientId, el.professionalId, el.description, el.title, el.type, el.price, el.address)
-    )
-  });
 
   return(
-    <JobContext.Provider value={{ jobs, searchClients }}>
+    <JobsContext.Provider value={{ jobs, searchClients }}>
       {children}
-    </JobContext.Provider>
+    </JobsContext.Provider>
   );
 }

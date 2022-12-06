@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Texto, TextoBold } from "../client-home/Body/styles";
-import { HeaderCadastro } from "../../signin/Header/Header";
+import Header from "../../Header";
 import { Footer } from "../../Footer";
 import BotaoServicos from "./Botao";
 import { ButtonConfirm } from "./Botao/BotaoConfirma";
@@ -28,7 +28,7 @@ export default function ClientCallService() {
     e.preventDefault()
     console.log(dataUser);
     let geolocation = getGeolocationByAddress(info.address, +info.number)
-    const clientId = dataUser.accounts.find(account => account.type === 'client')!.id
+    const clientId = dataUser.accounts.find(account => account.type === 'client')?.id
     axios.post(apiPath, {
       description: info.description,
       clientId,
@@ -53,7 +53,7 @@ export default function ClientCallService() {
 
   return (
     <Wrapper>
-    <HeaderCadastro path='/cliente/inicio'/>
+    <Header url='/cliente/inicio'/>
     <BodyOrganizer>
     <CardBotao>
     <TextoBold>Qual é o problema?</TextoBold>

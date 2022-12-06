@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
 z-index: 1;
@@ -124,7 +125,7 @@ line-height: 21px;
 }
 `
 
-export const BotaoRoxo = styled.a`
+export const BotaoRoxo = styled(Link)`
 width: 250px;
 height: 44px;
 text-decoration: none;

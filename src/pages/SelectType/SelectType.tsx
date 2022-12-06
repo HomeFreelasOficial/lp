@@ -2,6 +2,8 @@ import { Footer } from "../../components/Footer";
 import { HeaderCadastro } from "../../components/signin/Header/Header";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { LinkLogin } from "../../components/signup/FormularioCadastro/styles";
+
 
 export default function SelectType(props: {
   componentColor?: string
@@ -44,10 +46,11 @@ export default function SelectType(props: {
    
   `
 
-  const BotaoCliente = styled.a`
+  const BotaoCliente = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   width: 12em;
   height: 2.5em;
   background-color: #8811D2;
@@ -75,10 +78,11 @@ export default function SelectType(props: {
    }
   `
 
-const BotaoProfissional = styled.a`
+const BotaoProfissional = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   width: 12em;
   height: 2.5em;
   background-color: #FF00C7;
@@ -113,12 +117,8 @@ const BotaoProfissional = styled.a`
     <Wrapper> 
       <Card>
       <Texto>Deseja se conectar como?</Texto>
-      <Link to="/cliente/inicio">
-        <BotaoCliente>Cliente</BotaoCliente>
-      </Link>
-      <Link to="/profissional/inicio">
-        <BotaoProfissional href="/profissional/inicio">Profissional</BotaoProfissional>
-      </Link>
+        <BotaoCliente to="/cliente/inicio">Cliente</BotaoCliente>
+        <BotaoProfissional to="/profissional/inicio">Profissional</BotaoProfissional>
       </Card>
     </Wrapper>
     <Footer/>
