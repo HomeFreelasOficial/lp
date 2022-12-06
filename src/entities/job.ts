@@ -7,6 +7,8 @@ export class Job {
     readonly title: string,
     readonly type: { id: number, name: string },
     readonly price: number,
-    readonly address: string
+    readonly address: string,
+    readonly clientName: string,
+    readonly clientPicture: string,
   ) {}
 }

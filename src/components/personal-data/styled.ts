@@ -39,7 +39,7 @@ export const Styles = {
 
     TextBold : styled.p`
     font-weight: 700;
-    font-size: 12px;
+    font-size: 17px;
     `,
 
     Text : styled.p`

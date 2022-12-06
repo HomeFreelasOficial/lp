@@ -27,6 +27,7 @@ import { JobContextWrapper } from "./context/job";
 import FoundProfessional from "./pages/FoundProfessional";
 
 
+
 export function App() {
   return (
     <JobContextWrapper>
@@ -53,7 +54,6 @@ export function App() {
           </Router>
         </UserContextWrapper>
     </JobContextWrapper>
-    
   );
 }
 

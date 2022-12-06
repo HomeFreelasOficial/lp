@@ -14,7 +14,7 @@ export function FoundClients() {
 
   return(
     <>
-      <Header visible={false}/>
+      <Header url="/profissional/inicio" visible={false}/>
       {jobs.length ? <FoundedClients /> : <SearchClients />}
       <Footer/>
     </>

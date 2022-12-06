@@ -2,7 +2,8 @@ import * as S from './styled';
 import Section from '../../Section';
 import CardWork from '../../CardWork';
 import { useContext } from 'react';
-import { JobsContext, JobsContextWrapper } from '../../../context/jobs';
+import { JobsContext } from '../../../context/jobs';
+
 
 export default function Main() {
   const { jobs } = useContext(JobsContext);
@@ -14,9 +15,9 @@ export default function Main() {
           <S.Title>Clientes encontrados:</S.Title>
           <S.RootList>
             <S.ViewportList>
-              {/* {jobs.map(el => {
-                <CardWork {...el} />
-              })} */}
+              {jobs.map(el => (
+                <CardWork key={el.id} {...el} />
+              ))}
             </S.ViewportList>
             <S.ScrollbarList orientation='vertical'>
               <S.ThumbList />

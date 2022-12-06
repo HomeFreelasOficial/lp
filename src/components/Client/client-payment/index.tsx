@@ -1,5 +1,5 @@
 import { Footer } from "../../signin/Footer/Footer";
-import { HeaderCadastro } from "../../signin/Header/Header";
+import Header from "../../Header";
 import { BodyOrganizer, Wrapper } from "../client-call-service/styles";
 import Header from "../../Header";
 import SideBar from "../../SideBar";

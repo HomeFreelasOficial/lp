@@ -20,7 +20,7 @@ import * as S from "./styled";
     },
     solve: {
       title: "Confiabilidade",
-      description: "",
+      description: "Este é um projeto acadêmico, feito com a intenção de aprender e de ajudar aqueles que precisam da nossa tecnologia, então fique tranquilo. Nada malicioso por aqui",
     },
   }
 
