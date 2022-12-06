@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div `
+display: flex;
+flex-direction: column;
+gap: 3em;
+`
+
 export const Card = styled.div`
 display: flex;
 flex-direction: column;
@@ -15,7 +21,7 @@ border-radius: 8px;
 `
 
 export const ButtonConfirmService = styled.button`
-width: 26em;
+width: 20em;
 height: 6em;
 border-radius: 8px;
 font-size: 10px;
@@ -32,5 +38,32 @@ padding-block: 1em;
   cursor: pointer;
 }
 
+@media (min-width: 720px){
+  width: 30rem;
+  font-size: 13px;
+}
+`
 
+export const ButtonCancelService = styled.button`
+  width: 20em;
+  height: 6em;
+  border-radius: 8px;
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding-block: 1em;
+
+:hover {
+  border: 1px solid red;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+
+@media (min-width: 720px){
+  width: 30rem;
+  font-size: 13px;
+}
 `

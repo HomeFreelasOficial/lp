@@ -138,5 +138,6 @@ export const ButtonForm = styled.button`
   color: #fff;
   padding: 1rem 10rem;
   border-radius: 8px;
+  cursor: pointer;
   
 `

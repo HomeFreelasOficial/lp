@@ -13,8 +13,8 @@ flex-direction: column;
 gap: 5em;
 align-items: center;
 justify-content: center;
-padding-top: 40rem;
-padding-bottom: 40rem;
+padding-top: 25rem;
+padding-bottom: 25rem;
 ;
 
 `
@@ -59,6 +59,7 @@ border-radius: 8px;
 }
 
 @media (min-width: 1024px){
+  height: 75rem;
   font-size: 12px;
 }
 

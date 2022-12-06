@@ -23,33 +23,36 @@ import VerifyEmail from "./components/verifyEmail";
 import Work from "./pages/Work";
 import SearchClients from "./components/Professional/search-clients";
 import NotFound from "./pages/NotFound";
+import { JobContextWrapper } from "./context/job";
+import FoundProfessional from "./pages/FoundProfessional";
 
 
 export function App() {
   return (
-    <UserContextWrapper>
-    <GlobalStyles />
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage/>} /> 
-        <Route path="/signin" element={<SignIn/>} />
-        <Route path="/signup" element={<SignUp/>} />
-        <Route path="/email-verification" element={<VerifyEmail/>}/>
-        <Route path="/selecionar" element={<SelectType/>}/>
-        <Route path="/cliente/inicio" element={<ClientHome/>}/>
-        <Route path="/cliente/perfil" element={<ClientData/>}/>
-        <Route path="/perfil" element={<PersonalData/>}/>
-        <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
-        <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
-        <Route path="/profissional/clientes-encontrados" element={<FoundClients/>} />
-        <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
-        <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
-        <Route path="/cliente/servico-aceito" element={<ClientServiceAccepted/>}/>
-        <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>
-        <Route path="*" element={<NotFound/>}/>
-      </Routes>
-      </Router>
-    </UserContextWrapper>
+    <JobContextWrapper>
+        <UserContextWrapper>
+          <GlobalStyles />
+          <Router>
+              <Routes>
+                <Route path="/" element={<LandingPage/>} /> 
+                <Route path="/signin" element={<SignIn/>} />
+                <Route path="/signup" element={<SignUp/>} />
+                <Route path="/email-verification" element={<VerifyEmail/>}/>
+                <Route path="/selecionar" element={<SelectType/>}/>
+                <Route path="/cliente/inicio" element={<ClientHome/>}/>
+                <Route path="/cliente/perfil" element={<ClientData/>}/>
+                <Route path="/perfil" element={<PersonalData/>}/>
+                <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
+                <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
+                <Route path="/profissional/clientes-encontrados" element={<FoundClients/>} />
+                <Route path="/cliente/pedir-servico" element={<FoundProfessional/>}/>
+                <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>
+                <Route path="*" element={<NotFound/>}/>
+              </Routes>
+          </Router>
+        </UserContextWrapper>
+    </JobContextWrapper>
+    
   );
 }
 

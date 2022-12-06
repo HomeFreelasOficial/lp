@@ -6,21 +6,19 @@ import {
   CardBotao,
 } from './styles'
 import axios from 'axios'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../../Header'
 import SideBar from '../../SideBar'
+import { JobContext } from '../../../context/job'
 
 export default function ClientWaitingForFreela() {
 
-  const navigate = useNavigate();
-
   const [sideBar, setSideBar] = useState(false)
-
   function sideOpenClose() {
     setSideBar(old => !old)
   }
-
+ 
   return (
     <Wrapper>
        <Header visible={true} url="/cliente/inicio" functionSideBar={sideOpenClose}/>

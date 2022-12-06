@@ -9,7 +9,7 @@ interface JobContract {
 
 const jobs: Job[] = [];
 
-export const JobContext = createContext({jobs} as JobContract);
+export const JobsContext = createContext({jobs} as JobContract);
 
 export const JobsContextWrapper = ({ children }: any) => {
   const [clients, setClients] = useState<Job[]>([])
@@ -32,8 +32,8 @@ export const JobsContextWrapper = ({ children }: any) => {
   });
 
   return(
-    <JobContext.Provider value={{ jobs, searchClients }}>
+    <JobsContext.Provider value={{ jobs, searchClients }}>
       {children}
-    </JobContext.Provider>
+    </JobsContext.Provider>
   );
 }

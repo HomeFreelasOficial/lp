@@ -6,8 +6,7 @@ import BotaoServicos from "./Botao";
 import { ButtonConfirm } from "./Botao/BotaoConfirma";
 import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, Description } from "./styles";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import getGeolocationByAddress from "../../../gateways/geolocationGateway";
+import { useNavigate } from "react-router-dom"
 import { UserContext } from "../../../context/user";
 import { JobContext, JobContextWrapper } from "../../../context/job";
 import Header from "../../Header";
@@ -33,13 +32,12 @@ export default function ClientCallService() {
    })
    const apiPath = 'http://localhost:1234/jobs'
    const { dataUser } = useContext(UserContext)
-   const { job, newJob } = useContext(JobContext)
+   const { job, setNewJob } = useContext(JobContext)
    const navigate = useNavigate()
 
    function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
     e.preventDefault()
     console.log(dataUser);
-    let geolocation = getGeolocationByAddress(info.address, +info.number)
     const clientId = dataUser.accounts.find(account => account.type === 'client')!.id
     axios.post(apiPath, {
       description: info.description,
@@ -55,9 +53,9 @@ export default function ClientCallService() {
     .then((response) => {
       console.log(response)
       if (response.status == 201) {
-        const job = {...response.data.body}
-
-        newJob(job)
+        const refJob = {...response.data.body}
+        console.log(refJob, job)
+        setNewJob(refJob)
         return navigate("/cliente/aguardando-freelancer")
       }
     })
@@ -67,7 +65,6 @@ export default function ClientCallService() {
   }
 
   return (
-    <JobContextWrapper>
     <Wrapper>
     <Header visible={true} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
     {sideBar === true ? 
@@ -117,6 +114,5 @@ export default function ClientCallService() {
     </BodyOrganizer>
     <Footer/>
     </Wrapper>
-    </JobContextWrapper>
   )
 }
