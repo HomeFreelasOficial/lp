@@ -139,10 +139,9 @@ export const ButtonForm = styled.button`
   padding: 1rem 10rem;
   border-radius: 8px;
   cursor: pointer;
-
   transition: all .4s ease-in-out;
-
   &:hover {
     opacity: .8;
   }
+
 `

@@ -1,16 +1,12 @@
 import * as S from './styled';
-
 import Section from '../../Section';
 import CardWork from '../../CardWork';
-
 import { useContext } from 'react';
-
 import { JobsContext } from '../../../context/jobs';
+
 
 export default function Main() {
   const { jobs } = useContext(JobsContext);
-
-  console.log(jobs)
 
   return(
     <Section>

@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { LinkLogin } from "../../components/signup/FormularioCadastro/styles";
 
-
 export default function SelectType(props: {
   componentColor?: string
 }){
@@ -77,6 +76,7 @@ export default function SelectType(props: {
     height: 3em;
    }
   `
+
 
 const BotaoProfissional = styled(Link)`
   display: flex;

@@ -5,7 +5,8 @@ import { Card, DivInfo } from "./styles";
 interface ICardFreela {
   name: string,
   imgURL: string,
-  price: string
+  price: number,
+  hours: number
 }
 
 export default function CardFreela(props: ICardFreela){
@@ -36,7 +37,8 @@ export default function CardFreela(props: ICardFreela){
       <FreelaPicture alt={props.name}/>
       <DivInfo>
       <TextoBold>{props.name}</TextoBold>
-      <Texto>{props.price}</Texto>
+      <Texto>R${props.price+''} por hora</Texto>
+      <Texto>{props.hours+''} horas estimadas</Texto>
       </DivInfo>
     </Card>
   )

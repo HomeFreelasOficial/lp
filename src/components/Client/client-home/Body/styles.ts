@@ -8,7 +8,7 @@ position: relative;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-gap: 14em;
+gap: 10em;
 padding-top: 15em;
 padding-bottom: 15em;
 height: 100vh;

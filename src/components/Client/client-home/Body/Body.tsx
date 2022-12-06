@@ -1,4 +1,6 @@
 import { Card, CardBotao, CardLocalizacao, IconeLocal, Texto, TextoBold, Wrapper, OrganizadorCardLocalizacao, BotaoRoxo } from "./styles";
+import { Link } from "react-router-dom";
+
 
 export default function BodyApp() {
   return(
