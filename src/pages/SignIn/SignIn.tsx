@@ -2,6 +2,8 @@ import styled from "styled-components"
 import { Body } from "../../components/signin/Body/Body"
 import { Footer } from "../../components/Footer"
 import { HeaderCadastro } from "../../components/signin/Header/Header"
+import { UserContextWrapper } from "../../context/user"
+
 
 export default function SignIn() {
 
@@ -11,11 +13,13 @@ export default function SignIn() {
   `
 
   return (
-    <Wrapper>
-      <HeaderCadastro path="/"/>
-      <Body/>
-      <Footer/>
-    </Wrapper>
+    <UserContextWrapper>
+      <Wrapper>
+        <HeaderCadastro path="/"/>
+        <Body/>
+        <Footer/>
+      </Wrapper>
+    </UserContextWrapper>
   )
 }
 

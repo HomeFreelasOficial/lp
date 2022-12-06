@@ -2,22 +2,29 @@ import Header from "../../components/Header";
 import FoundedClients from '../../components/Professional/found-clients'
 import { Footer } from "../../components/Footer";
 import { useEffect, useContext } from "react";
-import { JobContext } from "../../components/Context/jobs";
+import { JobContext, JobContextWrapper } from "../../context/jobs";
 import SearchClients from "../../components/Professional/search-clients";
 
-export default function FoundClients() {
+function FoundClients() {
   const { searchClients, jobs } = useContext(JobContext);
 
-  // useEffect(() =>  {
-  //   searchClients()
-  // }, [])
+  useEffect(() =>  {
+    searchClients()
+  }, [])
 
   return(
     <>
       <Header visible={false}/>
-      <FoundedClients />
-      {/* {jobs.length ? <FoundedClients /> : <SearchClients />} */}
+      {jobs.length ? <FoundedClients /> : <SearchClients />}
       <Footer/>
     </>
   );
+}
+
+export default () => {
+  return (
+    <JobContextWrapper>
+      <FoundClients />
+    </JobContextWrapper>
+  )
 }
