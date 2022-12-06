@@ -10,7 +10,7 @@ export default function Header(props: {
   return (
     <S.Container>
       <S.Wrapper>
-        <S.ItemLogo href={props.url}/>  
+        <S.ItemLogo to={{ pathname: props.url }}/>  
         <S.Menu visible={props.visible as boolean} isOpened={props.isOpened as boolean} onClick={props.functionSideBar}>
           <div></div>
           <div></div>
