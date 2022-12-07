@@ -14,7 +14,7 @@ gap: 5em;
 align-items: center;
 justify-content: center;
 padding-block: 10rem;
-
+height: 100vh;
 `
 export const CardBotao = styled.div`
 display: flex;
