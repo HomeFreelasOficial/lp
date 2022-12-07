@@ -13,8 +13,9 @@ export default function Payment(){
       <Header url="/cliente/inicio" visible={false}/>
       <BodyOrganizer>
         <S.Card>
-            <TextoBold>Selecione o método de pagamento</TextoBold>
-            <S.ConfirmButton to='/cliente/servico-aceito/retornar'>Confirmar</S.ConfirmButton>
+            <TextoBold>Pagamento realizado.</TextoBold>
+            <TextoBold>Obrigado por utilizar HomeFreelas!</TextoBold>
+            <S.BtnExit to='/'>Voltar a tela inicial</S.BtnExit>
         </S.Card>
       </BodyOrganizer>
       <Footer/>

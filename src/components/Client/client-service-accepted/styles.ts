@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 export const Card = styled.div`
 display: flex;
@@ -14,7 +15,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
 `
 
-export const ButtonConfirmService = styled.button`
+export const ButtonConfirmService = styled(Link)`
 width: 26rem;
 height: 6rem;
 border-radius: 8px;
@@ -24,6 +25,7 @@ color: white;
 text-decoration: none;
 text-align: center;
 padding-block: 1em;
+text-decoration: none;
 
 :hover {
   border: 1px solid #227133;
@@ -51,7 +53,7 @@ flex-direction: column;
 gap: 5em;
 align-items: center;
 justify-content: center;
-padding-block: 105em;
+padding-block: 10rem;
 height: 100vh;
 
 @media (min-width: 720px){

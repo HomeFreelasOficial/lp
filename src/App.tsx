@@ -17,7 +17,9 @@ import ClientHome from "./components/Client/client-home";
 import ClientCallService from "./components/Client/client-call-service";
 import ClientWaitingForFreela from "./components/Client/client-waiting";
 import ClientServiceAccepted from "./components/Client/client-service-accepted";
+import RedirectPay from "./components/Client/client-redirect-from-payment";
 import Payment from "./components/Client/client-payment";
+import Return from "./components/Client/Client-return";
 
 import VerifyEmail from "./components/verifyEmail";
 import Work from "./pages/Work";
@@ -45,7 +47,9 @@ export function App() {
         <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
         <Route path="/cliente/aguardando-freelancer" element={<ClientWaitingForFreela/>}/>
         <Route path="/cliente/servico-aceito" element={<ClientServiceAccepted/>}/>
+        <Route path="/cliente/servico-aceito/redirect" element={<RedirectPay/>}/>
         <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>
+        <Route path="/cliente/servico-aceito/retornar" element={<Return/>}/>
       </Routes>
       </Router>
     </>

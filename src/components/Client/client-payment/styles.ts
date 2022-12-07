@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Card = styled.div`
     display: flex;
@@ -14,13 +15,14 @@ export const Card = styled.div`
     border-radius: 8px;
 `
 
-export const ConfirmBtn = styled.button`
+export const ConfirmButton = styled(Link)`
     background-color: #8811D2;
     color: white;
+    text-decoration: none;
 
     font-weight: 600;
     font-size: 3rem;
 
     padding: 1rem 8rem;
-    border-radius: 100%;
+    border-radius: 8px;
 `
