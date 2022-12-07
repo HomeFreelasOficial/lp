@@ -6,7 +6,6 @@ import BodyApp from "./Body/Body";
 
 
 export default function ClientHome(){
-
   const [sideBar, setSideBar] = useState(false)
 
   function sideOpenClose() {

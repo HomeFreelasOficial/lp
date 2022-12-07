@@ -1,16 +1,24 @@
 import { useState, useContext } from "react";
 import { Texto, TextoBold } from "../client-home/Body/styles";
-import { HeaderCadastro } from "../../signin/Header/Header";
+import Header from "../../Header";
 import { Footer } from "../../Footer";
 import BotaoServicos from "./Botao";
 import { ButtonConfirm } from "./Botao/BotaoConfirma";
 import { BodyOrganizer, Wrapper, CardBotao, Card, DescriptionForm, InputTitle, Description } from "./styles";
 import axios from "axios";
-import { redirect } from "react-router-dom";
-import getGeolocationByAddress from "../../../gateways/geolocationGateway";
+import { useNavigate } from "react-router-dom"
 import { UserContext } from "../../../context/user";
+import { JobContext, JobContextWrapper } from "../../../context/job";
+import SideBar from "../../SideBar";
 
 export default function ClientCallService() {
+
+  const [sideBar, setSideBar] = useState(false)
+
+  function sideOpenClose() {
+    setSideBar(old => !old)
+  } 
+
    const [isActiveEncanamento, setIsActiveEncanamento] = useState(false)
    const [isActiveEletrica, setIsActiveEletrica] = useState(false)
    const [isActiveReparos, setIsActiveReparos] = useState(false)
@@ -22,23 +30,32 @@ export default function ClientCallService() {
     number: ""
    })
    const apiPath = 'http://localhost:1234/jobs'
-   const { data } = useContext(UserContext)
+   const { dataUser } = useContext(UserContext)
+   const { job, setNewJob } = useContext(JobContext)
+   const navigate = useNavigate()
 
    function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
     e.preventDefault()
-    let geolocation = getGeolocationByAddress(info.address, +info.number)
-    const clientId = data.accounts.find(account => account.type === 'client')!.id
+    console.log(dataUser);
+    const clientId = dataUser.accounts.find(account => account.type === 'client')?.id
     axios.post(apiPath, {
       description: info.description,
       clientId,
       type: typeOfService,
       title: info.title,
-      address: geolocation
+      address: `${info.address}, ${info.number}`
+    }, {
+      headers: { 
+        Authorization: dataUser.token
+      }
     })
-    .then(function (response) {
+    .then((response) => {
       console.log(response)
-      if (response.status == 200) {
-        return redirect("/cliente/aguardando-freelancer")
+      if (response.status == 201) {
+        const refJob = {...response.data.body}
+        console.log(refJob, job)
+        setNewJob(refJob)
+        return navigate("/cliente/aguardando-freelancer")
       }
     })
     .catch(function (error) {
@@ -48,7 +65,12 @@ export default function ClientCallService() {
 
   return (
     <Wrapper>
-    <HeaderCadastro path='/cliente/inicio'/>
+    <Header visible={true} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
+    {sideBar === true ? 
+    <SideBar openOrClose={sideBar}/> 
+    : 
+    <SideBar openOrClose={sideBar}/>
+    }
     <BodyOrganizer>
     <CardBotao>
     <TextoBold>Qual é o problema?</TextoBold>

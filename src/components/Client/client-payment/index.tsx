@@ -1,21 +1,15 @@
-import { Footer } from "../../signin/Footer/Footer";
-import { HeaderCadastro } from "../../signin/Header/Header";
-import { BodyOrganizer, Wrapper } from "../client-call-service/styles";
+import * as S from './styled';
+import Section from "../../Section";
 
-
-
-
-export default function Payment(){
-
+export default function Main() {
   return(
-    <>
-    <Wrapper>
-      <HeaderCadastro path='/cliente/inicio'/>
-      <BodyOrganizer>
-        
-      </BodyOrganizer>
-      <Footer/>
-    </Wrapper>
-    </>
-  )
+    <Section>
+      <S.Container>
+        <S.WrapperCard>
+          <S.TitleWrapperCard>Selecione o método de pagamento</S.TitleWrapperCard>
+          
+        </S.WrapperCard>
+      </S.Container>
+    </Section>
+  );
 }

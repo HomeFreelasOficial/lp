@@ -2,10 +2,7 @@ import Section from '../../../Section';
 
 import * as S from './styled';
 
-import { useNavigate } from 'react-router-dom';
-
 export default function Main() {
-  const navigate = useNavigate();
 
   return(
     <Section>
@@ -25,7 +22,7 @@ export default function Main() {
           <S.TextBold>
             Faça Freelas para clientes da sua região!
           </S.TextBold>  
-          <S.ButtonSearch onClick={() => navigate('/profissional/clientes-encontrados')}>
+          <S.ButtonSearch to='/profissional/clientes-encontrados'>
             Procurar clientes próximos
           </S.ButtonSearch>
         </S.CardButton>

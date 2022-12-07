@@ -6,7 +6,7 @@ import Section from '../../Section';
 import { useContext } from 'react';
 import { JobsContext } from '../../../context/jobs';
 import { Job } from '../../../entities/job';
-import CardWorkDetailed from '../../CardWorkDetailed';
+import CardService from './CardService';
 
 
 export default function Main() {
@@ -24,7 +24,7 @@ export default function Main() {
             <S.Container>
                 <S.WrapperCard>
                     <S.TitleWrapperCard>Informações do serviço</S.TitleWrapperCard>
-                    <CardWorkDetailed {...cardJob} />
+                    <CardService {...cardJob} />
                 </S.WrapperCard>
             </S.Container>
         </Section>

@@ -1,5 +1,14 @@
 import styled from "styled-components"
 
+export const Background = styled.div `
+width: auto;
+height: 100vh;
+padding-block: 17.5em;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
 export const Wrapper = styled.div `
   display:flex;
   flex-direction: column;
@@ -122,4 +131,17 @@ color: red;
 @media screen and (min-width: 1024px){
   font-size: 15px;
 }
+`
+
+export const ButtonForm = styled.button`
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 10rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  &:hover {
+    opacity: .8;
+  }
+
 `

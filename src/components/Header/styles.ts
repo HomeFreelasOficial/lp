@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ export const Container = styled.header`
     z-index: 100;
   `
 
-  export const ItemLogo = styled.a`
+  export const ItemLogo = styled(Link)`
     width: 5rem;
     height: 5rem;
     background-image: url('/public/assets/logo.svg');

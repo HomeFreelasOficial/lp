@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 95vh;
+  align-items: center;
+  height: 85vh;
 `
 
 export const WrapperCard = styled.div<{ children: any }>`
