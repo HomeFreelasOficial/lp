@@ -10,10 +10,8 @@ export function FoundClients() {
   const {dataUser} = useContext(UserContext)
   const { searchClients, jobs } = useContext(JobsContext);
 
-  // dataUser.accounts.find(account => account.type === 'professional')
-
   useEffect(() =>  {
-    searchClients()
+    searchClients(dataUser.accounts.find(account => account.type === 'professional'))
   }, [])
 
   return(

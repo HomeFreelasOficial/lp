@@ -5,6 +5,8 @@ import { JobsContext, JobsContextWrapper } from "../../context/jobs";
 import { useContext, useEffect } from "react";
 import { JobContext } from "../../context/job";
 import { useParams } from "react-router-dom";
+import ServiceCompleted from "../../components/Professional/service-completed";
+import Main from "../../components/Professional/performing-service";
 
 export function PerformingService() {
   const { paymentSucess, paid } = useContext(JobContext);
@@ -24,7 +26,7 @@ export function PerformingService() {
   {paid === true ? 
   <>
     <Header visible={false}/>
-    <Main/>
+    <ServiceCompleted/>
     <Footer/> 
   </>
  :

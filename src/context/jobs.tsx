@@ -14,11 +14,11 @@ export const JobsContextWrapper = ({ children }: any) => {
   const [jobs, setJobs] = useState<Job[]>([])
   const [error, setError] = useState<Error | null>(null)
   
-  const searchClients = async () => {
+  const searchClients = async (account: Account) => {
     try {
-      // const types: string = account.jobTypes.map(jobType => jobType.name).join(',')
+      const types: string = account.jobTypes.map(jobType => jobType.name).join(',')
       const res = await axios.request({
-        url: `http://localhost:1234/jobs`,
+        url: `http://localhost:1234/jobs?type=${types}`,
         method: 'GET',
         data: {
           types: []
