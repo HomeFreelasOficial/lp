@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Texto, TextoBold } from "../../client-home/Body/styles";
+import { Text, TextBold } from "../../client-home/styled";
 import { Card, DivInfo } from "./styles";
 
 interface ICardFreela {
@@ -36,9 +36,9 @@ export default function CardFreela(props: ICardFreela){
     <Card>
       <FreelaPicture alt={props.name}/>
       <DivInfo>
-      <TextoBold>{props.name}</TextoBold>
-      <Texto>R${props.price+''} por hora</Texto>
-      <Texto>{props.hours+''} horas estimadas</Texto>
+      <TextBold>{props.name}</TextBold>
+      <Text>R${props.price+''} por hora</Text>
+      <Text>{props.hours+''} horas estimadas</Text>
       </DivInfo>
     </Card>
   )

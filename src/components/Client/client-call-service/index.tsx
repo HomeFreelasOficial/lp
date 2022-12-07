@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { Texto, TextoBold } from "../client-home/Body/styles";
+import { Text, TextBold } from "../client-home/styled";
 import Header from "../../Header";
 import { Footer } from "../../Footer";
 import BotaoServicos from "./Botao";
@@ -9,7 +9,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom"
 import { UserContext } from "../../../context/user";
 import { JobContext, JobContextWrapper } from "../../../context/job";
-import Header from "../../Header";
 import SideBar from "../../SideBar";
 
 export default function ClientCallService() {
@@ -74,7 +73,7 @@ export default function ClientCallService() {
     }
     <BodyOrganizer>
     <CardBotao>
-    <TextoBold>Qual é o problema?</TextoBold>
+    <TextBold>Qual é o problema?</TextBold>
     <BotaoServicos ativo={isActiveEncanamento} funcao={() => {
       setIsActiveEncanamento(!isActiveEncanamento)
       setIsActiveReparos(false)
@@ -97,16 +96,16 @@ export default function ClientCallService() {
     </CardBotao>
     <Card>
       <DescriptionForm>
-        <TextoBold>Informações adicionais:</TextoBold>
-        <Texto>Título do trabalho</Texto>
+        <TextBold>Informações adicionais:</TextBold>
+        <Text>Título do trabalho</Text>
         <InputTitle placeholder="Ex. Minha torneira quebrou!" value={info.title} onChange={(e) => { setInfo({...info, title: e.target.value})}}/>
-        <Texto>Dê uma descrição mais detalhada do problema</Texto>
+        <Text>Dê uma descrição mais detalhada do problema</Text>
         <Description placeholder="Ex. Estava lavando a louça quando a torneira parou de funcionar..." value={info.description} onChange={(e) => { setInfo({...info, description: e.target.value})}}>
         </Description>
-        <TextoBold>Endereço:</TextoBold>
-        <Texto>Nome da rua</Texto>
+        <TextBold>Endereço:</TextBold>
+        <Text>Nome da rua</Text>
         <InputTitle placeholder="Ex. Rua Virgínia Ferni" value={info.address} onChange={(e) => {setInfo({...info, address: e.target.value})}}/>
-        <Texto>Número</Texto>
+        <Text>Número</Text>
         <InputTitle placeholder="Ex. 256" value={info.number} onChange={(e) => {setInfo({...info, number: e.target.value})}}/>
         <ButtonConfirm type='submit' text="Chamar Freela" clicado={false} componentColor="black" componentWidth="20em" onClick={(e) => sendData(e)}/>
       </DescriptionForm>

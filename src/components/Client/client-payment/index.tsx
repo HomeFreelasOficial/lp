@@ -1,7 +1,6 @@
 import { Footer } from "../../signin/Footer/Footer";
 import Header from "../../Header";
 import { BodyOrganizer, Wrapper } from "../client-call-service/styles";
-import Header from "../../Header";
 import SideBar from "../../SideBar";
 import { useState } from "react";
 

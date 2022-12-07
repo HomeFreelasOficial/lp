@@ -1,6 +1,6 @@
 import { Footer } from "../../Footer";
 import { BodyOrganizer, Wrapper } from "../client-call-service/styles";
-import { TextoBold } from "../client-home/Body/styles";
+import { TextBold } from "../client-home/styled";
 import CardFreela from "./CardFreela/CardFreela";
 import * as S from "./styles";
 import Header from "../../Header";
@@ -32,14 +32,14 @@ export default function ClientServiceAccepted(){
           }
          <BodyOrganizer>
            <S.Card>
-            <TextoBold>Pedido aceito!</TextoBold>
+            <TextBold>Pedido aceito!</TextBold>
             <CardFreela 
               imgURL={professional.picture} 
               name={professional.name}
               price={professional.perHour}
               hours={job.MINIMUM_HOURS}
               />
-            <TextoBold>Está a caminho</TextoBold>
+            <TextBold>Está a caminho</TextBold>
            </S.Card>
           <S.ButtonCancelService onClick={cancelRequest}>Rejeitar Profissional</S.ButtonCancelService>
           <S.ButtonConfirmService>Confirmar conclusão do serviço</S.ButtonConfirmService>

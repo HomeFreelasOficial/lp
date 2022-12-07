@@ -22,7 +22,7 @@ border-radius: 8px;
 
 export const ButtonConfirmService = styled.button`
 width: 20em;
-height: 6em;
+height: 4em;
 border-radius: 8px;
 font-size: 10px;
 background-color: #227133;
@@ -46,7 +46,7 @@ padding-block: 1em;
 
 export const ButtonCancelService = styled.button`
   width: 20em;
-  height: 6em;
+  height: 4em;
   border-radius: 8px;
   font-size: 10px;
   background-color: red;

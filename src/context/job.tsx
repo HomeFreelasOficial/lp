@@ -31,7 +31,7 @@ interface IJobs {
         name: string,
         perHour: number,
         picture: string,
-        type: "client" | "professional",
+        type: "professional",
         userId: string
     }
 }
@@ -44,7 +44,7 @@ interface Professional {
         name: string,
         perHour: number,
         picture: string,
-        type: "client" | "professional",
+        type: "professional",
         userId: string
 }
 
@@ -87,14 +87,12 @@ export const JobContextWrapper = ({ children }: any) => {
   
   const checkJobAccepted = async (jobId: string) => {
     try {
-      const res = await axios.get('http://localhost:1234/jobs')     
+      const res = await axios.get(`http://localhost:1234/jobs`)     
       const jobs : IJobs[] = (res.data.body)
-      const refJob = jobs.findIndex(refJob => refJob.job.id === jobId)
-      const refProfessional = jobs[refJob].professional
-
-      if(refProfessional !== null){
+      const refJob = jobs.find(work => work.job.id === jobId)
+      const refProfessional = refJob?.professional
+      if(refProfessional){
         setProfessional(refProfessional)
-        return true
       }
     } catch(err: any) {
       console.error(err)

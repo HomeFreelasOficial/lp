@@ -46,6 +46,7 @@ export function App() {
                 <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
                 <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
                 <Route path="/profissional/clientes-encontrados" element={<FoundClients/>} />
+                <Route path="/profissional/clientes-encontrados/:id" element={<Work/>} />
                 <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
                 <Route path="/cliente/aguardando-freelancer" element={<FoundProfessional/>}/>
                 <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>

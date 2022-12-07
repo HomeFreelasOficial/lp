@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import { redirect, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { BodyOrganizer, Card, Wrapper } from "../Client/client-call-service/styles";
-import { Texto, TextoBold } from "../Client/client-home/Body/styles";
+import { Text, TextBold } from "../Client/client-home/styled";
 import { Footer } from "../Footer";
 import { HeaderCadastro } from "../signin/Header/Header";
 
@@ -34,8 +34,8 @@ export default function VerifyEmail(){
             <HeaderCadastro path=""/>
             <BodyOrganizer>
                 <Card>
-                    <TextoBold>Seu email foi verificado!</TextoBold>
-                    <Texto>Você será direcionado para a tela de login</Texto>
+                    <TextBold>Seu email foi verificado!</TextBold>
+                    <Text>Você será direcionado para a tela de login</Text>
                 </Card>
             </BodyOrganizer>
             <Footer/>

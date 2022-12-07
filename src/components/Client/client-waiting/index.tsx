@@ -1,4 +1,4 @@
-import { TextoBold } from '../client-home/Body/styles'
+import { TextBold } from '../client-home/styled'
 import { Footer } from '../../Footer'
 import {
   BodyOrganizer,
@@ -29,9 +29,9 @@ export default function ClientWaitingForFreela() {
         }
       <BodyOrganizer>
         <CardBotao>
-          <TextoBold>
+          <TextBold>
             Esperando algum profissional atender o chamado...
-          </TextoBold>
+          </TextBold>
         </CardBotao>
       </BodyOrganizer>
       <Footer />

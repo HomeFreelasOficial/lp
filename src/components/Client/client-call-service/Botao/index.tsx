@@ -18,7 +18,7 @@ const Botao = styled.button<IBotao>`
     width: 257px;
     height: 34px;
     border-radius: 8px;
-
+    cursor: pointer;
 
     @media (min-width: 720px){
   font-size: 12px;
