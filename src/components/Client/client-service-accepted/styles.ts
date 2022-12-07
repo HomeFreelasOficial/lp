@@ -35,14 +35,14 @@ text-decoration: none;
 }
 
 @media (min-width: 720px){
-  width: 32em;
-  height: 10em;
+  width: 32rem;
+  height: 5rem;
   font-size: 14px;
 }
 
 @media (min-width: 1024px){
-  width: 32em;
-  height: 10em;
+  width: 32rem;
+  height: 5rem;
   font-size: 14px;
 }
 `
