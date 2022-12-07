@@ -2,9 +2,8 @@ import { Footer } from "../../signin/Footer/Footer";
 import Header from "../../Header";
 import { Wrapper } from "../client-call-service/styles";
 import * as S from "./styles";
-
-import { TextoBold } from "../client-home/Body/styles";
-import { BodyOrganizer } from "../client-service-accepted/styles";
+import { TextBold } from "../client-home/styled";
+import { BodyOrganizer } from "../client-call-service/styles";
 
 
 export default function Payment(){
@@ -13,8 +12,8 @@ export default function Payment(){
       <Header url="/cliente/inicio" visible={false}/>
       <BodyOrganizer>
         <S.Card>
-            <TextoBold>Pagamento realizado.</TextoBold>
-            <TextoBold>Obrigado por utilizar HomeFreelas!</TextoBold>
+            <TextBold>Pagamento realizado.</TextBold>
+            <TextBold>Obrigado por utilizar HomeFreelas!</TextBold>
             <S.BtnExit to='/'>Voltar a tela inicial</S.BtnExit>
         </S.Card>
       </BodyOrganizer>

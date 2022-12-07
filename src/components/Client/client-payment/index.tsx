@@ -1,28 +1,11 @@
-<<<<<<< HEAD
-import * as S from './styled';
-import Section from "../../Section";
-
-
-export default function Main() {
-  return(
-    <Section>
-      <S.Container>
-        <S.WrapperCard>
-          <S.TitleWrapperCard>Selecione o método de pagamento</S.TitleWrapperCard>
-          
-        </S.WrapperCard>
-      </S.Container>
-    </Section>
-  );
-=======
 import { Footer } from "../../signin/Footer/Footer";
 import Header from "../../Header";
 import { Wrapper } from "../client-call-service/styles";
 import * as S from "./styles";
 
-import Selector from "./selector/selector";
-import { TextoBold } from "../client-home/Body/styles";
-import { BodyOrganizer } from "../client-service-accepted/styles";
+import Selector from "./selector/Selector";
+import { TextBold } from "../client-home/styled";
+import { BodyOrganizer } from "../client-call-service/styles";
 
 
 export default function Payment(){
@@ -31,7 +14,7 @@ export default function Payment(){
       <Header url="/cliente/inicio" visible={false}/>
       <BodyOrganizer>
         <S.Card>
-            <TextoBold>Selecione o método de pagamento</TextoBold>
+            <TextBold>Selecione o método de pagamento</TextBold>
             <Selector/>
             <S.ConfirmButton to='/cliente/servico-aceito/retornar'>Confirmar</S.ConfirmButton>
         </S.Card>
@@ -39,5 +22,4 @@ export default function Payment(){
       <Footer/>
     </Wrapper>
   )
->>>>>>> 3ebf80ae6afc4d007fa35784a265cbc513fcbbfb
 }

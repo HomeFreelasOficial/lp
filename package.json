@@ -12,11 +12,8 @@
     "styled-components": "^5"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@radix-ui/react-dialog": "^1.0.2",
-=======
     "@radix-ui/react-icons": "^1.1.1",
->>>>>>> 3ebf80ae6afc4d007fa35784a265cbc513fcbbfb
     "@radix-ui/react-scroll-area": "^1.0.1",
     "@radix-ui/react-select": "^1.1.2",
     "@react-google-maps/api": "^2.16.0",

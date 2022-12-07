@@ -11,9 +11,7 @@ export default function PersonalData() {
 
     const {dataUser} = useContext(UserContext)
     const [isEditable, setIsEditable] = useState<boolean>(false)
-    const [file, setFile] = useState<File | null>(null)
-    const name = 'Alceu Dispor'
-    
+    const [file, setFile] = useState<File | null>(null)   
     const picture = dataUser.accounts.find(account => account.type === 'professional')?.picture!
    console.log('index ' + picture)
 
