@@ -13,7 +13,6 @@ export default function PersonalData() {
     const [isEditable, setIsEditable] = useState<boolean>(false)
     const [file, setFile] = useState<File | null>(null)   
     const picture = dataUser.accounts.find(account => account.type === 'professional')?.picture!
-   console.log('index ' + picture)
 
     return (
         <S.Wrapper>

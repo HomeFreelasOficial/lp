@@ -24,7 +24,7 @@ export const Styles = {
     
     `,
 
-    EditButton : styled.button<{isClicked : boolean}>`
+    EditButton : styled.button`
     z-index: 3;
     width: 20px;
     height: 20px;
@@ -33,7 +33,7 @@ export const Styles = {
     background-position: center;
     background-size: cover;
     border-radius: 10px;
-    background-image: ${props => props.isClicked ? 'url(../../../src/assets/img/component-2.png)' : 'url(../../../src/assets/img/component-3.png)'};
+    background-image: url(../../../src/assets/img/component-3.png);
     cursor: pointer
     `,
 
@@ -44,6 +44,23 @@ export const Styles = {
 
     Text : styled.p`
     font-size: 12px;
+    `,
+
+    InputPicture : styled.input`
+    display: none;
+    `,
+
+    LabelPicture : styled.label`
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 10em;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    background-image: url(./src/assets/img/component-2.png);
+    cursor: pointer
     `
 
 
