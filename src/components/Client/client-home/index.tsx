@@ -17,9 +17,9 @@ export default function ClientHome(){
     <>
     <Header visible={true} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
     {sideBar === true ? 
-    <SideBar openOrClose={sideBar}/> 
+    <SideBar type="client" openOrClose={sideBar}/> 
     : 
-    <SideBar openOrClose={sideBar}/>
+    <SideBar type="client" openOrClose={sideBar}/>
     }
     <Section>
     <S.Wrapper>

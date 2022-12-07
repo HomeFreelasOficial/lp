@@ -8,22 +8,12 @@ import { Styles as S} from './styled'
 
 export default function ClientData() {
 
-    const [sideBar, setSideBar] = useState(false)
     const [isEditable, setIsEditable] = useState<boolean>(false)
     const name = 'Alceu Dispor'
-
-    function sideOpenClose() {
-    setSideBar(old => !old)
-    }
-
+    
     return (
         <S.Wrapper>
-             <Header visible={true} isOpened={sideBar} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
-            {sideBar === true ? 
-            <SideBar openOrClose={sideBar}/> 
-            : 
-            <SideBar openOrClose={sideBar}/>
-            }
+             <Header visible={false} url="/cliente/inicio"/>
             <S.Body>
                 <S.ProfileDiv>
                  <ProfilePicture thumb="../../../src/assets/img/AlceuDispor.svg"/>

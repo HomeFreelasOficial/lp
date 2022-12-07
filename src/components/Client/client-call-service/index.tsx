@@ -67,9 +67,9 @@ export default function ClientCallService() {
     <Wrapper>
     <Header visible={true} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
     {sideBar === true ? 
-    <SideBar openOrClose={sideBar}/> 
+    <SideBar type="client" openOrClose={sideBar}/> 
     : 
-    <SideBar openOrClose={sideBar}/>
+    <SideBar type="client" openOrClose={sideBar}/>
     }
     <BodyOrganizer>
     <CardBotao>

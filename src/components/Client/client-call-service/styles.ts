@@ -13,9 +13,7 @@ flex-direction: column;
 gap: 5em;
 align-items: center;
 justify-content: center;
-padding-top: 25rem;
-padding-bottom: 25rem;
-;
+padding-block: 10rem;
 
 `
 export const CardBotao = styled.div`
@@ -25,8 +23,6 @@ align-items: center;
 justify-content: space-around;
 padding: 4em;
 gap: 2em;
-width: 65em;
-height: 35em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
@@ -47,9 +43,7 @@ export const Card = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-padding: 10em;
-width: 65em;
-height: 115em;
+padding: 4em;
 background-color: #F4F4F4;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
@@ -59,7 +53,6 @@ border-radius: 8px;
 }
 
 @media (min-width: 1024px){
-  height: 75rem;
   font-size: 12px;
 }
 

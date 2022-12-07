@@ -21,12 +21,7 @@ export default function ClientWaitingForFreela() {
  
   return (
     <Wrapper>
-       <Header visible={true} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
-        {sideBar === true ? 
-        <SideBar openOrClose={sideBar}/> 
-        : 
-        <SideBar openOrClose={sideBar}/>
-        }
+       <Header visible={false} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
       <BodyOrganizer>
         <CardBotao>
           <TextBold>

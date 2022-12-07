@@ -3,6 +3,7 @@ import { HeaderCadastro } from "../../components/signin/Header/Header";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { LinkLogin } from "../../components/signup/FormularioCadastro/styles";
+import Header from "../../components/Header";
 
 export default function SelectType(props: {
   componentColor?: string
@@ -113,12 +114,12 @@ const BotaoProfissional = styled(Link)`
   
   return (
     <>
-    <HeaderCadastro path="/"/>
+    <Header url="/" visible={false}/>
     <Wrapper> 
       <Card>
       <Texto>Deseja se conectar como?</Texto>
-        <BotaoCliente to="/cliente/inicio">Cliente</BotaoCliente>
-        <BotaoProfissional to="/profissional/inicio">Profissional</BotaoProfissional>
+        <BotaoCliente to="/cliente/perfil">Cliente</BotaoCliente>
+        <BotaoProfissional to="/perfil">Profissional</BotaoProfissional>
       </Card>
     </Wrapper>
     <Footer/>

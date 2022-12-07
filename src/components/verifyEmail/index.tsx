@@ -4,13 +4,14 @@ import { redirect, useNavigate, useParams, useSearchParams } from "react-router-
 import { BodyOrganizer, Card, Wrapper } from "../Client/client-call-service/styles";
 import { Text, TextBold } from "../Client/client-home/styled";
 import { Footer } from "../Footer";
+import Header from "../Header";
 import { HeaderCadastro } from "../signin/Header/Header";
+import * as S from './styled'
 
 
 export default function VerifyEmail(){
     const [ searchParams ] = useSearchParams()
     const hash = searchParams.get('hash')
-    const [time, setTime] = useState<number>(5);
     const timeout = useRef(0);
     const navigate = useNavigate();
 
@@ -22,7 +23,7 @@ export default function VerifyEmail(){
            console.log(res.status)
            if(res.status === 200){ 
 
-            return setTimeout(() => navigate('/signin'), 1000*5)}
+            return setTimeout(() => navigate('/signin'), 1000*3)}
         }).catch((error) => {
             console.log(error)
         })
@@ -31,13 +32,13 @@ export default function VerifyEmail(){
     return(
         <>
         <Wrapper>
-            <HeaderCadastro path=""/>
-            <BodyOrganizer>
-                <Card>
+            <Header url="/" visible={false}/>
+            <S.BodyWrapper>
+                <S.Card>
                     <TextBold>Seu email foi verificado!</TextBold>
                     <Text>Você será direcionado para a tela de login</Text>
-                </Card>
-            </BodyOrganizer>
+                </S.Card>
+            </S.BodyWrapper>
             <Footer/>
         </Wrapper>
         </>

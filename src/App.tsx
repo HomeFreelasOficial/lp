@@ -44,15 +44,11 @@ export function App() {
                 <Route path="/selecionar" element={<SelectType/>}/>
                 <Route path="/cliente/inicio" element={<ClientHome/>}/>
                 <Route path="/cliente/perfil" element={<ClientData/>}/>
-                <Route path="/perfil" element={<PersonalData/>}/>
+                <Route path="/profissional/perfil" element={<PersonalData/>}/>
                 <Route path="/profissional/inicio" element={<ProfessionalHome/>}/>
                 <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
                 <Route path="/profissional/clientes-encontrados" element={<FoundClients/>} />
                 <Route path="/profissional/clientes-encontrados/:id" element={<Work/>} />
-<<<<<<< HEAD
-=======
-                <Route path="/profissional/realizando-servico" element={<PerformingService/>} />
->>>>>>> 8ca386cf58003293de07598b1e33a8814f9e8ac7
                 <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
                 <Route path="/cliente/aguardando-freelancer" element={<FoundProfessional/>}/>
                 <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>

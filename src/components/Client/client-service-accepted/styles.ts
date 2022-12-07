@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
 
 export const Wrapper = styled.div `
 display: flex;
@@ -20,7 +21,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
 `
 
-export const ButtonConfirmService = styled.button`
+export const ButtonConfirmService = styled(Link)`
 width: 20em;
 height: 4em;
 border-radius: 8px;
@@ -35,30 +36,6 @@ padding-block: 1em;
   border: 1px solid #227133;
   background-color: white;
   color: #227133;
-  cursor: pointer;
-}
-
-@media (min-width: 720px){
-  width: 30rem;
-  font-size: 13px;
-}
-`
-
-export const ButtonCancelService = styled.button`
-  width: 20em;
-  height: 4em;
-  border-radius: 8px;
-  font-size: 10px;
-  background-color: red;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  padding-block: 1em;
-
-:hover {
-  border: 1px solid red;
-  background-color: white;
-  color: red;
   cursor: pointer;
 }
 

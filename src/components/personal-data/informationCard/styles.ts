@@ -69,6 +69,12 @@ export const SaveButton = styled.button`
         height: 6rem;
         padding: 5px;
     }
+
+    :hover {
+        border: 1px solid #039487;
+        color: #039487;
+        background-color: white;
+}
 `
 export const JobButton = styled.button<{ isClicked: boolean, color: string }>`
     color: ${props => props.isClicked ? props.color : 'white'};

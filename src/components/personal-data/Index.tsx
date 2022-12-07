@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import  Informations  from './informationCard/informationCard'
 import SideBar from "../SideBar";
 import ProfilePicture from "./profilePicture/profilePicture";
@@ -10,31 +10,33 @@ import { UserContext } from "../../context/user";
 export default function PersonalData() {
 
     const {dataUser} = useContext(UserContext)
-    const [sideBar, setSideBar] = useState(false)
     const [isEditable, setIsEditable] = useState<boolean>(false)
+    const [file, setFile] = useState<File | null>(null)
     const name = 'Alceu Dispor'
-
-    function sideOpenClose() {
-    setSideBar(old => !old)
-    }
+    
+    const picture = dataUser.accounts.find(account => account.type === 'professional')?.picture!
+   console.log('index ' + picture)
 
     return (
         <S.Wrapper>
-             <Header visible={true} isOpened={sideBar} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
-            {sideBar === true ? 
-            <SideBar openOrClose={sideBar}/> 
-            : 
-            <SideBar openOrClose={sideBar}/>
-            }
+             <Header visible={false} url="/profissional/inicio"/>
             <S.Body>
                 <S.ProfileDiv>
-                 <ProfilePicture thumb="./src/assets/img/AlceuDispor.svg"/>
-                 <S.EditButton isClicked={isEditable} onClick={() => setIsEditable(!isEditable)}/>
+                 <ProfilePicture thumb={dataUser.accounts.find(account => account.type === 'professional')?.picture!}/>
+                 { isEditable? <S.LabelPicture>
+                    <S.InputPicture 
+                        placeholder="+"
+                        type="file" 
+                        accept="image*" 
+                        onChange={({ target }) => {
+                            setFile(target.files![0])
+                        }} />
+                 </S.LabelPicture>  : <S.EditButton onClick={() => setIsEditable(!isEditable)}/>}
                 </S.ProfileDiv>
             
             <S.TextBold>{dataUser.user?.name}</S.TextBold>
                 
-            <Informations isEditable={isEditable}/>
+            <Informations isEditable={isEditable} file={file!}/>
             </S.Body>
         <Footer/>
         </S.Wrapper>

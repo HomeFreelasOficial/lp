@@ -11,25 +11,12 @@ import axios from "axios";
 
 export default function ClientServiceAccepted(){
 
-  const [sideBar, setSideBar] = useState(false)
   const { professional, job } = useContext(JobContext)
-
-  function sideOpenClose() {
-    setSideBar(old => !old)
-  }
-
-  const cancelRequest = () => {axios.post(`http://localhost:1234/jobs/${job.id}/cancel`)
-  }
-  
 
   return(
     <S.Wrapper>
-          <Header visible={true} url="/cliente/inicio" functionSideBar={sideOpenClose}/>
-         {sideBar === true ? 
-          <SideBar openOrClose={sideBar}/> 
-          : 
-          <SideBar openOrClose={sideBar}/>
-          }
+          <Header visible={false} url="/cliente/inicio"/>
+
          <BodyOrganizer>
            <S.Card>
             <TextBold>Pedido aceito!</TextBold>
@@ -41,8 +28,7 @@ export default function ClientServiceAccepted(){
               />
             <TextBold>Está a caminho</TextBold>
            </S.Card>
-          <S.ButtonCancelService onClick={cancelRequest}>Rejeitar Profissional</S.ButtonCancelService>
-          <S.ButtonConfirmService>Confirmar conclusão do serviço</S.ButtonConfirmService>
+          <S.ButtonConfirmService to="/cliente/servico-aceito/pagamento">Confirmar conclusão do serviço</S.ButtonConfirmService>
          </BodyOrganizer>
          <Footer/>
     </S.Wrapper>

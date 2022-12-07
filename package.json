@@ -16,10 +16,7 @@
     "@radix-ui/react-scroll-area": "^1.0.1",
     "@radix-ui/react-select": "^1.1.2",
     "@react-google-maps/api": "^2.16.0",
-<<<<<<< HEAD
-=======
     "@types/styled-components": "^5.1.26",
->>>>>>> 8ca386cf58003293de07598b1e33a8814f9e8ac7
     "axios": "^1.2.1",
     "buffer": "^6.0.3",
     "cpf-cnpj-validator": "^1.0.3",

@@ -7,9 +7,12 @@ interface IProfilePicture {
 }
 
 export default function ProfilePicture(props: IProfilePicture){
+
+    console.log('profilePicture ' + props.thumb)
+
     return (
         <>
-        <Picture src={props.thumb}/>
+        <Picture src={props.thumb} alt="selecione uma imgaem"/>
         </>
     )
 }

@@ -20,12 +20,11 @@ const Botao = styled.button<IBotao>`
     border-radius: 8px;
     cursor: pointer;
 
-    @media (min-width: 720px){
+ @media (min-width: 720px){
   font-size: 12px;
 }
 
 @media (min-width: 1024px){
-  font-size: 12px;
   width: 35em;
 }
 
