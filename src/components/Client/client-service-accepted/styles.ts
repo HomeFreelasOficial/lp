@@ -53,11 +53,10 @@ flex-direction: column;
 gap: 5em;
 align-items: center;
 justify-content: center;
-padding-block: 10rem;
-height: 100vh;
+padding-block: 60rem;
 
 @media (min-width: 720px){
-  padding-block: 75em;
+  padding-block: 18rem;
 
   font-size: 10px ;
 }
