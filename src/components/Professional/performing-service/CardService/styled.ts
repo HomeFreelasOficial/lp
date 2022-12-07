@@ -1,6 +1,4 @@
-import styled, { keyframes } from "styled-components";
-import { Link } from 'react-router-dom';
-import * as Dialog from '@radix-ui/react-dialog';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -91,64 +89,6 @@ export const Arrow = styled.span<{ active: boolean }>`
   transform: ${props => props.active ? 'rotate(180deg)' : 'rotate(0)'};
 `
 
-export const ButtonAccept = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  width: 40rem;
-  height: 3em;
-  background-color: #000000;
-  border-radius: 8px;
-  color: white;
-  font-weight: 700;
-  font-size: 2rem;
-  text-decoration: none;
-
-  transition: all .4s ease;
-
-  :hover {
-    cursor: pointer;
-
-    background-color: white;
-    border: 2px solid #000000;
-    color: #000000;
-  }
-
-  @media (min-width: 769px) {
-    font-size: 1.7rem;
-  }
-`
-
-export const ButtonCancel = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  width: 40rem;
-  height: 3em;
-  background-color: #FF0000;
-  border-radius: 8px;
-  color: white;
-  font-weight: 700;
-  font-size: 2rem;
-  text-decoration: none;
-
-  transition: all .4s ease;
-
-  :hover {
-    cursor: pointer;
-
-    background-color: white;
-    border: 2px solid #FF0000;
-    color: #FF0000;
-  }
-
-  @media (min-width: 769px) {
-    font-size: 1.7rem;
-  }
-`
-
 export const Title = styled.h1`
   font-size: 3rem;
   font-weight: 600;
@@ -160,8 +100,7 @@ export const Title = styled.h1`
 `
 
 export const Address = styled.p`
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 2rem;
   line-height: 2rem;
   letter-spacing: .3rem;
 

@@ -4,6 +4,8 @@ import { Job } from '../../../../entities/job';
 
 import * as S from './styled';
 
+import axios from 'axios';
+
 interface Itypes {
   name: string;
 }
@@ -22,7 +24,8 @@ const typeName: { [key: string]: Itypes } = {
 
 export default function CardWorkDetailed(props: Job) {
   const [ active, setActive ] = useState<boolean>(true);
-
+  const navigate = useNavigate();
+ 
   return(
     <S.Container>
       <S.Wrapper>

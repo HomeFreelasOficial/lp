@@ -1,9 +1,9 @@
 import { Footer } from "../../Footer";
 import { Wrapper } from "../client-call-service/styles";
-import { TextoBold } from "../client-home/Body/styles";
+import { TextBold } from "../client-home/styled";
 
 import { ButtonPay } from "./styled";
-import {BodyOrganizer, Card} from "../client-service-accepted/styles";
+import {BodyOrganizer, Card} from "../client-call-service/styles";
 import Header from "../../Header";
 
 export default function ClientServiceAccepted(){
@@ -13,10 +13,9 @@ export default function ClientServiceAccepted(){
         <Header url="/cliente/inicio" visible={false} />
         <BodyOrganizer>
             <Card>
-              <TextoBold>
+              <TextBold>
               Confirme a finalização do serviço.
-              </TextoBold>
-              
+              </TextBold>
               <ButtonPay to="/cliente/servico-aceito/pagamento">Ir para o pagamento</ButtonPay>
             </Card>
           </BodyOrganizer>

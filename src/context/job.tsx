@@ -32,7 +32,8 @@ interface IJobs {
         perHour: number,
         picture: string,
         type: "professional",
-        userId: string
+        userId: string,
+        hours: string
     }
 }
 
@@ -45,7 +46,8 @@ interface Professional {
         perHour: number,
         picture: string,
         type: "professional",
-        userId: string
+        userId: string,
+        hours: string,
 }
 
 interface JobContext {
@@ -81,7 +83,8 @@ export const JobContextWrapper = ({ children }: any) => {
         perHour: 0,
         picture: "",
         type: "professional",
-        userId: ""
+        userId: "",
+        hours: "",
     }
   )
   

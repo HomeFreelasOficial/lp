@@ -118,8 +118,8 @@ const BotaoProfissional = styled(Link)`
     <Wrapper> 
       <Card>
       <Texto>Deseja se conectar como?</Texto>
-        <BotaoCliente to="/cliente/perfil">Cliente</BotaoCliente>
-        <BotaoProfissional to="/perfil">Profissional</BotaoProfissional>
+        <BotaoCliente to="/cliente/inicio">Cliente</BotaoCliente>
+        <BotaoProfissional to="/profissional/inicio">Profissional</BotaoProfissional>
       </Card>
     </Wrapper>
     <Footer/>

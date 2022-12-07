@@ -6,7 +6,7 @@ interface ICardFreela {
   name: string,
   imgURL: string,
   price: number,
-  hours: number
+  hours: string,
 }
 
 export default function CardFreela(props: ICardFreela){
