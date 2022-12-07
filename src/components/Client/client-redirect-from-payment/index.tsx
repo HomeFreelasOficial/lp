@@ -1,9 +1,8 @@
 import { Footer } from "../../Footer";
-import { Wrapper } from "../client-call-service/styles";
+import { BodyOrganizer, Wrapper } from "../client-call-service/styles";
 import { TextBold } from "../client-home/styled";
-
 import { ButtonPay } from "./styled";
-import {BodyOrganizer, Card} from "../client-call-service/styles";
+import { Card } from "../client-service-accepted/styles";
 import Header from "../../Header";
 
 export default function ClientServiceAccepted(){

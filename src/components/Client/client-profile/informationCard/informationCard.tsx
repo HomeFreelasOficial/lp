@@ -1,21 +1,18 @@
 import { useRef } from "react"
 import * as S from "./styles"
 
-interface informationProps {
-    isEditable: boolean;
+interface Information {
+    email: string,
+    cpf: string
 }
 
-export default function Informations({ isEditable }: informationProps) {
-
-    const email = useRef<HTMLInputElement>(null)
-    const cpf = useRef<HTMLInputElement>(null)
-
+export default function Informations(props: Information) {
 
     return (
         <>
             <S.Card>
-                <S.Label>E-mail: {email.current?.value} </S.Label>
-                <S.Label>CPF: {cpf.current?.value}</S.Label>
+                <S.Label>E-mail: {props.email} </S.Label>
+                <S.Label>CPF: {props.cpf}</S.Label>
             </S.Card>
         </>
 

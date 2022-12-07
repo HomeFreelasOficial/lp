@@ -25,7 +25,7 @@ export const JobsContextWrapper = ({ children }: any) => {
         } 
       })
       setJobs(res.data.body.map((el: any) => {
-        return new Job(el.job.id, el.job.clientId, el.job.professionalId, el.job.description, el.job.title, el.job.type, el.job.price, el.job.address, el.client.name, el.client.picture)
+        return new Job(el.job.id, el.job.clientId, el.job.professionalId, el.job.description, el.job.title, el.job.type, el.job.price, el.job.address, el.client.name, el.client.picture, el.job.paid)
       }))
     } catch(err: any) {
       setError(err)

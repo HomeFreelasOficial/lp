@@ -20,7 +20,6 @@ export const UserContext = createContext({} as UserContextContract)
 const BASE_URL = 'http://localhost:1234'
 
 export const UserContextWrapper = ({ children }: any) => {
-  // const [cookies, setCookie, removeCookie] = useCookies(['token']);
   const [dataUser, setDataUser] = useState<UserContextData>({ user: null, token: '', accounts: [] })
 
   const login = async (email: string, password: string) => {
@@ -31,16 +30,11 @@ export const UserContextWrapper = ({ children }: any) => {
         data: { email, password }
       })
       setDataUser({ user: data.body.user, token: data.body.jwt, accounts: data.body.accounts })
-      // setCookie('token', data.jwt)
     } catch(error: any) {
       console.error(error)
       throw error.response.data
     }
   }
-
-  useEffect(() => {
-    console.log(dataUser)
-  }, [dataUser])
 
   return (
     <UserContext.Provider value={{ dataUser, login }}>

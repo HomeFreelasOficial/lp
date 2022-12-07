@@ -10,5 +10,6 @@ export class Job {
     readonly address: string,
     readonly clientName: string,
     readonly clientPicture: string,
+    readonly paid: boolean = false,
   ) {}
 }

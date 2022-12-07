@@ -2,7 +2,6 @@ import { Footer } from "../../signin/Footer/Footer";
 import Header from "../../Header";
 import { Wrapper } from "../client-call-service/styles";
 import * as S from "./styles";
-
 import { TextBold } from "../client-home/styled";
 import { BodyOrganizer } from "../client-call-service/styles";
 
