@@ -3,7 +3,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn/SignIn";
 import { GlobalStyles } from "./styles/global";
 import SelectType from "./pages/SelectType/SelectType";
-import { UserContextWrapper } from "./context/user";
+
 
 import {
   BrowserRouter as Router, 
@@ -18,13 +18,15 @@ import ClientHome from "./components/Client/client-home";
 import ClientCallService from "./components/Client/client-call-service";
 import ClientWaitingForFreela from "./components/Client/client-waiting";
 import ClientServiceAccepted from "./components/Client/client-service-accepted";
-import Payment from "./components/Client/client-payment";
+import Payment from "./pages/Payment";
 import VerifyEmail from "./components/verifyEmail";
 import Work from "./pages/Work";
 import SearchClients from "./components/Professional/search-clients";
 import NotFound from "./pages/NotFound";
 import { JobContextWrapper } from "./context/job";
+import { UserContextWrapper } from "./context/user"
 import FoundProfessional from "./pages/FoundProfessional";
+import PerformingService from "./pages/PerformingService";
 
 
 
@@ -47,6 +49,10 @@ export function App() {
                 <Route path="/profissional/procurar-cliente" element={<SearchClients/>}/>
                 <Route path="/profissional/clientes-encontrados" element={<FoundClients/>} />
                 <Route path="/profissional/clientes-encontrados/:id" element={<Work/>} />
+<<<<<<< HEAD
+=======
+                <Route path="/profissional/realizando-servico" element={<PerformingService/>} />
+>>>>>>> 8ca386cf58003293de07598b1e33a8814f9e8ac7
                 <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
                 <Route path="/cliente/aguardando-freelancer" element={<FoundProfessional/>}/>
                 <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>
