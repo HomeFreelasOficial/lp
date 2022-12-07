@@ -15,7 +15,7 @@ export const Card = styled.div`
     border-radius: 8px;
 `
 
-export const ConfirmButton = styled(Link)`
+export const ConfirmButton = styled.button`
     background-color: #8811D2;
     color: white;
     text-decoration: none;
