@@ -1,0 +1,41 @@
+
+.Label{
+    
+    background-color: #e3e3e3;
+    
+    display: flex;
+    justify-content: left;
+
+    font-size: 2rem;
+    width: 30rem;
+    
+    border-radius: 10px;
+    border-style: none;
+}
+
+.SelectTrigger{
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    margin-block: 1rem 5rem;
+}
+
+
+.component{
+    padding-left: 3rem;
+    padding-bottom: 1.5rem ;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.first{
+    padding-top: 1.5rem;
+}
+
+.Icon{
+    width: 40px;
+    height: 40px;
+}
+

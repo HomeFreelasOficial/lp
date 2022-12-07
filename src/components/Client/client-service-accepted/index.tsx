@@ -28,7 +28,7 @@ export default function ClientServiceAccepted(){
               />
             <TextBold>Está a caminho</TextBold>
            </S.Card>
-          <S.ButtonConfirmService to="/cliente/servico-aceito/pagamento">Confirmar conclusão do serviço</S.ButtonConfirmService>
+          <S.ButtonConfirmService to="/cliente/servico-aceito/redirect">Confirmar conclusão do serviço</S.ButtonConfirmService>
          </BodyOrganizer>
          <Footer/>
     </S.Wrapper>

@@ -3,8 +3,6 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn/SignIn";
 import { GlobalStyles } from "./styles/global";
 import SelectType from "./pages/SelectType/SelectType";
-
-
 import {
   BrowserRouter as Router, 
   Routes, 
@@ -16,9 +14,9 @@ import FoundClients from "./pages/FoundClients";
 import ClientData from "./components/Client/client-profile/Index";
 import ClientHome from "./components/Client/client-home";
 import ClientCallService from "./components/Client/client-call-service";
-import ClientWaitingForFreela from "./components/Client/client-waiting";
-import ClientServiceAccepted from "./components/Client/client-service-accepted";
-import Payment from "./pages/Payment";
+import RedirectPay from "./components/Client/client-redirect-from-payment";
+import Payment from "./components/Client/client-payment";
+import Return from "./components/Client/Client-return";
 import VerifyEmail from "./components/verifyEmail";
 import Work from "./pages/Work";
 import SearchClients from "./components/Professional/search-clients";
@@ -51,7 +49,9 @@ export function App() {
                 <Route path="/profissional/clientes-encontrados/:id" element={<Work/>} />
                 <Route path="/cliente/pedir-servico" element={<ClientCallService/>}/>
                 <Route path="/cliente/aguardando-freelancer" element={<FoundProfessional/>}/>
+                <Route path="/cliente/servico-aceito/redirect" element={<RedirectPay/>}/>
                 <Route path="/cliente/servico-aceito/pagamento" element={<Payment/>}/>
+                <Route path="/cliente/servico-aceito/retornar" element={<Return/>}/>
                 <Route path="*" element={<NotFound/>}/>
               </Routes>
           </Router>

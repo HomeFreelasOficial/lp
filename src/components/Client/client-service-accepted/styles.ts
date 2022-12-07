@@ -31,6 +31,7 @@ color: white;
 text-decoration: none;
 text-align: center;
 padding-block: 1em;
+text-decoration: none;
 
 :hover {
   border: 1px solid #227133;
