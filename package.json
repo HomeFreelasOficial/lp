@@ -14,6 +14,7 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.2",
     "@radix-ui/react-scroll-area": "^1.0.1",
+    "@radix-ui/react-select": "^1.1.2",
     "@react-google-maps/api": "^2.16.0",
     "@types/styled-components": "^5.1.26",
     "axios": "^1.1.3",

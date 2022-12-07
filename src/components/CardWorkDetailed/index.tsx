@@ -36,6 +36,8 @@ export default function CardWorkDetailed(props: Job) {
     const hours = inputRefHours.current?.value;
     const professionalId = dataUser.accounts.find(account => account.type === 'professional')?.id
 
+    console.log(professionalId);
+
     const response = await axios.post(`http://localhost:1234/jobs/${props.id}/accept`, {
       professionalId,
       hours,
@@ -48,7 +50,7 @@ export default function CardWorkDetailed(props: Job) {
     console.log(response);
 
     if(response.status === 200) {
-      navigate('/esperando-pagamento');
+      navigate('/profissional/realizando-servico');
     }
   }
 
