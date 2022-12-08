@@ -63,7 +63,7 @@ interface JobContext {
 export const JobContext = createContext({} as JobContext)
 
 export const JobContextWrapper = ({ children }: any) => {
-  const [job, setJob] = useState<IJob>(
+  const [job, setWork] = useState<IJob>(
     {
       MINIMUM_HOURS: 0,
       id: '',
@@ -80,7 +80,7 @@ export const JobContextWrapper = ({ children }: any) => {
 
   const setNewJob = (newJob: IJob) => {
     console.log(newJob)
-    setJob({...newJob})
+    setWork(newJob)
     console.log(job)
   }
 
