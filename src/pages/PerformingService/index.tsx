@@ -1,15 +1,49 @@
 import { Footer } from "../../components/Footer";
-import Main from '../../components/Professional/performing-service';
+
 import Header from "../../components/Header";
-import { JobsContextWrapper } from "../../context/jobs";
+import { JobsContext, JobsContextWrapper } from "../../context/jobs";
+import { useContext, useEffect } from "react";
+import { JobContext } from "../../context/job";
+import { useParams } from "react-router-dom";
+import ServiceCompleted from "../../components/Professional/service-completed";
+import Main from "../../components/Professional/performing-service";
 
+export function PerformingService() {
+  const { paymentSucess, paid } = useContext(JobContext);
+  const { searchClients } = useContext(JobsContext);
+  const { id } = useParams();
 
-export default function PerformingService() {
+  useEffect(() => {
+    searchClients();
+
+    setInterval(() => {
+      paymentSucess(id);
+    }, 3000)
+  }, [])
+  
   return(
-  <JobsContextWrapper>
+  <>
+  {paid === true ? 
+  <>
     <Header visible={false}/>
-    <Main/>
-    <Footer/>
-  </JobsContextWrapper>
+    <ServiceCompleted/>
+    <Footer/> 
+  </>
+ :
+ <>
+  <Header visible={false}/>
+  <Main/>
+  <Footer/> 
+ </>
+}
+  </>
   );
+}
+
+export default () => {
+  return(
+    <JobsContextWrapper>
+      <PerformingService/>
+    </JobsContextWrapper>
+  )
 }

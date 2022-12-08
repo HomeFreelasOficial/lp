@@ -4,9 +4,9 @@ import { Job } from '../../entities/job';
 
 import * as S from './styled';
 
-
 import axios from 'axios';
 import { UserContext } from '../../context/user';
+import { JobsContext } from '../../context/jobs';
 
 interface Itypes {
   name: string;
@@ -28,6 +28,7 @@ export default function CardWorkDetailed(props: Job) {
   const [ active, setActive ] = useState<boolean>(true);
   const navigate = useNavigate();
   const inputRefHours = useRef<HTMLInputElement>(null);
+  const { jobs } = useContext(JobsContext);
   const { dataUser } = useContext(UserContext);
 
   const sendData = async (e: FormEvent) => {
@@ -50,7 +51,7 @@ export default function CardWorkDetailed(props: Job) {
     console.log(response);
 
     if(response.status === 200) {
-      navigate('/profissional/realizando-servico');
+      navigate(`/profissional/realizando-servico/${props.id}`);
     }
   }
 
@@ -87,7 +88,7 @@ export default function CardWorkDetailed(props: Job) {
               <S.Form method='POST'>
                 <S.TitleModal>Tempo estimado</S.TitleModal>
                 <S.DescriptionModal>Tempo estimado para a conclusão do Trabalho:</S.DescriptionModal>
-                <S.InputHour type="number" placeholder="Horas estimadas" ref={inputRefHours} />
+                <S.InputHour min={1} max={9} type="number" placeholder="Horas estimadas" ref={inputRefHours} />
                 <S.CloseModal>
                   <S.ButtonConfirm onClick={sendData}>Confirmar</S.ButtonConfirm>
                   <S.ButtonClose>Fechar</S.ButtonClose>

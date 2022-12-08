@@ -9,7 +9,8 @@ interface IJob {
     title: string,
     type: { id: number, name: string },
     price: number,
-    address: string
+    address: string,
+    paid: boolean,
 }
 
 interface IJobs {
@@ -32,7 +33,8 @@ interface IJobs {
         perHour: number,
         picture: string,
         type: "professional",
-        userId: string
+        userId: string,
+        hours: string
     }
 }
 
@@ -45,17 +47,21 @@ interface Professional {
         perHour: number,
         picture: string,
         type: "professional",
-        userId: string
+        userId: string,
+        hours: string,
 }
 
 interface JobContext {
      job : IJob,
+     paid: boolean,
      setNewJob : Function,
      professional: Professional,
-     checkJobAccepted: Function
+     checkJobAccepted: Function,
+     paymentSucess: Function
 }
 
 export const JobContext = createContext({} as JobContext)
+
 export const JobContextWrapper = ({ children }: any) => {
   const [job, setJob] = useState({
         MINIMUM_HOURS: 1,
@@ -66,7 +72,8 @@ export const JobContextWrapper = ({ children }: any) => {
         title: '',
         type: { id: 0, name: '' },
         price: 0,
-        address: ''
+        address: '',
+        paid: false,
   })
 
   const setNewJob = (newJob: IJob) => {
@@ -81,9 +88,26 @@ export const JobContextWrapper = ({ children }: any) => {
         perHour: 0,
         picture: "",
         type: "professional",
-        userId: ""
+        userId: "",
+        hours: "",
     }
   )
+
+  const [ paid, setPaid ] = useState<boolean>(false);
+
+  const paymentSucess = async (jobId: string) => {
+    try {
+      const res = await axios.get(`http://localhost:1234/jobs`)     
+      const jobs : IJobs[] = (res.data.body)
+      const refJob = jobs.find(work => work.job.id === jobId)
+      const refPaid = refJob?.job.paid
+      if(refPaid){
+        setPaid(refPaid)
+      }
+    } catch (err) {
+      console.error(err)
+    }
+  }
   
   const checkJobAccepted = async (jobId: string) => {
     try {
@@ -100,7 +124,7 @@ export const JobContextWrapper = ({ children }: any) => {
   }
   
   return (
-    <JobContext.Provider value={{job , setNewJob, professional, checkJobAccepted}}>
+    <JobContext.Provider value={{job , setNewJob, professional, checkJobAccepted, paymentSucess, paid}}>
       {children}
     </JobContext.Provider>
   )

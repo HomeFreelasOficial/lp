@@ -3,20 +3,16 @@ import { useParams } from 'react-router-dom';
 import * as S from './styled';
 
 import Section from '../../Section';
+import CardService from './CardService';
 import { useContext } from 'react';
 import { JobsContext } from '../../../context/jobs';
 import { Job } from '../../../entities/job';
-import CardService from './CardService';
 
 
 export default function Main() {
-    const { jobs, searchClients } = useContext(JobsContext)
-    const { id } = useParams();
-
-    useEffect(() => {
-        searchClients();
-    }, []);
-
+    const { jobs } = useContext(JobsContext)
+    const { id } = useParams();    
+   
     const cardJob = jobs.find(el => el.id === id) as Job;
 
     return(
@@ -24,7 +20,7 @@ export default function Main() {
             <S.Container>
                 <S.WrapperCard>
                     <S.TitleWrapperCard>Informações do serviço</S.TitleWrapperCard>
-                    <CardService {...cardJob} />
+                    <CardService {...cardJob}/>
                 </S.WrapperCard>
             </S.Container>
         </Section>

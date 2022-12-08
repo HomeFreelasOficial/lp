@@ -24,7 +24,7 @@ export default function ClientServiceAccepted(){
               imgURL={professional.picture} 
               name={professional.name}
               price={professional.perHour}
-              hours={job.MINIMUM_HOURS}
+              hours={professional.hours}
               />
             <TextBold>Está a caminho</TextBold>
            </S.Card>
