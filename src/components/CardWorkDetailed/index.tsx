@@ -39,7 +39,7 @@ export default function CardWorkDetailed(props: Job) {
 
     console.log(professionalId);
 
-    const response = await axios.post(`http://localhost:1234/jobs/${props.id}/accept`, {
+    const response = await axios.post(`https://api.homefreelas.com.br/jobs/${props.id}/accept`, {
       professionalId,
       hours,
     }, {

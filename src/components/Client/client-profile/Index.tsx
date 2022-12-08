@@ -20,7 +20,7 @@ export default function ClientData() {
         const clientAccount = dataUser.accounts?.find(account => account.type === 'client')
         const Picture = new Blob([file!])
         const pictureBase64 = await convert(Picture)
-        await axios.patch(`http://localhost:1234/accounts/${clientAccount?.id}`, {
+        await axios.patch(`https://api.homefreelas.com.br/accounts/${clientAccount?.id}`, {
           pictureBase64
         },
         {

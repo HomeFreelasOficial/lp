@@ -29,7 +29,7 @@ export default function ClientCallService() {
     address: "",
     number: ""
    })
-   const apiPath = 'http://localhost:1234/jobs'
+   const apiPath = 'https://api.homefreelas.com.br/jobs'
    const { dataUser } = useContext(UserContext)
    const { job, setNewJob } = useContext(JobContext)
    const navigate = useNavigate()

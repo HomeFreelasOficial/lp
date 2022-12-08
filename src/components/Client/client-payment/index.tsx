@@ -18,7 +18,7 @@ export default function Payment(){
   const { job } = useContext(JobContext)
 
   const pay = async () => {
-     axios.post(`http://localhost:1234/jobs/${job.id}/pay`, 
+     axios.post(`https://api.homefreelas.com.br/jobs/${job.id}/pay`, 
       {
         headers : {
           Authorization: dataUser.token
