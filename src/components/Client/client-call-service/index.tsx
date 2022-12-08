@@ -29,16 +29,16 @@ export default function ClientCallService() {
     address: "",
     number: ""
    })
-   const apiPath = 'https://api.homefreelas.com.br/jobs'
+   const apiPath = 'http://localhost:1234/jobs'
    const { dataUser } = useContext(UserContext)
    const { job, setNewJob } = useContext(JobContext)
    const navigate = useNavigate()
 
-   function sendData(e : React.MouseEvent<HTMLButtonElement, MouseEvent>){
+   const sendData = async (e : React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault()
     console.log(dataUser);
     const clientId = dataUser.accounts.find(account => account.type === 'client')?.id
-    axios.post(apiPath, {
+    await axios.post(apiPath, {
       description: info.description,
       clientId,
       type: typeOfService,
@@ -53,8 +53,9 @@ export default function ClientCallService() {
       console.log(response)
       if (response.status == 201) {
         const refJob = {...response.data.body}
-        console.log(refJob, job)
-        setNewJob(refJob)
+        console.log(refJob)
+        setNewJob(refJob!)
+        console.log(job)
         return navigate("/cliente/aguardando-freelancer")
       }
     })

@@ -24,7 +24,7 @@ export default function Informations(props: IInformationCard) {
       const paymentPerHours = inputRef.current?.value
       const Picture = new Blob([props.file])
       const pictureBase64 = await convert(Picture)
-      await axios.patch(`https://api.homefreelas.com.br/accounts/${professionalAccount?.id}`, {
+      await axios.patch(`http://localhost:1234/accounts/${professionalAccount?.id}`, {
         perHours: +paymentPerHours!,
         jobTypes: Object.keys(types),
         pictureBase64

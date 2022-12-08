@@ -18,7 +18,7 @@ export const JobsContextWrapper = ({ children }: any) => {
     try {
       const types: string = account.jobTypes.map(jobType => jobType.name).join(',')
       const res = await axios.request({
-        url: `https://api.homefreelas.com.br/jobs?type=${types}`,
+        url: `http://localhost:1234/jobs?type=${types}`,
         method: 'GET',
         data: {
           types: []

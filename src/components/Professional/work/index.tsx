@@ -19,6 +19,8 @@ export default function Main() {
 
     const cardJob = jobs.find(el => el.id === id) as Job;
 
+    console.log(cardJob)
+
     return(
         <Section>
             <S.Container>

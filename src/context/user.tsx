@@ -17,7 +17,7 @@ interface UserContextContract {
 
 export const UserContext = createContext({} as UserContextContract)
 
-const BASE_URL = 'https://api.homefreelas.com.br'
+const BASE_URL = 'http://localhost:1234'
 
 export const UserContextWrapper = ({ children }: any) => {
   const [dataUser, setDataUser] = useState<UserContextData>({ user: null, token: '', accounts: [] })

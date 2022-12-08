@@ -1,4 +1,4 @@
-import { createContext, useState, SetStateAction } from 'react'
+import { createContext, useState} from 'react'
 
 interface IJob {
     MINIMUM_HOURS: number,
@@ -63,21 +63,25 @@ interface JobContext {
 export const JobContext = createContext({} as JobContext)
 
 export const JobContextWrapper = ({ children }: any) => {
-  const [job, setJob] = useState({
-        MINIMUM_HOURS: 1,
-        id: '',
-        clientId: '',
-        professionalId: '',
-        description: '',
-        title: '',
-        type: { id: 0, name: '' },
-        price: 0,
-        address: '',
-        paid: false,
-  })
+  const [job, setJob] = useState<IJob>(
+    {
+      MINIMUM_HOURS: 0,
+      id: '',
+      clientId: '',
+      professionalId: '',
+      description: '',
+      title: '',
+      type: { id: 0, name: '' },
+      price: 0,
+      address: '',
+      paid: false,
+    }
+  )
 
   const setNewJob = (newJob: IJob) => {
-    setJob(newJob)
+    console.log(newJob)
+    setJob({...newJob})
+    console.log(job)
   }
 
   const [professional, setProfessional] = useState<Professional>(
@@ -97,7 +101,7 @@ export const JobContextWrapper = ({ children }: any) => {
 
   const paymentSucess = async (jobId: string) => {
     try {
-      const res = await axios.get(`https://api.homefreelas.com.br/jobs`)     
+      const res = await axios.get(`http://localhost:1234/jobs`)     
       const jobs : IJobs[] = (res.data.body)
       const refJob = jobs.find(work => work.job.id === jobId)
       const refPaid = refJob?.job.paid
@@ -111,8 +115,9 @@ export const JobContextWrapper = ({ children }: any) => {
   
   const checkJobAccepted = async (jobId: string) => {
     try {
-      const res = await axios.get(`https://api.homefreelas.com.br/jobs`)     
+      const res = await axios.get(`http://localhost:1234/jobs`)     
       const jobs : IJobs[] = (res.data.body)
+      console.log(res)
       const refJob = jobs.find(work => work.job.id === jobId)
       const refProfessional = refJob?.professional
       if(refProfessional){
