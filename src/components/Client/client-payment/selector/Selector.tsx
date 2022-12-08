@@ -35,10 +35,10 @@ export default () => (
   </>
 );
 
-const SelectItem = React.forwardRef(({ children, className, ...props }, forwardedRef) => {
+const SelectItem = React.forwardRef(({ value, className, ...props }: any, forwardedRef) => {
     return (
       <Select.Item className={classnames('SelectItem', className)} {...props} ref={forwardedRef}>
-        <Select.ItemText>{children}</Select.ItemText>
+        <Select.ItemText>{value}</Select.ItemText>
         <Select.ItemIndicator className="SelectItemIndicator"/>
       </Select.Item>
     );

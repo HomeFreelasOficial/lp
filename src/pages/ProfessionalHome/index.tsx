@@ -12,9 +12,9 @@ export default function ProfessionalHome() {
     <>
       <Header visible={true} url="/profissional/inicio" functionSideBar={() => setSideBar(old => !old)} isOpened={sideBar}/>
       {sideBar === true ? 
-      <SideBar openOrClose={sideBar}/> 
+      <SideBar type='professional' openOrClose={sideBar}/> 
       : 
-      <SideBar openOrClose={sideBar}/>
+      <SideBar type='professional' openOrClose={sideBar}/>
       }
       <Main />
       <Footer/>
