@@ -13,15 +13,15 @@ interface IInformationCard {
 export default function Informations(props: IInformationCard) {
     const inputRef = useRef<HTMLInputElement>(null)
     const {dataUser} = useContext(UserContext)
+    const professionalAccount = dataUser.accounts?.find(account => account.type === 'professional')
     const [types, setTypes] = useState({
-      'electric': false,
-      'pumbling': false,
-      'technical_repairs': false
+      'electric': !!professionalAccount?.jobTypes.find(jobType => jobType.name === 'electric'),
+      'plumbing': !!professionalAccount?.jobTypes.find(jobType => jobType.name === 'plumbing'),
+      'technical_repairs': !!professionalAccount?.jobTypes.find(jobType => jobType.name === 'technical_repairs')
     })
 
     const send = async () => {
       const paymentPerHours = inputRef.current?.value
-      const professionalAccount = dataUser.accounts?.find(account => account.type === 'professional')
       const Picture = new Blob([props.file])
       const pictureBase64 = await convert(Picture)
       await axios.patch(`http://localhost:1234/accounts/${professionalAccount?.id}`, {
@@ -45,10 +45,10 @@ export default function Informations(props: IInformationCard) {
           {props.isEditable ? <>
             <S.Text>Encanamento</S.Text>
           <S.JobButton 
-          isClicked={types['pumbling']} 
+          isClicked={types['plumbing']} 
           color='#116AD2'
-          onClick={() => setTypes(old => ({ ...old, pumbling: !old.pumbling }))}
-          >{types['pumbling'] ? 'Ativo' : 'Ativar'}</S.JobButton>
+          onClick={() => setTypes(old => ({ ...old, plumbing: !old.plumbing }))}
+          >{types['plumbing'] ? 'Ativo' : 'Ativar'}</S.JobButton>
           <S.Text>Elétrica</S.Text>
           <S.JobButton 
           isClicked={types['electric']} 
@@ -65,9 +65,9 @@ export default function Informations(props: IInformationCard) {
 
           <S.Text>Encanamento</S.Text>
           <S.JobButton 
-          isClicked={types['pumbling']} 
+          isClicked={types['plumbing']} 
           color='#116AD2'
-          >{types['pumbling'] ? 'Ativo' : 'Ativar'}
+          >{types['plumbing'] ? 'Ativo' : 'Ativar'}
           </S.JobButton>
 
           <S.Text>Elétrica</S.Text>
