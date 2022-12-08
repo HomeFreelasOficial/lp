@@ -101,7 +101,7 @@ export const JobContextWrapper = ({ children }: any) => {
 
   const paymentSucess = async (jobId: string) => {
     try {
-      const res = await axios.get(`http://localhost:1234/jobs`)     
+      const res = await axios.get(`https://api.homefreelas.com.br/jobs`)     
       const jobs : IJobs[] = (res.data.body)
       const refJob = jobs.find(work => work.job.id === jobId)
       const refPaid = refJob?.job.paid
@@ -115,7 +115,7 @@ export const JobContextWrapper = ({ children }: any) => {
   
   const checkJobAccepted = async (jobId: string) => {
     try {
-      const res = await axios.get(`http://localhost:1234/jobs`)     
+      const res = await axios.get(`https://api.homefreelas.com.br/jobs`)     
       const jobs : IJobs[] = (res.data.body)
       console.log(res)
       const refJob = jobs.find(work => work.job.id === jobId)
